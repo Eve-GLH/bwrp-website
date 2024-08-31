@@ -30,6 +30,7 @@
   display: flex;
   flex-direction: column;
   list-style: none;
+  margin: 0;
 }
 @media (min-width: 576px) {
   .toplinks__inner {
@@ -37,15 +38,25 @@
     justify-content: space-evenly;
   }
 }
+.toplinks__li {
+  padding: 15px 20px;
+}
+.toplinks__li--alt {
+  background: #e8630a;
+}
 .toplinks__link {
   color: #FFF;
   text-transform: uppercase;
   font-weight: 700;
   transition: all 0.5s;
+  text-decoration: none;
 }
 .toplinks__link:hover {
   color: #e8630a;
   text-decoration: underline;
+}
+.toplinks__link--alt:hover {
+  color: #FFF;
 }
 .banner {
   padding: 0;

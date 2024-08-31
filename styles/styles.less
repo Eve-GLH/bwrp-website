@@ -38,9 +38,17 @@
         display: flex;
         flex-direction: column;
         list-style: none;
+        margin: 0;
         @media @sm {
             flex-direction: row;
             justify-content: space-evenly;
+        }
+    }
+
+    &__li {
+        padding: 15px 20px;
+        &--alt {
+            background: @orange;
         }
     }
 
@@ -49,9 +57,16 @@
         text-transform: uppercase;
         font-weight: 700;
         transition: all 0.5s;
+        text-decoration: none;
         &:hover {
             color: @orange;
             text-decoration: underline;
+        }
+
+        &--alt {
+            &:hover {
+                color: #FFF;
+            }
         }
     }
 }
