@@ -90,7 +90,6 @@
                 color: #FFF;
                 text-transform: uppercase;
                 font-weight: 700;
-                transition: all 0.5s;
                 text-decoration: none;
                 width: 100%;
                 height: 100%;
@@ -102,6 +101,30 @@
                 &:after {
                     opacity: 0;
                 }
+            }
+        }
+    }
+
+    &__dropdown {
+        background: @bluedark;
+        border: none;
+        border-radius: 0;
+        text-align: center;
+        &-li {
+            padding: 10px;
+            &:hover {
+                background: @orange;
+            }
+        }
+        
+        &-link {
+            color: #FFF;
+            text-transform: uppercase;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 10px 0;
+            &:hover {
+                color: #FFF;
             }
         }
     }

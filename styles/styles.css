@@ -80,10 +80,10 @@
   right: 0;
   bottom: 0;
   opacity: 1;
+  transition: all 0.5s;
   color: #FFF;
   text-transform: uppercase;
   font-weight: 700;
-  transition: all 0.5s;
   text-decoration: none;
   width: 100%;
   height: 100%;
@@ -95,6 +95,28 @@
 }
 .toplinks__link--alt:hover:after {
   opacity: 0;
+}
+.toplinks__dropdown {
+  background: #2A3132;
+  border: none;
+  border-radius: 0;
+  text-align: center;
+}
+.toplinks__dropdown-li {
+  padding: 10px;
+}
+.toplinks__dropdown-li:hover {
+  background: #f97352;
+}
+.toplinks__dropdown-link {
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 10px 0;
+}
+.toplinks__dropdown-link:hover {
+  color: #FFF;
 }
 .banner {
   padding: 0;
