@@ -78,6 +78,16 @@ table {
     }
 }
 
+iframe {
+    border: 5px solid @bluedark;
+    transition: all 0.5s;
+    display: block;
+    margin: 0 auto;
+    &:hover {
+        border: 5px solid @orange;
+    }
+}
+
 //Mobile Menu Section
 .mobile-menu {
     background: @bluedark;
@@ -452,5 +462,11 @@ table {
     &-image {
         display: flex;
         justify-content: center;
+    }
+    &-video {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-content: center;
     }
 }
