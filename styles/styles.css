@@ -276,7 +276,7 @@ table tr:nth-child(even) {
   overflow: hidden;
 }
 .banner .slick-list {
-  height: 80vh;
+  height: 75.25vh;
 }
 .banner .slick-track {
   height: 100%;
@@ -325,6 +325,9 @@ table tr:nth-child(even) {
   max-height: 100vw;
   height: fit-content;
   padding: 0 20px;
+}
+.banner__text h2 {
+  border: none;
 }
 .slick-dots {
   position: absolute;
@@ -383,14 +386,38 @@ table tr:nth-child(even) {
 .footer__logo img {
   max-width: 100%;
 }
+@media (min-width: 768px) {
+  .footer__col-end {
+    width: 20%;
+  }
+}
 .footer__link {
   color: #FFF;
   transition: all 0.5s;
   text-decoration: none;
+  margin: 5px 0;
+}
+@media (min-width: 768px) {
+  .footer__link {
+    margin: 0 5px;
+  }
 }
 .footer__link:hover {
   color: #f97352;
   text-decoration: underline;
+}
+.footer__link svg {
+  width: 20px;
+}
+.footer__link svg:hover path {
+  fill: #f97352;
+}
+.footer__link svg path {
+  fill: #FFF;
+  transition: all 0.5s;
+}
+.footer__link.money-bag img {
+  width: 48px;
 }
 .accordion-title {
   background-color: #2A3132;
