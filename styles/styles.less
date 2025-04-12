@@ -369,24 +369,25 @@ section {
 }
 
 .content-row {
-    padding: 10px 0;
+    padding: 30px 0;
     &-inner {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         @media @sm {
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
         }
         @media @md {
             justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
         }
     }
     &-left, &-right {
-        width: 48%;
-        margin: auto;
+        @media @md {
+            width: 48%;
+            margin: auto;
+        }
     }
     &-image {
         display: flex;
