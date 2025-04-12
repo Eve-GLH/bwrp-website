@@ -350,3 +350,33 @@ section {
   padding: 15px;
   transition: all 0.5s;
 }
+.content-row {
+  padding: 10px 0;
+}
+.content-row-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 576px) {
+  .content-row-inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 768px) {
+  .content-row-inner {
+    justify-content: space-between;
+  }
+}
+.content-row-left,
+.content-row-right {
+  width: 48%;
+  margin: auto;
+}
+.content-row-image {
+  display: flex;
+  justify-content: center;
+}
