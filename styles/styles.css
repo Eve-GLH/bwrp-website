@@ -109,6 +109,12 @@
     padding-left: 2rem;
   }
 }
+.toplinks .dropdown-toggle::after {
+  margin: 0;
+}
+.toplinks .dropdown-toggle:hover::after {
+  border: 0;
+}
 .toplinks__link {
   color: #FFF;
   text-transform: uppercase;

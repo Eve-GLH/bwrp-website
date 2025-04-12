@@ -117,6 +117,17 @@
         }
     }
 
+    .dropdown-toggle {
+        &::after {
+            margin: 0;
+        }
+        &:hover {
+            &::after {
+                border: 0;
+            }
+        }
+    }
+
     &__link {
         color: #FFF;
         text-transform: uppercase;
