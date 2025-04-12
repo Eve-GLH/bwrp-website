@@ -3,15 +3,51 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet/less" type="text/css" href="styles/styles.css" />
     <title>Broken World Role Play</title>
   </head>
   <body>
-    <header class="header">
+    <div class="mobile-menu d-block d-sm-none">
+        <div class="mobile-menu__inner">
+            <div class="mobile-menu__logo">
+                <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png" srcset="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png 1x, https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_2x_p69bcp.png 2x" alt="BWRP Logo" />
+            </div>
+            <button class="mobile-menu__button dropdown-toggle" data-bs-toggle="dropdown" type="button" id="MobileDropdownButton" aria-haspopup="true" aria-expanded="false">
+                <img src="images/mobile-menu-closed.png" alt="Menu Closed" />
+            </button>
+            <ul class="dropdown-menu mobile-menu__dropdown" aria-labelledby="MobileDropdownButton">
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/">Home</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/rules">Rules</a>
+                </li>
+                <li class="mobile-menu__li mobile-menu__li--alt">
+                    <a class="mobile-menu__link" href="https://discord.gg/F2ugDHf">Discord</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/mechanics">Our Mechanics</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/about-the-world">Our World</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/our-team">Our Team</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/our-roleplay">Our Roleplay</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/join">Join</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <header class="header d-none d-sm-block">
         <div class="container">
             <div class="header__inner">
                 <div class="header__logo">
@@ -46,9 +82,9 @@
         </div>
     </header>
     <section class="banner">
-        <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1605286610/Homepage%20Banner/placeholder-1920x1080-1920x1080_cymnuj_aojnve.png" class="banner__inner banner__inner-1" />
-        <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1605286612/Homepage%20Banner/placeholder3-1920x1080-1920x1080_ogss3n_w1dh5g.png" class="banner__inner banner__inner-2" />
-        <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1605286613/Homepage%20Banner/placeholder2-1920x1080-1920x1080_udevhp_qqkq6y.jpg" class="banner__inner banner__inner-3" />
+        <div class="banner__inner banner__inner-1"></div>
+        <div class="banner__inner banner__inner-2"></div>
+        <div class="banner__inner banner__inner-3"></div>
     </section>
     <section class="banner__text">
         <div class="banner__text-1">
@@ -64,25 +100,23 @@
             <h3>Want to be more involved? Consider joining our discord and one of our teams.</h3>
         </div>
     </section>
-    <footer>
-        <div class="footer__top">
-            <div class="container">
-                <div class="footer__top-inner">
-                    <a href="/" class="footer__top-logo">
-                        <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png" srcset="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png 1x, https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_2x_p69bcp.png 2x" alt="BWRP Logo" />
-                    </a>
-                    <a class="footer__top-link" href="https://www.patreon.com/join/brokenworldrp">Become a Patron</a>
-                    <a class="footer__top-link" href="https://www.paypal.com/paypalme/BWRPDonations">Donate on Paypal</a>
-                    <a class="footer__top-link" href="https://discord.gg/F2ugDHf">Join Our Discord</a>
-                </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <a href="/" class="footer__logo">
+                    <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png" srcset="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png 1x, https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_2x_p69bcp.png 2x" alt="BWRP Logo" />
+                </a>
+                <a class="footer__link" href="https://www.patreon.com/join/brokenworldrp">Become a Patron</a>
+                <a class="footer__link" href="https://www.paypal.com/paypalme/BWRPDonations">Donate on Paypal</a>
+                <a class="footer__link" href="https://discord.gg/F2ugDHf">Join Our Discord</a>
             </div>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/less" ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="scripts/theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>
