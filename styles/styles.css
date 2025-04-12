@@ -1,3 +1,15 @@
+body {
+  color: #252525;
+}
+body ::-moz-selection {
+  /* Code for Firefox */
+  color: #FFF;
+  background: #000;
+}
+body ::selection {
+  color: #FFF;
+  background: #000;
+}
 section {
   padding: 30px 0;
   position: relative;
@@ -16,6 +28,21 @@ a {
 }
 a:hover {
   color: #f97352;
+}
+table {
+  width: 100%;
+  margin: 10px 0;
+}
+table td {
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 5px 10px;
+}
+table th {
+  padding: 5px 10px;
+}
+table tr:nth-child(even) {
+  background-color: #f0cdc5;
 }
 .contents {
   color: #FFF;
@@ -168,7 +195,7 @@ a:hover {
   position: absolute;
   bottom: -2px;
   left: 50%;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 .toplinks__link:hover {
   color: #FFF;
