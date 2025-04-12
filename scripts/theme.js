@@ -15,4 +15,13 @@ $(document).ready(function(){
         dots: false,
         focusOnSelect: true
     })
+
+    function addDataText(className) {
+        const elements = document.querySelectorAll(`.${className}`);
+        elements.forEach(el => {
+            el.setAttribute('data-text', el.textContent.trim());
+        });
+    }
+    addDataText('accordion-title');
 });
+
