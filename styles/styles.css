@@ -62,13 +62,13 @@ table tr:nth-child(even) {
   background-color: #f97352;
   color: #FFF;
 }
-iframe {
+.video-iframe {
   border: 5px solid #2A3132;
   transition: all 0.5s;
   display: block;
   margin: 0 auto;
 }
-iframe:hover {
+.video-iframe:hover {
   border: 5px solid #f97352;
 }
 .mobile-menu {
