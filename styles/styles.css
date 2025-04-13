@@ -22,6 +22,7 @@ section {
 }
 h2 {
   border-bottom: 1px solid #2A3132;
+  margin-top: 25px;
 }
 a {
   transition: all 0.5s;
@@ -474,8 +475,11 @@ table tr:nth-child(even) {
   padding: 15px;
   transition: all 0.5s;
 }
+.accordion-details {
+  margin: 10px 0;
+}
 .content-row {
-  padding: 30px 0;
+  padding: 15px 0;
 }
 .content-row-inner {
   display: flex;
@@ -506,4 +510,17 @@ table tr:nth-child(even) {
   justify-content: center;
   flex-direction: column;
   align-content: center;
+}
+@media (min-width: 576px) {
+  .mechanics-page-left {
+    width: 70%;
+  }
+}
+.mechanics-page-image {
+  padding: 30px 15px 0;
+}
+@media (min-width: 576px) {
+  .mechanics-page-image {
+    width: 20%;
+  }
 }
