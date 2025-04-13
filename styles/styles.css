@@ -29,6 +29,40 @@ a {
 a:hover {
   color: #f97352;
 }
+.btn-orange {
+  background-color: #f97352;
+  color: #FFF;
+  border: 1px solid #f97352;
+  border-radius: 0;
+  text-decoration: none;
+  padding: 15px 20px;
+  font-weight: 700;
+  transition: all 0.5s;
+  display: inline-block;
+  width: fit-content;
+  margin: 10px 5px;
+}
+.btn-orange:hover {
+  color: #FFF;
+  background: transparent;
+}
+.btn-blue {
+  background-color: #4c6972;
+  color: #FFF;
+  border: 1px solid #4c6972;
+  border-radius: 0;
+  text-decoration: none;
+  padding: 15px 20px;
+  font-weight: 700;
+  transition: all 0.5s;
+  display: inline-block;
+  width: fit-content;
+  margin: 10px 5px;
+}
+.btn-blue:hover {
+  color: #FFF;
+  background: transparent;
+}
 table {
   width: 100%;
   margin: 10px 0;
