@@ -15,5 +15,8 @@ $(document).ready(function(){
         dots: false,
         focusOnSelect: true
     })
+    setTimeout(() => { $('.slick-slider .slick-track').css('width', '100vw'); }, 1);
+
+
 });
 

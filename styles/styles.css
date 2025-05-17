@@ -376,15 +376,17 @@ table tr:nth-child(even) {
   left: 0;
   right: 0;
   top: 40%;
-  color: #FFF;
   max-width: 100vw;
   overflow: hidden;
   max-height: 100vw;
   height: fit-content;
   padding: 0 20px;
 }
-.banner__text h2 {
+.banner__text h1,
+.banner__text h2,
+.banner__text h3 {
   border: none;
+  color: #FFF;
 }
 .slick-dots {
   position: absolute;
