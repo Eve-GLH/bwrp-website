@@ -219,7 +219,7 @@ table {
     }
 }
 .toplinks {
-    margin: 10px 0;
+    margin: 0;
     @media @sm {
         width: 80%;
     }
@@ -278,34 +278,15 @@ table {
         }
 
         &--alt {
-            border: 1px solid @orange;
-            background: @bluedark;
+            background-color: @orange;
             position: relative;
-            padding: 15px 20px;
-            &:after {
-                content: "Discord";
-                background: @orange;
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                opacity: 1;
-                transition: all 0.5s;
-                color: #FFF;
-                text-transform: uppercase;
-                font-weight: 700;
-                text-decoration: none;
-                width: 100%;
-                height: 100%;
-                padding: 15px 20px;
-            }
+            padding: 8px 15px;
+            
             &:hover {
                 color: #FFF;
                 text-decoration: none;
-                &:after {
-                    opacity: 0;
-                }
+                background-color: @bluedark;
+                border: none;
             }
         }
     }

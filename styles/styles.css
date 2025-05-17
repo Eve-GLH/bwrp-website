@@ -198,7 +198,7 @@ table tr:nth-child(even) {
   }
 }
 .toplinks {
-  margin: 10px 0;
+  margin: 0;
 }
 @media (min-width: 576px) {
   .toplinks {
@@ -258,35 +258,15 @@ table tr:nth-child(even) {
   background-color: #ffffff;
 }
 .toplinks__link--alt {
-  border: 1px solid #f97352;
-  background: #2A3132;
+  background-color: #f97352;
   position: relative;
-  padding: 15px 20px;
-}
-.toplinks__link--alt:after {
-  content: "Discord";
-  background: #f97352;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 1;
-  transition: all 0.5s;
-  color: #FFF;
-  text-transform: uppercase;
-  font-weight: 700;
-  text-decoration: none;
-  width: 100%;
-  height: 100%;
-  padding: 15px 20px;
+  padding: 8px 15px;
 }
 .toplinks__link--alt:hover {
   color: #FFF;
   text-decoration: none;
-}
-.toplinks__link--alt:hover:after {
-  opacity: 0;
+  background-color: #2A3132;
+  border: none;
 }
 .toplinks__dropdown {
   background: #2A3132;
