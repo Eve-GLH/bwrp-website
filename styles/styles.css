@@ -26,6 +26,7 @@ h2 {
 }
 a {
   transition: all 0.5s;
+  color: #2A3132;
 }
 a:hover {
   color: #f97352;
