@@ -11,7 +11,7 @@ body ::selection {
   background: #000;
 }
 section {
-  padding: 30px 0;
+  padding: 15px 0 30px;
   position: relative;
   text-align: center;
 }
@@ -19,6 +19,11 @@ section {
   section {
     text-align: left;
   }
+}
+h1,
+h2,
+h3 {
+  margin: 30px 0 15px;
 }
 h2 {
   border-bottom: 1px solid #2A3132;
