@@ -234,7 +234,8 @@ table {
         padding: 0;
         @media @sm {
             flex-direction: row;
-            justify-content: space-evenly;
+            justify-content: center;
+            align-items: center;
         }
         @media @md {
             padding-left: 2rem;
@@ -248,6 +249,23 @@ table {
         &:hover {
             &::after {
                 border: 0;
+            }
+        }
+    }
+
+    &__li {
+        padding: 0 20px;
+        &--alt {
+            background-color: @orange;
+            position: relative;
+            padding: 8px 15px;
+            transition: all 0.5s;
+            
+            &:hover {
+                color: #FFF;
+                text-decoration: none;
+                background-color: @bluedark;
+                border: none;
             }
         }
     }
@@ -277,19 +295,6 @@ table {
                 left: 0;
                 right: 0;
                 background-color: rgba(255,255,255,1);
-            }
-        }
-
-        &--alt {
-            background-color: @orange;
-            position: relative;
-            padding: 8px 15px;
-            
-            &:hover {
-                color: #FFF;
-                text-decoration: none;
-                background-color: @bluedark;
-                border: none;
             }
         }
     }

@@ -220,7 +220,8 @@ table tr:nth-child(even) {
 @media (min-width: 576px) {
   .toplinks__inner {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
   }
 }
 @media (min-width: 768px) {
@@ -233,6 +234,21 @@ table tr:nth-child(even) {
 }
 .toplinks .dropdown-toggle:hover::after {
   border: 0;
+}
+.toplinks__li {
+  padding: 0 20px;
+}
+.toplinks__li--alt {
+  background-color: #f97352;
+  position: relative;
+  padding: 8px 15px;
+  transition: all 0.5s;
+}
+.toplinks__li--alt:hover {
+  color: #FFF;
+  text-decoration: none;
+  background-color: #2A3132;
+  border: none;
 }
 .toplinks__link {
   color: #FFF;
@@ -261,17 +277,6 @@ table tr:nth-child(even) {
   left: 0;
   right: 0;
   background-color: #ffffff;
-}
-.toplinks__link--alt {
-  background-color: #f97352;
-  position: relative;
-  padding: 8px 15px;
-}
-.toplinks__link--alt:hover {
-  color: #FFF;
-  text-decoration: none;
-  background-color: #2A3132;
-  border: none;
 }
 .toplinks__dropdown {
   background: #2A3132;
