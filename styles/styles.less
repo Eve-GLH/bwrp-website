@@ -8,8 +8,25 @@
 @bluedark: #2A3132; ;
 @bluelight:  #b6e1e0;
 @orange: #f97352;
+
+.OpenSans {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.Roboto {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
 body {
-    color: #252525;
+    color: #777;
+    font-size: 17px;
+    .OpenSans;
     ::-moz-selection { /* Code for Firefox */
         color: #FFF;
         background: #000;
@@ -32,6 +49,9 @@ section {
 
 h1, h2, h3 {
     margin: 30px 0 15px;
+    color: #212529;
+    .Roboto;
+    font-weight: 700;
 }
 
 h2 {
@@ -526,7 +546,6 @@ table {
     &-left, &-right {
         @media @md {
             width: 48%;
-            margin: auto;
         }
     }
     &-image {
