@@ -282,7 +282,11 @@ table tr:nth-child(even) {
   background: #2A3132;
   border: none;
   border-radius: 0;
-  text-align: center;
+  text-align: left;
+  position: absolute;
+  inset: 0px auto auto 0px;
+  margin: 0px;
+  transform: translate(10px, 26px) !important;
 }
 .toplinks__dropdown-li {
   padding: 10px;
