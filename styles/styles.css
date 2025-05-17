@@ -474,6 +474,10 @@ table tr:nth-child(even) {
   border: 1px solid #2A3132;
   padding: 15px;
   transition: all 0.5s;
+  position: relative;
+}
+.accordion-inner img {
+  max-width: 100%;
 }
 .accordion-details {
   margin: 10px 0;
