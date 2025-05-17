@@ -194,7 +194,7 @@ table tr:nth-child(even) {
 @media (min-width: 576px) {
   .header__inner {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 }
 .toplinks {
@@ -202,7 +202,12 @@ table tr:nth-child(even) {
 }
 @media (min-width: 576px) {
   .toplinks {
-    width: 80%;
+    width: 60%;
+  }
+}
+@media (min-width: 768px) {
+  .toplinks {
+    width: 40%;
   }
 }
 .toplinks__inner {
