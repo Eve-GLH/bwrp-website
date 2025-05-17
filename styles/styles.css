@@ -1,5 +1,6 @@
 body {
-  color: #252525;
+  color: #777;
+  font-size: 17px;
 }
 body ::-moz-selection {
   /* Code for Firefox */
@@ -24,6 +25,7 @@ h1,
 h2,
 h3 {
   margin: 30px 0 15px;
+  color: #212529;
 }
 h2 {
   border-bottom: 1px solid #2A3132;
@@ -501,7 +503,6 @@ table tr:nth-child(even) {
   .content-row-left,
   .content-row-right {
     width: 48%;
-    margin: auto;
   }
 }
 .content-row-image {
