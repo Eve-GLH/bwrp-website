@@ -50,7 +50,11 @@ a:hover {
 }
 .btn-orange:hover {
   color: #FFF;
+<<<<<<< Updated upstream
   background-color: #252525;
+=======
+  background-color: #2A3132;
+>>>>>>> Stashed changes
 }
 .btn-blue {
   background-color: #4c6972;
@@ -66,7 +70,11 @@ a:hover {
 }
 .btn-blue:hover {
   color: #FFF;
+<<<<<<< Updated upstream
   background-color: #252525;
+=======
+  background-color: #2A3132;
+>>>>>>> Stashed changes
 }
 table {
   width: 100%;
@@ -288,7 +296,7 @@ table tr:nth-child(even) {
   padding-bottom: 0;
 }
 .toplinks__dropdown-li {
-  padding: 10px;
+  padding: 0 10px;
 }
 .toplinks__dropdown-li:hover {
   background: #f97352;
