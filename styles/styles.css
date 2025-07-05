@@ -10,6 +10,11 @@
   font-weight: 400;
   font-style: normal;
 }
+img {
+  display: block;
+  position: relative;
+  max-width: 100%;
+}
 body {
   color: #777;
   font-size: 17px;
@@ -389,6 +394,12 @@ table tr:nth-child(even) {
 .banner__text h3 {
   border: none;
   color: #FFF;
+}
+.faction-flags {
+  transform: rotate(90deg);
+  width: 40%;
+  margin: auto;
+  display: block;
 }
 .slick-dots {
   position: absolute;
