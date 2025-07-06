@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet/less" type="text/css" href="styles/styles.css" />
+    <link rel="canonical" href="https://www.brokenworldrp.com/wildchoir" />
+    <title>Wildchoir - Broken World Role Play</title>
+    <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/bwrpimages/image/upload/v1625305628/Logos%20and%20Socials/favicon-32x32_uuq7wv.png">
+  </head>
+  <body>
+    <div class="mobile-menu d-block d-sm-none">
+        <div class="mobile-menu__inner">
+            <div class="mobile-menu__logo">
+                <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png" srcset="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png 1x, https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_2x_p69bcp.png 2x" alt="BWRP Logo" />
+            </div>
+            <button class="mobile-menu__button dropdown-toggle" data-bs-toggle="dropdown" type="button" id="MobileDropdownButton" aria-haspopup="true" aria-expanded="false">
+                <img src="images/mobile-menu-closed.png" alt="Menu Closed" />
+            </button>
+            <ul class="dropdown-menu mobile-menu__dropdown" aria-labelledby="MobileDropdownButton">
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/">Home</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/rules">Rules</a>
+                </li>
+                <li class="mobile-menu__li mobile-menu__li--alt">
+                    <a class="mobile-menu__link" href="https://discord.gg/F2ugDHf">Discord</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/mechanics">Our Mechanics</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/about-the-world">Our World</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/our-team">Our Team</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/our-roleplay">Our Roleplay</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/join">Join</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <header class="header d-none d-sm-block">
+        <div class="container">
+            <div class="header__inner">
+                <a href="/" class="header__logo">
+                    <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png" srcset="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png 1x, https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_2x_p69bcp.png 2x" alt="BWRP Logo" />
+                </a>
+                <nav class="toplinks">
+                    <ul class="toplinks__inner">
+                        <li class="toplinks__li">
+                            <a class="toplinks__link" href="/">Home</a>
+                        </li>
+                        <li class="toplinks__li">
+                            <a class="toplinks__link" href="/rules">Rules</a>
+                        </li>
+                        <li class="toplinks__li toplinks__li--alt">
+                            <a class="toplinks__link toplinks__link--alt" href="https://discord.gg/F2ugDHf">Discord</a>
+                        </li>
+                        <li class="dropdown toplinks__li">
+                            <div class="dropbtn toplinks__link" type="button" id="AboutDropdownButton" data-bs-toggle="dropdown" aria-expanded="false">About</div>
+                            <ul class="dropdown-menu toplinks__dropdown dropdown-content" aria-labelledby="AboutDropdownButton">
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/mechanics">Our Mechanics</a></li>
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/about-the-world">Our World</a></li>
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/our-team">Our Team</a></li>
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/our-roleplay">Our Roleplay</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown toplinks__li">
+                            <div type="button" class="dropbtn toplinks__link" href="#">Join</div>
+                            <ul class="dropdown-menu toplinks__dropdown dropdown-content">
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/apply.html">Join Us</a></li>
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/team-apply.html">Join A Team</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="content-row-single">
+                <h1>The Wildchoir</h1>
+                <p>Between the <a href="https://broken-worlds.fandom.com/wiki/Amatl_Dreadwastes">Amatl Dreadwastes</a> and the Uncovered Sea stretches the ancient and colossal <a href="https://broken-worlds.fandom.com/wiki/Venswood">Venswood</a>, whose denizens are every bit as vicious and lethal as the forest itself. The inhabitants of this harsh, primordial place came to survive their hostile environment in their own distinct ways, but only in combining their strengths did they learn to master it.</p>
+            </div>
+        </div>
+    </section>
+    <div class="content-row">
+        <div class="container">
+            <div class="content-row-inner">
+                <div class="content-row-left">
+                    <p>The Wildchoir takes its name from its founding faith, and is a collection of peoples consisting of the halfling Cuthail, the spiritual orcish Hjen, the plant-like elvish Kihai, and the humanic Endless Spears. Founded by followers of the <a href="https://broken-worlds.fandom.com/wiki/The_Verse_and_Weave">Verse</a> nearly one thousand years ago, the Verse has guided them through the ages as they united the Vens under their leadership.</p>
+                </div>
+                <div class="content-row-right">
+                    <div class="contents-list">
+                        <a class="contents" href="#History">History</a>
+                        <a class="contents" href="#Governance">Governance</a>
+                        <a class="contents" href="#Geography">Geography</a>
+                        <a class="contents" href="#Education">Education</a>
+                        <a class="contents" href="#Culture">Culture</a>
+                        <a class="contents" href="#Timeline">Timeline</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="History" class="content-row">
+        <div class="container">
+            <h2>History</h2>
+            <details class="accordion-details">
+                <summary class="accordion-title">Pre-Taming of the Vens</summary>
+                <div class="accordion-inner">
+                    <p>The Venswood is a harsh land. While it can appear to be a more hospitable land than the great wastes that surround it, this is a deceptive reality, as its natural resources only attract greater threats. Despite this, many peoples were drawn to the Vens for varied reasons. Of them, the Kihai seem to have been the first to reside under the canopies, perhaps even originating from the region. Much of their origins is lost to time, but oral traditions of the Hjen, Cuthail, and Spears all tell of the Kihai long residing in the land. The Cuthail are perhaps the next oldest race, arriving from an unknown land only half referenced in surviving tales. The Spears and Hjen both however come from distant lands, the former to escape a land across the wastes being ravaged by nature, and the other sailing from across the sea in search of a new home.</p>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Taming the Vens</summary>
+                <div class="accordion-inner">
+                    <p>In spite of the hostile conditions, the peoples of the Vens survived, but it was only later that they truly began to thrive. It was the Cuthail who first began to beat back the Venswood, clearing the first Glades to create their bustling communities. The Kihai, already adept at gardening in their attempts to cultivate beneficial adaptations readily took up the new methods to build larger communities. The Spears found a place in these bustling new communities as messengers, mercenaries and traders as their hunting parties roamed the Vens. Lastly the Hjen plied the waterways and coastlines, creating the most elaborate cities of them all upon small islands that dotted the shores of the Tidal Flats.</p>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Singing of the Verse</summary>
+                <div class="accordion-inner">
+                    <p>The Verse would be sung along the edges of the Tide pools, in a Hjen monastery built around Maun Kapuhanga that served as a minor pilgrimage site for the Hjen due to the supposed prophetic powers of its Oracle. The prophetess Rhania, the last Oracle of Maun Kapuhanga would famously enter a trance and for three days sing the history of the Venswood and of what would be for its people before dying due to exhaustion.</p>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Voice of the Speakers</summary>
+                <div class="accordion-inner">
+                    <p>It was as the Verse and Weave spread through the Venswood during the travels of the early converts, and the passing of Rhania’s prophecies, that the Wildchoir shaped itself into the beginnings of what it would become over the next thousand years. It thus left its history of disarrayed groups and skirmishes far behind. There were numerous attempts over those early years to unite the Choirfolk under a single leadership. Yet, even for the beliefs that came to bring the people of the Venswood together, no such attempts succeeded. Instead, it was in a group of early followers of the faith that the idea of a Speaker of the Verse was defined. A collection of converts located near the Maun Kapuhanga believed, in their interpretation of the Verse, that Rhania’s song did not speak of the need for a single leader. Instead it called for people who would speak for those the Verse sought to bring together. This then worked in tandem with the duty of spreading the word of the prophetess. And it was this initial group of Speakers, only decades after the Verse had been sung, who founded the Wildchoir in the first meeting that they held.</p>
+                    <p>This early collection of Speakers that dotted the <a href="https://broken-worlds.fandom.com/wiki/Tidal_Groves">Tidal Groves</a> consisted mostly of Seekers, and thought themselves anything from an advisor to their designated territory to the lawmaking authority of their people. This variance would continue as the Speakers traveled to spread their word. As the concept became intertwined with the fast-growing prominence of the Verse and Weave, the role of Speakers gained sway over a great portion of the Venswood. Though some groups merely delegated the name to a pre-existing figure of authority, many began choosing their Speakers through various other means. Conflict and disagreements were common throughout the land, and it often fell to these newfound leaders to resolve such qualms, and speak to one another of the interests of their people and the happenings of their region. Not all followers of the teachings of the Weave placed an importance on the existence of a Speaker, but they nonetheless appointed one when it was necessary.</p>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Prosperity of the Wildchoir</summary>
+                <div class="accordion-inner">
+                    <p>The last centuries in which the Wildchoir lived in the Venswood were times of relative peace, and the time in which the Choirfolk truly began to thrive. Through new vigor came greater trade, travel, exploration, and innovation. The general acceptance of the Verse was wholly commonplace, whether through the means of old beliefs co-existing alongside the song and its teachings, or the fading prominence and silencing of old understandings. The last two hundred years before the Cataclysm saw the anticipation and debate of many within the Choir, as what remained of the Verse was slowly drawing to its written end, to what upheaval the prophetess had only been able to foretell vaguely, leaving room for the disarmingly incorrect interpretation of the Wildchoir’s last days. The denizens of the Vens continued to flourish, their communities and cities standing as strong as ever. Strong, and yet wholly unprepared for the devastation that the Undead would bring, a threat greater than anything the Venswood had ever presented them with before.</p>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Evacuation from Imeris</summary>
+                <div class="accordion-inner">
+                    <p>The Undead came from the endless and uncrossable golden dunes of the Amatl Badlands. It was those few people who patrolled the ever shifting dunes who saw the beginning of the Cataclysm. News of the horde and the destruction they brought spread like wildfire throughout the Vens. Where the horde moved, more rose from their graves to join the steady march against the long-standing prosperity of the land and its people, tearing away all notions of a coming Utopia with frightening efficiency and brutality. It would be nearly a year later that the Undead reached the edge of the Toba Expanse, having wholly ravaged the isolated communities of the Dreadwastes and the Wildkin and Mokobeasts that also inhabited the region. What survivors were left moved swiftly to the main Vens, warning other regions, and people, of the threat that loomed at their doorstep. The Wildchoir braced itself for a war that would be unlike anything it had ever seen before.</p>
+                    <p>The fight against the Undead was a valiant one, but it was not one that the Choir could hope to win. Though the Choirfolk had numbers and a great deal of courage, the hordes only ever grew, and within two years of the encroachment of the border of the Toba Expanse, the greater part of the Vens had been overrun. A meeting called by what Speakers remained finalized the decision that their homeland had to be evacuated, as other various communities had already decreed. A portion of dedicated denizens stood firm to hold in place feeble, crumbling defenses, and the scattered remains of the Wildchoir mobilized their ships to the shore and fled their ancient homeland four years after the news of the Undead first came from the Badlands.</p>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Arrival on Nebelloren</summary>
+                <div class="accordion-inner">
+                    <p>The small, scattered fleets of ships carrying the Wildchoir’s refugees sailed for the open ocean bordering the south of the Venswood, and did not look back to the remains of their homeland and the devastating loss of culture and fellow Choirfolk that they had endured. The refugees soon found themselves in the middle of the vast sea, unsure where they were going or what they were looking for, mulling what had occurred but never ceasing their sailing, their search for something better that lay beyond. It was then that the weather shifted, fog rolling in thick around the fleets. After some time within the mists - days, likely - the weather turned once more, bringing powerful, sweeping storms that wrecked the Wildchoir’s ships and left them to wash up on the shores of Nebelloren.</p>
+                </div>
+            </details>
+        </div>
+    </div>
+    <div class="content-row" id="Governance">
+        <div class="container">
+            <h2>Governance</h2>
+            <details class="accordion-details">
+                <summary class="accordion-title">Politics</summary>
+                <div class="accordion-inner">
+                    <p>The Choir is ruled by its Speakers, with each one representing a part of the greater whole. While the actual authority these Speakers held differed from place to place, they all spoke for their peoples and their lands when they gathered to discuss disagreements and matters of shared interest. One method by which Speakers were chosen was through anonymous vote, although often the role of Speaker was just tied to more ancient institutions that predated the Wildchoir.</p>
+                    <p>On Nebelloren, now that the Choir has lost so much in the past years in their fighting with the undead, only one Speaker is necessary to guide the surviving few.</p>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Laws</summary>
+                <div class="accordion-inner">
+                    <p>The Wildchoir did not have a continent-wide set of laws that all regions and people were expected to follow. The content of laws, and even their existence, varied greatly depending on what region or community any individual Choirfolk might be from. In general, however, one could expect to face repercussions for conduct such as theft and assault, even if only by the person they had slighted or those close to them.</p>
+                </div>
+            </details>
+        </div>
+    </div>
+    <div class="content-row" id="Geography">
+        <div class="container">
+            <h2>Geography</h2>
+            <div class="content-row-inner">
+                <div class="content-row-left">
+                    <p>The peoples of the Wildchoir lived among the greater landmass known as the Venswood. This continent sprawled from large swathes of mangrove islands along its southern coast, to endless and inhospitable deserts to the north. Its large size, series of mountain ranges, and vast rivers made way for an extremely diverse set of landscapes that housed many types of civilizations and cultures. Beyond the shores of the Vens lied the the Uncovered Seas.</p>
+                </div>
+                <div class="content-row-right content-row-image">
+                    <img src="/images/VensExport_tpr11d.png" alt="A map of the Venswood" />
+                </div>
+            </div>
+            <details class="accordion-details">
+                <summary class="accordion-title">Natural Features</summary>
+                <div class="accordion-inner">
+                    <ul>
+                        <li><b>The River Ord -</b> The greatest river of the entire Venswood, spanning its central landmass, from the northern Kwaungmo to the southern shore.</li>
+                        <li><b>Tidal Groves -</b> The Tidal Groves are a region in the south eastern Vens, where the forest sprawls out into the sea, as a mangrove forest. There, the woods meet an archipelago of thousands of Volcanic isles, rich in fertile land and fishery. Whereas larger cities were more prevalent on the mainland, the majority of the Tidal Grove's population was scattered amongst small, island villages. Sometimes villages bridged two or three closer islands together, and other towns were built entirely on the water. Culturally, they placed large importance on family and took a more relaxed attitude to work.
+                        <ul>
+                            <li><b>Maun Kapuhanga -</b> The low lying lands east of the Darigens, the Dale was an agricultural centre for much of northern Imeris.</li>
+                        </ul>
+                        </li>
+                        <li><b>Amatl Dreadwastes -</b> Home to the Mokobeasts and Wildkin of the Venswood, the Amatl wastes were a dangerous part of the Choir’s homeland. Beastmen would frequently lead attacks through the wastes in an attempt at getting to the Vens itself, while certain families of Endless Spears such as the Ridgewalkers would patrol the dreadwastes to defend the Vens from incoming raids. Despite being a dry climate the wastes were not exclusively sand, both gravelly stretches of land as well as stone plateaus made up the wasteland’s uninhabitable biomes.</li>
+                        <li><b>Kwaungmo -</b> A large mountain range to the norh of the core Vens, taking up a large part of its border with the Toba Expanse and the Dreadwastes beyond. It was famed for its tapestries, clothing, dairy, metallurgy and the many monastries that line its peaks. It can be divided into the Aainkaain Plateau in the north, which is cold and relatively arid, and the Mitahkat Valleys to the south, which benefited greatly from river trade. Due to its location, many merchants traveled through it to and from the Dreadwastes.</li>
+                        <li><b>The Abiral Range -</b> A mostly mountainous region, located south of the Toba Expanse, of which it shares its sole land border with. It’s inhabited primarily by the Cuthail, who have deep roots in the settlement and prosperity of the range. Beyond the mountains are the Abiral Foothills and the Mehr Lowlands. The region’s trade lies in the textiles, spices, and metals exported from its array of coastal cities. Its range encompasses a variety of lifestyles, from those of the bustling port cities and the shepherds of the foothills to the isolated people of the mountain top cities, seated in the heart of the high peaks of the Far Reaches.</li>
+                        <li><b>Faroch Dreich -</b> The Faroch Dreich is an area of the Venswood, known for its bad weather and abundant heathers. While it has a temperate maritime climate, it is relatively cold compared to other regions and subject to frequent rains and poor soil quality. The main exports are whisky, wool products and fine violins, and who could forget the famous Faroch Pocket!?</li>
+                    </ul>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Cities and Towns</summary>
+                <div class="accordion-inner">         
+                    <li><b>Lotusmire -</b> A Swamp Village inhabited by mostly Spears.</li>
+                    <li><b>Balakinaell  -</b> An oasis village in the Amatl Wastes.</li>
+                    <li><b>Beanfyn Valley -</b> Another oasis village in the Amatl Wastes.</li>
+                    <li><b>Mapleview -</b> A Cuthail trading town built in the roots of giant trees, it attracted many Kihai due to the ancient maple trees.</li>
+                    <li><b>E`aenaserin -</b> A Kihai village at the edges of the Tidal Grove.</li>
+                    <li><b>Jarvick -</b> A Spear Village high in the mountains famed for the ever present crows that scavenge the nearby killing fields.</li>
+                    <li><b>Hardwater  -</b> A Spear &amp; Kihai village along the River Ord.</li>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Nature and Wildlife</summary>
+                <div class="accordion-inner">
+                    <p>The Venswood was a geographically diverse realm, with nature itself holding the most dire threats, with things like Dire Brambles, Beebleplants, Mokobeasts, Quillpetals and similar posing great dangers to the varied environs they inhabit. Despite these most material of threats the inhabitants of the Venns never stop speaking of nor trying to appease those that may also exist beyond mortal ken.</p>
+                    <p>Quillpetals - The Quillpetal is the bloom of the Amatl cactus. Bright red, with fleshy petals, and large spines to deter predators and catch the morning dew. It is revered in Spear culture as a spiritual plant, since it only blooms once every 8 years, and is believed to have a strong connection to the Otherside.</p>
+                    <p>Mokobeasts - Tales of many kinds of mokobeast were known far and wide across the Venswood. These large creatures proved to be formidable threats on their own, and disastrous for whole towns in herds or packs. Few remained by the time the Wildchoir fled the Venswood, and some survivors tell tales of undead Mokobeasts marching with the undead.</p>
+                </div>
+            </details>
+        </div>
+    </div>
+    <div id="Culture" class="content-row">
+        <div class="container">
+            <h2>Culture</h2>
+            <details class="accordion-details">
+                <summary class="accordion-title">Calendar</summary>
+                <div class="accordion-inner">
+                    <p>The Wildchoir have lived by the comings and goings of the seasons and have structured their calendar accordingly. The passing seasons have a name and a certain expectation—there's a time to harvest and a time to plant seed, there's a time where game is plentiful and a time where without proper planning food will be scarce.</p>
+                    <p>A cycle consists of four seasons, which each consist of three months. Each month consists of 28 days.</p>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Religions</summary>
+                <div class="accordion-inner">         
+                    <p>Whilst the Wildchoir has a mostly unified belief system in the Weave its teachings are inclusive and frequently none destructive with what other localised faiths existed before it; choosing to build upon local knowledge in some search of the greater truth.</p>
+                    <li><b>The Verse:</b> The prophesy sang by the Prophetess Rhania, which serves as the foundation of the Wildchoir.</li>
+                    <li><b>The Weave:</b> The system of belief surrounding the Verse, and the consequences of it.</li>
+                    <p>While these constitute the main religions of the Wildchoir, certain other belief systems survive in syncretism with it. Notable among these are:</p>
+                    <li>The ancient rites of the Spears and their beliefs surrounding the Otherside.</li>
+                    <li>The Mojudan, the ancient belief system of the Kihai, which keeps its old tenets and traditions alive and well.</li>
+                    <li>While Cuthail at times make references to their now long forsaken "Dead Gods", most Cuthail are irreligious, or adhere to other faiths, while adopting a philosophy focused on the joys of life, like food, friendship, and a cozy bed.</li>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Festivals</summary>
+                <div class="accordion-inner">
+                    <li><b>Bird Turn</b>, A festival which takes place near the end of winter, the celebration of the return of the songbirds to the forest!</li>
+                    <li><b>Festival of the Waters</b>, A festival celebrated on the shores, with offerings frequently made to sea spirits during it.</li>
+                    <li><b>Harvestboon</b>, Early Autumn, the first harvested crops are offered to the great spirits in thanks, and a celebration is held in anticipation of the big harvests.</li>
+                    <li><b>Feast of the Ancestors</b>, Living parents and parental figures are venerated on this day, along with remembrance of the dead.</li>
+                    <li><b>Prophesy Day</b>, A day of remembrance to the prophetess Rhania.</li>
+                    <li><b>Log King!</b>, A festival originating with the Cuthail, possibly dating back to their dead gods. A day of games and merrymaking that ends in the crowning of the Log King with The Log Crown. The Log Crown is a crude wooden crown given to whoever wins a log rolling competition.</li>
+                    <li><b>Flaxfall </b>, Flaxfall is a holiday of the Wildchoir, which originated as a way to avoid the sexennially emerging Flaxtail Cicada, who’s explosive mating habits required everyone to band together and clean it up. In Nebelloren, there are no Flaxtails, so this holiday now serves as an opportunity to connect and have a nice evening indoors, singing traditional songs, and remembering homes across the sea. Unlike Calan Gaeaf, Flaxfall does not have a direct real world analog date, but it occurs around mid-January.</li>
+                    <li><b>The Feast of Blooming Kindness</b>, Once every six years, the Venswood is graced with a period of pleasant weather, neither to cold and dry, or hot and humid. According to the Mojudan, this is brought about by the confluence of two great moju of wind and sea, creating a time just right for the planting and blooming of flowers. Ancient Kihai rituals note this as an ideal time for taking cuttings and potting plants to share with others. While this began as a tradition to ensure the health and natural diversity of a Kihai's garden, the romantic story of the Moju who only saw one another every six years made this a time for young Kihai to profess thier feelings, to woo a potential partner, or to just appreciate the people in their lives with gifts of home grown flowers, sometimes accompanied by honey or more recently chocolate. Widely observed among the Wildchoir at large these days, and by Kihai in particular, the celebration has been a windfall for Florists and makers of sweets.</li>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Architecture</summary>
+                <div class="accordion-inner">
+                    <p>Homes across the Venswood were built to withstand the wildly different conditions of the colossal continent, from the arid, sweltering Amatl Dreadwastes to the more tropical spread of the Tidal Groves. Though this meant that architecture could be deeply rooted in the differences between regions, preferences and patterns still existed. Kihai and Cuthail dominant cities in particular usually had a canopy-ground split, with Kihai residing in the higher trees and points of the city and Cuthail settling in burrows amongst the roots and nearby hills and cliffsides. Hjen influence was largely regional, but they often built in temple styles with intricate awnings and roofs. Spears moved gradually over the Wildchoir’s history from their nomadic roots, with their close-knit camps transitioning to makeshift huts and lodges, and eventually, permanent settlements meant to accommodate their families. These settlements tended to mimic the architectural styles of their neighbors while still built with the practical, close-knit lifestyle of the Spears in mind.</p>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Arts</summary>
+                <div class="accordion-inner">
+                    <p>The Choirfolk still had various forms of literature, poetry, and philosophy cultivated from centuries of history despite their partialness to orally-kept traditions and stories. Kihai kept long epic poems throughout their time in the Venswood, most merely creative observations and interpretations of the world around them, though some referenced vaguely to the arrival of the Cuthail, Hjen, and Spears and the settlement of regions of the Vens. These poems were usually performed in song, and the growing prevalence of short form stories was viewed with relative distaste by their writers. Such stories, short-form or otherwise, encompassed everything from children’s tales of fictional heroes to novels and written myths. The popularity and recognition of certain tales varied depending on where any given Choir citizen might live, as mass-producing and then moving physical books across the Venswood was an arduous task. Philosophy of the Wildchoir was tied mainly to the teachings interpreted from the Verse and written into the Weave, along with the debate of the Verse itself.</p>
+                    <p>Music was the most widely practiced art of the Wildchoir, encompassing many distinct styles and traditional songs, but each group of Choirfolk had a signature artform or few that was important to their respective culture. Theater was also distinct as an extension of mask culture and local folklore.</p>
+                    <p>Kihai tended towards elaborate floral or botanical displays, with both grand community gardens and individual gardens boasting lavishly adorned arches and trellises. Manipulating the growth of trees was also an artform of sorts, creating groupings of twisting, connecting branches on both a small and large scale.</p>
+                    <p>Cuthail were partial to detailed and technically skilled woodwork, whittling and painting wooden toys, furniture, instruments, and tools. Toys might house delicate, winding parts within them to play music or hinges to support movement. It was common to find whole workshops dedicated to the creation of such goods.</p>
+                    <p>Spear artistry lied mainly in the trinkets they crafted and passed through their generations. Jewelry or small decorative keepsakes made of shells, animal teeth, claws, and beads were prized. Talismans and charms were made and fixed to the bridles and saddles of horses, or to hang from weapons.</p>
+                    <p>Hjen encompassed a wide variety of arts in their culture. Many of these creative practices were intertwined with the belief of the Weave, including the creation of tapestries and the practice of Inkweaving. Plays and theater were also a staple of creativity. Art could be counted on to be a core part of Hjen culture regardless of region.</p>
+                </div>
+            </details>
+        </div>
+    </div>
+    <div class="content-row" Id="Timeline">
+        <div class="container">
+            <h2>Timeline</h2>
+            <ul>
+                <li><b>??? BL,</b> the Kihai live in their various commune-states, villages, tribes, and other tiny communities.</li>
+                <li><b>~3100 BL,</b> the Cuthail arrive and cut the first glades, making contact with the Kihai and drawing them both into larger glade-city states.</li>
+                <li><b>~3000 BL,</b> the Hjen and Spears arrive over the course of many years.</li>
+                <li><b>~2300 BL,</b> more diverse communities have taken shape, but the communities of the Venswood still live very separate lives, clumped into highly regional alliances and conflicts.</li>
+                <li><b>~1030 BL,</b> Rhania is first mentioned in a collection of records of the Oracles of Maun Kapuhanga as a young Oracle.</li>
+                <li><b>1000 BL,</b> the Verse is sung.</li>
+                <li><b>975 BL,</b> various forms of the Weave take shape.</li>
+                <li><b>~950 BL,</b> the Wildchoir is founded by the first Speakers.</li>
+                <li><b>700 BL,</b> the Maun Kapuhanga erupts in accordance with the Verse.</li>
+                <li><b>~200 BL,</b> the Wildchoir slowly approaches an uncertainty to the future they have not experienced in eight centuries.</li>
+                <li><b>15 BL,</b> the remaining recorded prophecies of the Verse dwindle to one; "We will enter a world without death and, death will know no end."</li>
+                <li><b>4 BL,</b> news of the Undead spreads from the Amatl Badlands.</li>
+                <li><b>2 BL,</b> the Undead reach the edge of the Toba Expanse.</li>
+                <li><b>2 BL,</b> the Undead reach the edge of the Toba Expanse.</li>
+                <li><b>Icetide 1, 1 BL,</b> the remaining Speakers convene, and decide they must flee.</li>
+                <li><b>0 BL,</b> the Wildchoir is near-decimated, and vacates the Venswood entirely over several months.</li>
+                <li><b>1 AL,</b> The survivors of the Wildchoir wash up on Nebelloren.</li>
+                <li><b>Timber 2, 1 AL,</b> The town of Parravon is founded.</li>
+                <li><b>Felsite 20, 1 AL,</b> first contact with the Imeris Entente.</li>
+            </ul>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <a href="/" class="footer__logo">
+                    <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png" srcset="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png 1x, https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_2x_p69bcp.png 2x" alt="BWRP Logo" />
+                </a>
+                <div class="footer__col">
+                    <a class="footer__link" href="https://www.patreon.com/join/brokenworldrp">Become a Patron</a>
+                    <a class="footer__link money-bag" href="https://www.paypal.com/paypalme/BWRPDonations">
+                        <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1605286689/Logos%20and%20Socials/money-bag_h9kyq6_sdw7s0.png" alt="" />
+                    </a>
+                    <a class="footer__link" href="https://www.paypal.com/paypalme/BWRPDonations">Donate on Paypal</a>
+                </div>
+                <div class="footer__col-end">
+                    <a class="footer__link" href="#">Found an issue?</a>
+                    <a class="footer__link" href="https://discord.gg/F2ugDHf">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M524.5 69.8a1.5 1.5 0 0 0 -.8-.7A485.1 485.1 0 0 0 404.1 32a1.8 1.8 0 0 0 -1.9 .9 337.5 337.5 0 0 0 -14.9 30.6 447.8 447.8 0 0 0 -134.4 0 309.5 309.5 0 0 0 -15.1-30.6 1.9 1.9 0 0 0 -1.9-.9A483.7 483.7 0 0 0 116.1 69.1a1.7 1.7 0 0 0 -.8 .7C39.1 183.7 18.2 294.7 28.4 404.4a2 2 0 0 0 .8 1.4A487.7 487.7 0 0 0 176 479.9a1.9 1.9 0 0 0 2.1-.7A348.2 348.2 0 0 0 208.1 430.4a1.9 1.9 0 0 0 -1-2.6 321.2 321.2 0 0 1 -45.9-21.9 1.9 1.9 0 0 1 -.2-3.1c3.1-2.3 6.2-4.7 9.1-7.1a1.8 1.8 0 0 1 1.9-.3c96.2 43.9 200.4 43.9 295.5 0a1.8 1.8 0 0 1 1.9 .2c2.9 2.4 6 4.9 9.1 7.2a1.9 1.9 0 0 1 -.2 3.1 301.4 301.4 0 0 1 -45.9 21.8 1.9 1.9 0 0 0 -1 2.6 391.1 391.1 0 0 0 30 48.8 1.9 1.9 0 0 0 2.1 .7A486 486 0 0 0 610.7 405.7a1.9 1.9 0 0 0 .8-1.4C623.7 277.6 590.9 167.5 524.5 69.8zM222.5 337.6c-29 0-52.8-26.6-52.8-59.2S193.1 219.1 222.5 219.1c29.7 0 53.3 26.8 52.8 59.2C275.3 311 251.9 337.6 222.5 337.6zm195.4 0c-29 0-52.8-26.6-52.8-59.2S388.4 219.1 417.9 219.1c29.7 0 53.3 26.8 52.8 59.2C470.7 311 447.5 337.6 417.9 337.6z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/less" ></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="scripts/theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
