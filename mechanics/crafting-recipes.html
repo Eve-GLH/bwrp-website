@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="canonical" href="https://www.brokenworldrp.com/mechanics/crafting-recipes" />
+    <link rel="stylesheet/less" type="text/css" href="../styles/styles.css" />
+    <title>Crafting Recipes - Broken World Role Play</title>
+  </head>
+  <body>
+    <div class="mobile-menu d-block d-sm-none">
+        <div class="mobile-menu__inner">
+            <div class="mobile-menu__logo">
+                <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png" srcset="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png 1x, https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_2x_p69bcp.png 2x" alt="BWRP Logo" />
+            </div>
+            <button class="mobile-menu__button dropdown-toggle" data-bs-toggle="dropdown" type="button" id="MobileDropdownButton" aria-haspopup="true" aria-expanded="false">
+                <img src="../images/mobile-menu-closed.png" alt="Menu Closed" />
+            </button>
+            <ul class="dropdown-menu mobile-menu__dropdown" aria-labelledby="MobileDropdownButton">
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/">Home</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/rules">Rules</a>
+                </li>
+                <li class="mobile-menu__li mobile-menu__li--alt">
+                    <a class="mobile-menu__link" href="https://discord.gg/F2ugDHf">Discord</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/mechanics">Our Mechanics</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/about-the-world">Our World</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/our-team">Our Team</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/our-roleplay">Our Roleplay</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/join">Join</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <header class="header d-none d-sm-block">
+        <div class="container">
+            <div class="header__inner">
+                <a href="/" class="header__logo">
+                    <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png" srcset="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png 1x, https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_2x_p69bcp.png 2x" alt="BWRP Logo" />
+                </a>
+                <nav class="toplinks">
+                    <ul class="toplinks__inner">
+                        <li class="toplinks__li">
+                            <a class="toplinks__link" href="/">Home</a>
+                        </li>
+                        <li class="toplinks__li">
+                            <a class="toplinks__link" href="/rules">Rules</a>
+                        </li>
+                        <li class="toplinks__li toplinks__li--alt">
+                            <a class="toplinks__link toplinks__link--alt" href="https://discord.gg/F2ugDHf">Discord</a>
+                        </li>
+                        <li class="dropdown toplinks__li">
+                            <div class="dropdown-toggle toplinks__link" type="button" id="AboutDropdownButton" data-bs-toggle="dropdown" aria-expanded="false">About</div>
+                            <ul class="dropdown-menu toplinks__dropdown" aria-labelledby="AboutDropdownButton">
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/mechanics">Our Mechanics</a></li>
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/about-the-world">Our World</a></li>
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/our-team">Our Team</a></li>
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/our-roleplay">Our Roleplay</a></li>
+                            </ul>
+                        </li>
+                        <li class="toplinks__li">
+                            <a class="toplinks__link" href="/join">Join</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="content-row">
+        <div class="container">
+            <h1>Crafting Recipes</h1>
+            <p><b>Our server uses a large amount of custom recipes.</b></p>
+            <p>Some are available to all, and some are given only to certain classes. The dropdowns below have each recipe for each class.</p>
+            <details class="accordion-details">
+                <summary class="accordion-title">Angler</summary>
+                <div class="accordion-inner recipe-panels">
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">
+                            Cooked Salmon
+                        </b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/AnglerCookedSalmon_pnyhbx.png" alt="A crafting grid showing the recipe for cooked salmon" />
+                        <p class="recipe-panel__text">A quick way to get Cooked Salmon without a Furnace.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Cooked Cod</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/AnglerCookedCod_obf5oa.png" alt="A crafting grid showing the recipe for cooked cod" />
+                        <p class="recipe-panel__text">A quick way to get Cooked Cod without a Furnace.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Coconut Fibers</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/AnglerCocoString_fefcdp.png" alt="A crafting grid showing the recipe for coconut fibers" />
+                        <p class="recipe-panel__text">Stripping two Coconuts will produce a few pieces of string. This requires the official Coconut item, not Cocoa Beans.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Debone</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/AnglerDebone_hnxrvl.gif" alt="A crafting grid showing the recipe for deboning fish" />
+                        <p class="recipe-panel__text">Adding 9 Cod or Salmon to a Crafting Table will give you 7 Bones.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Fishing Raft</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/AnglerBoat_mifxeh.png" alt="A crafting grid showing the recipe for a fishing raft" />
+                        <p class="recipe-panel__text">A simple recipe for a cheap Boat.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Pumpkin Fibers</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/AnglerPumpkinString_bbjfxm.png" alt="A crafting grid showing the recipe for pumpkin fibers" />
+                        <p class="recipe-panel__text">Gutting two Pumpkins will produce a few pieces of string.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Prismarine Cycling</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/AnglerDarkPrismarine_j9t3cj.png" alt="A crafting grid showing the recipe for" />
+                        <p class="recipe-panel__text">You can use a ring of one Prismarine block to make another.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Prismarine Cycling</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/AnglerPrismarine_hyukrn.png" alt="A crafting grid showing the recipe for" />
+                        <p class="recipe-panel__text">You can use a ring of one Prismarine block to make another.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Prismarine Cycling</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/AnglerPrismarineBricks_wxt1l1.png" alt="A crafting grid showing the recipe for" />
+                        <p class="recipe-panel__text">You can use a ring of one Prismarine block to make another.</p>
+                    </div>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Alchemist</summary>
+                <div class="accordion-inner recipe-panels">
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Alchemical Pot</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/AlchemicalPot_qlxxop.png" alt="A crafting grid showing the recipe for an alchemical pot" />
+                        <p class="recipe-panel__text">Using a Flower Pot with Sand and the custom Sea Salt item will give you an Alchemical Pot, which is necessary for some Alchemist’s work.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Alchemical Reagent</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/AlchemicalReagent_qr7zpe.png" alt="A crafting grid showing the recipe for an alchemical reagent" />
+                        <p class="recipe-panel__text">Add this into any alchemical recipie to give it an extra kick. It requires Sea Salt, not Sugar.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Arrow of Poison</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/ArtificerArrowOfPoison_sd9qtj.png" alt="A crafting grid showing the recipe for an arrow of poison" />
+                        <p class="recipe-panel__text">This recipe requires the poison “Blood’s Bane” to work correctly.</p>
+                    </div>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Artificer</summary>
+                <div class="accordion-inner recipe-panels">
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Rail</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/ArtificerRail_nkiczv.png" alt="A crafting grid showing the recipe for Rail" />
+                        <p class="recipe-panel__text">A cheaper Rail recipe.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Activator Rail</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/ArtificerActivatorRail_hcmbcl.png" alt="A crafting grid showing the recipe for Activator Rail" />
+                        <p class="recipe-panel__text">A cheaper activator rail recipe.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Detector Rail</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/ArtificerDetectorRail_rcxzot.png" alt="A crafting grid showing the recipe for Detector Rail" />
+                        <p class="recipe-panel__text">A cheaper Detector Rail recipe.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Iron Arrow</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/ArtificerIronArrow_fjisnb.png" alt="A crafting grid showing the recipe for Iron Arrow" />
+                        <p class="recipe-panel__text">An alternative Arrow recipe.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Bolt</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/ArtificerBolt_vht3gk.png" alt="A crafting grid showing the recipe for Bolt" />
+                        <p class="recipe-panel__text">An Iron Nugget and an Arrow allow you to make the ammunition for Hand Crossbows.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Hand Crossbow</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/ArtificerHandCrossbow_ndbpzd.png" alt="A crafting grid showing the recipe for Hand Crossbow" />
+                        <p class="recipe-panel__text">This recipe can be used with any kind of Log, not just Oak. This includes Stripped varieties.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Compass</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/ArtificerCompass_zfijhz.png" alt="A crafting grid showing the recipe for Compass" />
+                        <p class="recipe-panel__text">A cheaper Compass recipe.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Lamp</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/ArtificerLamp_mdofdr.png" alt="A crafting grid showing the recipe for Lamp" />
+                        <p class="recipe-panel__text">A cheaper Redstone Lamp.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Quartz</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/ArtificerQuartz_n5fjoo.png" alt="A crafting grid showing the recipe for Quartz" />
+                        <p class="recipe-panel__text">This recipe allows you to turn Quartz Blocks into individual Quartz pieces.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Pipette</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/ArtificerPipette_d0i73u.png" alt="A crafting grid showing the recipe for Pipette" />
+                        <p class="recipe-panel__text">This creates an essential item for Doctors.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Wheelchair</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/ArtificerWheelchair_ygefay.png" alt="A crafting grid showing the recipe for Wheelchair" />
+                        <p class="recipe-panel__text">This creates an essential item for Doctors. It can be made using any type of Wooden Plank, not just Oak.</p>
+                    </div>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Blacksmith</summary>
+                <div class="accordion-inner recipe-panels">
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Cheaper Lanterns</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/ChaperLantern_cftjdb.png" alt="A crafting grid showing the recipe for Cheaper Lanterns" />
+                        <p class="recipe-panel__text">A cheaper lantern recipe.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Chain Helmet</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithChainHelmet_s5kw29.png" alt="A crafting grid showing the recipe for Chain Helmet" />
+                        <p class="recipe-panel__text">This recipe allows you to craft the helmet piece of Chain Armor, which is just as strong as Iron Armor.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Chain Chestplate</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithChainChest_cwtpme.png" alt="A crafting grid showing the recipe for Chain Chestplate" />
+                        <p class="recipe-panel__text">This recipe allows you to craft the chest piece of Chain Armor, which is just as strong as Iron Armor.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Chain Leggings</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithChainLeggings_finzvt.png" alt="A crafting grid showing the recipe for Chain Leggings" />
+                        <p class="recipe-panel__text">This recipe allows you to craft the leggings piece of Chain Armor, which is just as strong as Iron Armor.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Chain Boots</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithChainBoot_tdrw4f.png" alt="A crafting grid showing the recipe for Chain Boots" />
+                        <p class="recipe-panel__text">This recipe allows you to craft the shoes of Chain Armor, which is just as strong as Iron Armor.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Golden Helmet</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithGoldHelm_qm4ojy.png" alt="A crafting grid showing the recipe for Golden Helmet" />
+                        <p class="recipe-panel__text">This recipe allows you to craft the helmet piece of a custom Golden Armor set that is just as strong as Iron Armor.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Golden Chestplate</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithGoldChestplate_pwoxn8.png" alt="A crafting grid showing the recipe for Golden Chestplate" />
+                        <p class="recipe-panel__text">This recipe allows you to craft the chest piece of a custom Golden Armor set that is just as strong as Iron Armor.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Golden Leggings</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithGoldLeggings_phrj0k.png" alt="A crafting grid showing the recipe for Golden Leggings" />
+                        <p class="recipe-panel__text">This recipe allows you to craft the leggings piece of a custom Golden Armor set that is just as strong as Iron Armor.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Golden Boots</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithGoldBoot_cs5blj.png" alt="A crafting grid showing the recipe for Golden Boots" />
+                        <p class="recipe-panel__text">This recipe allows you to craft the shoe piece of a custom Golden Armor set that is just as strong as Iron Armor.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Bolt</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithBolt_kpxhqc.png" alt="A crafting grid showing the recipe for Bolt" />
+                        <p class="recipe-panel__text">An Iron Nugget and an Arrow allow you to make the ammunition for Crossbows and Hand Crossbows.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Iron Arrow</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithIronArrow_z31ykl.png" alt="A crafting grid showing the recipe for Iron Arrow" />
+                        <p class="recipe-panel__text">A cheaper Arrow recipe.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Scissors</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithScissors_am8alq.png" alt="A crafting grid showing the recipe for Scissors" />
+                        <p class="recipe-panel__text">Each piece of this recipe must be placed in the order shown to work properly. Scissors are required for multiple skills.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Throwing Axe</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithThrowingAxe_jw0mql.png" alt="A crafting grid showing the recipe for Throwing Axe" />
+                        <p class="recipe-panel__text">Any log, two iron ingots, and one iron nugget makes a Throwing Axe. These single use weapons can be used to slow and incapacitate opponents.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Throwing Dagger</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithThrowingDagger_g2ee7i.png" alt="A crafting grid showing the recipe for Throwing Dagger" />
+                        <p class="recipe-panel__text">Three iron nuggets make a Throwing Dagger. These single use weapons can be quickly thrown to hit a ranged foe.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Throwing Hammer</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithThrowingHammer_c26lrp.png" alt="A crafting grid showing the recipe for Throwing Hammer" />
+                        <p class="recipe-panel__text">Three iron ingots and a stick makes a Throwing Hammer. These single use weapons can be used to disorient and daze at range.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Lance</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithblueWhiteLance_nnfjpi.png" alt="A crafting grid showing the recipe for Lance" />
+                        <p class="recipe-panel__text">An iron ingot, any log, and an iron nugget alongside blue dye gets you a blue lance. It can be swung while on a mount to remove others from theirs. It takes some skill to hit with it!</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Lance</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithPurpleWhiteLance_avwhgb.png" alt="A crafting grid showing the recipe for Lance" />
+                        <p class="recipe-panel__text">An iron ingot, any log, and an iron nugget alongside purple dye gets you a purple lance. It can be swung while on a mount to remove others from theirs. It takes some skill to hit with it!</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Lance</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithRedWhiteLance_dlftsg.png" alt="A crafting grid showing the recipe for Lance" />
+                        <p class="recipe-panel__text">An iron ingot, any log, and an iron nugget alongside red dye gets you a red lance. It can be swung while on a mount to remove others from theirs. It takes some skill to hit with it!</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Lance</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithYellowWhiteLance_gucwgt.png" alt="A crafting grid showing the recipe for Lance" />
+                        <p class="recipe-panel__text">An iron ingot, any log, and an iron nugget alongside yellow dye gets you a yellow lance. It can be swung while on a mount to remove others from theirs. It takes some skill to hit with it!</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Shortsword</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithShortsword_qkozyw.png" alt="A crafting grid showing the recipe for Shortsword" />
+                        <p class="recipe-panel__text">A classic and perhaps more practical blade.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Cleddau</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithCleddau_bh3xnq.png" alt="A crafting grid showing the recipe for Cleddau" />
+                        <p class="recipe-panel__text">A wide cutting blade that can be used to cleave multiple foes at once - Swing, crouch and miss! Careful not to get rushed up close.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Longsword</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithLongsword_crgqr3.png" alt="A crafting grid showing the recipe for Longsword" />
+                        <p class="recipe-panel__text">A well made blade, the goto for most fighters.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Falchion</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithFalchion_dwv8j2.png" alt="A crafting grid showing the recipe for Falchion" />
+                        <p class="recipe-panel__text">A stylistic choice over the regular longsword.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Messer</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithMesser_n1jrmr.png" alt="A crafting grid showing the recipe for Messer" />
+                        <p class="recipe-panel__text">A stylistic choice over the regular longsword.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Cleaver</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithCleaver_rkljnm.png" alt="A crafting grid showing the recipe for Cleaver" />
+                        <p class="recipe-panel__text">Want a cheap cutting edge that never breaks? The cleaver has you covered!</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Mace</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithMace_bowd4z.png" alt="A crafting grid showing the recipe for Mace" />
+                        <p class="recipe-panel__text">Enough heft to dent a shield, cheap enough to mass produce and such a block of iron will last longer than the man weilding it.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Dagger</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithDagger_cwvc1r.png" alt="A crafting grid showing the recipe for Dagger" />
+                        <p class="recipe-panel__text">Cheap, easy to hide, and quick to swing. A lucky man would say this would draw more blood than the longsword any day.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Rapier</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithRapier_olipar.png" alt="A crafting grid showing the recipe for Rapier" />
+                        <p class="recipe-panel__text">A long fine blade that's quick to swing but the smarter weilder will use it's length to thrust from afar - Right click!</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Spear</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithSpear_nbhjix.png" alt="A crafting grid showing the recipe for Spear" />
+                        <p class="recipe-panel__text">Not much to look at but it's thrust is deadly. Right click and keep your foes at bay.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Warpick</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithWarpick_hi6p19.png" alt="A crafting grid showing the recipe for Warpick" />
+                        <p class="recipe-panel__text">A pick made entirely for war. It'll pierce most armours aswell as breaking through shields.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Leiomano</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithLeiomano_wba8br.png" alt="A crafting grid showing the recipe for Leiomano" />
+                        <p class="recipe-panel__text">A traditional Hjen weapon with both a cutting edge and the ability to bludgeon or punt foes away.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Warhammer</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithWarhammer_b7zm9x.png" alt="A crafting grid showing the recipe for Warhammer" />
+                        <p class="recipe-panel__text">The heaviest of weapons and slowest because of it. It bring devastating hits that will dent armour and break shields.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Glaive</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithGlaive_vu7usl.png" alt="A crafting grid showing the recipe for Glaive" />
+                        <p class="recipe-panel__text">A lengthy, two handed shaft with a cutting blade that can be used to cleave multiple foes at once at range - Swing, crouch and miss! Careful not to get rushed up close.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Greataxe</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithGreataxe_cjqciw.png" alt="A crafting grid showing the recipe for Greataxe" />
+                        <p class="recipe-panel__text">A lengthy, two handed shaft with a swing that has the ability to break shields or cut into armour and even the ability to cleave - Swing, crouch and miss! Careful not to get rushed up close.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Greatsword</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithGreatsword_yr2u9e.png" alt="A crafting grid showing the recipe for Greatsword" />
+                        <p class="recipe-panel__text">A heavy two handed weapon with a swifter swing than most but still the bite to pierce armour and break shields.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Halberd</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithHalberd_xndn2d.png" alt="A crafting grid showing the recipe for Halberd" />
+                        <p class="recipe-panel__text">A two handed polearm with the ability to cleave - Swing, crouch and miss! Thrust on a right click and even be somewhat effective up close. A practical weapon in most situations.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Pike</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithPike_vcaqzd.png" alt="A crafting grid showing the recipe for Pike" />
+                        <p class="recipe-panel__text">Utterly useless at close range but it has the longest range, and quickest thrust. - Swing, crouch and miss! Careful not to get rushed up close. A solid hit with a pike can dismount a mounted foe.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Golden Bracelet</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithGoldBracelet_butxmh.png" alt="A crafting grid showing the recipe for Golden Bracelet" />
+                        <p class="recipe-panel__text">A straight line of Gold Ingots allows you to make this plain piece of jewelry. The recipe requires each piece to be placed in the order shown to work properly.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Golden Ring</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithGoldRing_khwbqo.png" alt="A crafting grid showing the recipe for Golden Ring" />
+                        <p class="recipe-panel__text">A circle of Golden Nuggets allows you to make this plain piece of jewelry.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Tiara</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BlacksmithTiara_b39qma.png" alt="A crafting grid showing the recipe for Tiara" />
+                        <p class="recipe-panel__text">Five Gold Ingots placed in the order shown above allows you to make this piece of plain jewelry.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Steel Mix</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/steelmix_eoghvz.png" alt="A crafting grid showing the recipe for Steel Mix" />
+                        <p class="recipe-panel__text">A mix of raw nickel and iron will give you a blend to put directly into a Blast Furnace to make steel.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Bronze Mix</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/BronzeMix_tkobho.png" alt="A crafting grid showing the recipe for Bronze Mix" />
+                        <p class="recipe-panel__text">A mix of raw tin and copper will give you a blend to smelt into bronze in a furnace.</p>
+                    </div>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Cultivator</summary>
+                <div class="accordion-inner recipe-panels">
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Bonemeal</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/CultivatorBonemeal_tpfqsg.png" alt="A crafting grid showing the recipe for Bonemeal" />
+                        <p class="recipe-panel__text">This recipe provides an alternative way to craft Bonemeal by using 9 Rotten Flesh or 9 Poisonous Potatoes.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Cake</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/CultivatorCake_ufxmvx.png" alt="A crafting grid showing the recipe for Cake" />
+                        <p class="recipe-panel__text">A cheaper recipe for Cake. Empty buckets are returned to you.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Fern</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/CultivatorFern_ktoeex.png" alt="A crafting grid showing the recipe for Fern" />
+                        <p class="recipe-panel__text">This allows you to transform a piece of Grass into a Fern for various uses.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Grass</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/CultivatorGrass_skrwtn.png" alt="A crafting grid showing the recipe for Grass" />
+                        <p class="recipe-panel__text">This allows you to make a piece of Grass for various uses.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Grass Block</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/CultivatorGrassBlock_ebar9t.png" alt="A crafting grid showing the recipe for Grass Block" />
+                        <p class="recipe-panel__text">This allows you to acquire Grass Blocks without the use of Silk Touch.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Mycelium Block</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/CultivatorMyceliumBlock_vcoc5z.png" alt="A crafting grid showing the recipe for Mycelium Block" />
+                        <p class="recipe-panel__text">This allows you to acquire Mycelium Blocks without the use of Silk Touch. Both Red and Brown Mushrooms work.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Podzol</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/CultivatorPodzolBlock_twej31.png" alt="A crafting grid showing the recipe for Podzol" />
+                        <p class="recipe-panel__text">This allows you to acquire Podzol Blocks without the use of Silk Touch. All types of Leaf Blocks work.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Cooked Chicken</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/CultivatorQuickCookChicken_p8t6wu.png" alt="A crafting grid showing the recipe for Cooked Chicken" />
+                        <p class="recipe-panel__text">A quick way to get most Cooked Meats and Baked Potatoes without a Furnace.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Cooked Lamb</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/CultivatorQuickCookMutton_fzrgtj.png" alt="A crafting grid showing the recipe for Cooked Lamb" />
+                        <p class="recipe-panel__text">A quick way to get most Cooked Meats and Baked Potatoes without a Furnace.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Cooked Porkchop</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/CultivatorQuickCookPorkchop_rrrbel.png" alt="A crafting grid showing the recipe for Cooked Porkchop" />
+                        <p class="recipe-panel__text">A quick way to get most Cooked Meats and Baked Potatoes without a Furnace.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Cooked Rabbit</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/CultivatorQuickCookRabbit_ji7umg.png" alt="A crafting grid showing the recipe for Cooked Rabbit" />
+                        <p class="recipe-panel__text">A quick way to get most Cooked Meats and Baked Potatoes without a Furnace.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Cooked Beef</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/CultivatorQuickCookSteak_y9khow.png" alt="A crafting grid showing the recipe for Cooked Beef" />
+                        <p class="recipe-panel__text">A quick way to get most Cooked Meats and Baked Potatoes without a Furnace.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Cooked Potato</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/CultivatorQuickCookPotato_srtopa.png" alt="A crafting grid showing the recipe for Cooked Potato" />
+                        <p class="recipe-panel__text">A quick way to get most Cooked Meats and Baked Potatoes without a Furnace.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Fertiliser Box</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/CultivatorFertilizerBox_gskgph.png" alt="A crafting grid showing the recipe for Fertiliser Box" />
+                        <p class="recipe-panel__text">Alchemical Reagent, Charcoal, Strange Pellet, Poppy, Barrel, Dandelion, Allium, Gelsemium, and Cornflower will make a Fertiliser Box. This can be used to fertilise a wide area of crops to speed their growth.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Scarecrow</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/CultivatorScarecrow_iqtmnd.png" alt="A crafting grid showing the recipe for Scarecrow" />
+                        <p class="recipe-panel__text">Four logs, ambrosia, deathcap, Hay bale, mandrake root, lucky rabbit's foot will make a Scarecrow body and a head! The body acts as a weed killer for plant growth, stopping them from dying.</p>
+                    </div>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Doctor</summary>
+                <div class="accordion-inner recipe-panels">
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Bandage</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/DoctorBandages_bwufyo.png" alt="A crafting grid showing the recipe for Bandage" />
+                        <p class="recipe-panel__text">Four Sticks and a piece of Wool gives you four Bandages, a necessary item for the Field Medic Skill.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Crutch</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/DoctorCrutch_tfwcyi.png" alt="A crafting grid showing the recipe for Crutch" />
+                        <p class="recipe-panel__text">Each piece of this recipe must be placed in the order shown to work properly.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Smelling Salts</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/DoctorSmellingSalts_ufqfbt.png" alt="A crafting grid showing the recipe for Smelling Salts" />
+                        <p class="recipe-panel__text">This recipe requires the Sea Salt item, not Sugar.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Splint</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/DoctorSplint_fp1sbi.png" alt="A crafting grid showing the recipe for Splint" />
+                        <p class="recipe-panel__text">Each piece of this recipe must be placed in the order shown to work properly.</p>
+                    </div>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Leatherworker</summary>
+                <div class="accordion-inner recipe-panels">
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Brace of Daggers</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/LeatherworkerBraceOfDaggers_dywp3s.png" alt="A crafting grid showing the recipe for Brace of Daggers" />
+                        <p class="recipe-panel__text">A brace to hold up to 5 daggers for quick consecutive use. Will need loading with daggers!</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Saddle</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/LeatherworkerSaddle_jdqjpf.png" alt="A crafting grid showing the recipe for Saddle" />
+                        <p class="recipe-panel__text">This allows you to craft Saddles.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Whip</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/LeatherworkerWhip_xk3xzd.png" alt="A crafting grid showing the recipe for Whip" />
+                        <p class="recipe-panel__text">Left click to swing overhead for a second then lash your target and pull them. Right click to quickly lash at your target and drive them back with a chance to force them to drop their weapon.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Studded Helmet</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/LeatherworkerStuddedHelmet_wduasa.png" alt="A crafting grid showing the recipe for Studded Helmet" />
+                        <p class="recipe-panel__text">This recipe allows you to craft the helmet piece of a custom Leather Armor set that is just as strong as Iron Armor.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Studded Chestpiece</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/LeatherworkerStuddedChestplate_uvo2mc.png" alt="A crafting grid showing the recipe for Studded Chestpiece" />
+                        <p class="recipe-panel__text">This recipe allows you to craft the chest piece of a custom Leather Armor set that is just as strong as Iron Armor.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Studded Leggings</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/LeatherworkerStuddedLeggings_mqq5zk.png" alt="A crafting grid showing the recipe for Studded Leggings" />
+                        <p class="recipe-panel__text">This recipe allows you to craft the legging piece of a custom Leather Armor set that is just as strong as Iron Armor.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Studded Boots</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/LeatherworkerStuddedBoots_ncdyy3.png" alt="A crafting grid showing the recipe for Studded Boots" />
+                        <p class="recipe-panel__text">This recipe allows you to craft the shoe piece of a custom Leather Armor set that is just as strong as Iron Armor.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Wool Wash</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/LeatherworkerWoolWash_lrjyhp.gif" alt="A crafting grid showing the recipe for Wool Wash" />
+                        <p class="recipe-panel__text">A ring of dyed Wool around a Bucket of Water will give you 8 pieces of regular white Wool.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Banner Wash</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/LeatherworkerBannerWash_lpgfjd.png" alt="A crafting grid showing the recipe for Banner Wash" />
+                        <p class="recipe-panel__text">A Dyed Banner added with White Dye will turn it into a blank, White Banner.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Dyed Banner</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/LeatherworkerCheapBannerDye_aapp4k.gif" alt="A crafting grid showing the recipe for Dyed Banner" />
+                        <p class="recipe-panel__text">A cheaper recipe for Dyed Banners.</p>
+                    </div>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Rancher</summary>
+                <div class="accordion-inner recipe-panels">
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Golden Horse Armor</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/RancherGoldenArmour_p0xjxx.png" alt="A crafting grid showing the recipe for Golden Horse Armor" />
+                        <p class="recipe-panel__text">This recipe lets you make gold armor for your steed.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Iron Horse Armor</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/RancherIronArmour_s4sgz4.png" alt="A crafting grid showing the recipe for Iron Horse Armor" />
+                        <p class="recipe-panel__text">This recipe lets you make iron armor for your steed.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Nametags</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/RancherNameTag_ftiuzf.png" alt="A crafting grid showing the recipe for Nametags" />
+                        <p class="recipe-panel__text">A simple recipe that gives you multiple nametags.</p>
+                    </div>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Scholar</summary>
+                <div class="accordion-inner recipe-panels">
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Book</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/ScholarBook_fyiyb1.png" alt="A crafting grid showing the recipe for Book" />
+                        <p class="recipe-panel__text">A cheaper recipe to make Books. These books will come with lore that can be removed by placing them on the crafting table again.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Bookcase</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/ScholarBookcase_rswkmx.png" alt="A crafting grid showing the recipe for Bookcase" />
+                        <p class="recipe-panel__text">A cheaper bookcase recipe.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Ink</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/DwavenInks_wudsmg.png" alt="A crafting grid showing the recipe for Ink" />
+                        <p class="recipe-panel__text">An alternative recipe for ink.</p>
+                    </div>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Surveyor</summary>
+                <div class="accordion-inner recipe-panels">
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Carrying Rope</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/SurveyorCarryingRope_mz3spp.png" alt="A crafting grid showing the recipe for Carrying Rope" />
+                        <p class="recipe-panel__text">This recipe creates an item that lets you pick up another player. Hold the rope and right click whilst looking at the player you wish to pick up, if they're crouching and looking back at you then you'll mount them! It's got quite the range so you can even help people climb steep cliffs!</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Quarterstaff</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/SurveyorQuarterstaff_x4d4em.png" alt="A crafting grid showing the recipe for Quarterstaff" />
+                        <p class="recipe-panel__text">A good strong staff! Great for vaulting over things, use right click.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Hunting Horn</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/SurveyorHuntingHorn1_zfbvlz.png" alt="A crafting grid showing the recipe for Hunting Horn" />
+                        <p class="recipe-panel__text">A Walrus tusk with two leather and a string can be made into a hunting horn. You can right click the hunting horn to sound an alarm across a huge radius. Add a stick into one of the empty slots to change the note the horn plays. There are 6 types of horn in total!</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Torch</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/SurveyorWoodTorch_yan3td.png" alt="A crafting grid showing the recipe for Torch" />
+                        <p class="recipe-panel__text">Two recipes for torches for when you’re out of either wood or coal.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Torch</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/SurveyorCoalTorch_yfinfa.png" alt="A crafting grid showing the recipe for Torch" />
+                        <p class="recipe-panel__text">Two recipes for torches for when you’re out of either wood or coal.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Stone Conversion</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/SurveyorGranite_sobfq1.png" alt="A crafting grid showing the recipe for Stone Conversion" />
+                        <p class="recipe-panel__text">You can use a ring of one Stone block to make another.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Stone Conversion</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/SurveyorDiorite_qhbvxy.png" alt="A crafting grid showing the recipe for Stone Conversion" />
+                        <p class="recipe-panel__text">You can use a ring of one Stone block to make another.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Stone Conversion</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/SurveyorAndesite_uiuykm.png" alt="A crafting grid showing the recipe for Stone Conversion" />
+                        <p class="recipe-panel__text">You can use a ring of one Stone block to make another.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Stone Conversion</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/SurveyorStone_nywryx.png" alt="A crafting grid showing the recipe for Stone Conversion" />
+                        <p class="recipe-panel__text">You can use a ring of one Stone block to make another.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Netherrack</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/SurveyorNetherrack_wetdv5.png" alt="A crafting grid showing the recipe for Netherrack" />
+                        <p class="recipe-panel__text">A ring of Cobblestone around a Fermented Spider Eye makes 8 blocks of Netherrack.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Stairs</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/SurveyorStairs_zyhkj9.png" alt="A crafting grid showing the recipe for Stairs" />
+                        <p class="recipe-panel__text">A cheaper recipe for stairs. This recipe can make any type of Stair, not just Oak Wood.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Ice</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/SurveyorIce_z1flcb.png" alt="A crafting grid showing the recipe for Ice" />
+                        <p class="recipe-panel__text">A single piece of Packed Ice makes 9 pieces of Ice.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Packed Ice</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/SurveyorPackedIce_deoujs.png" alt="A crafting grid showing the recipe for Packed Ice" />
+                        <p class="recipe-panel__text">A single piece of Blue Ice makes 9 pieces of Packed Ice.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Terracotta</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/SurveyorTerracotta_uc9aw5.gif" alt="A crafting grid showing the recipe for Terracotta" />
+                        <p class="recipe-panel__text">A ring of Stained Terracotta (all of the same color) with a Water Bucket in the center will give you back 8 pieces of Terracotta.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Concrete</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/SurveyorWhiteConcrete_h8cw3m.gif" alt="A crafting grid showing the recipe for Concrete" />
+                        <p class="recipe-panel__text">A ring of Concrete (all of the same color) with a Water Bucket in the center will give you back 8 blocks of White Concrete.</p>
+                    </div>
+                    <div class="recipe-panel">
+                        <b class="recipe-panel__title">Stool</b>
+                        <img class="receipe-panel__image" src="../images/crafting-recipes/Stool_mwx6ds.png" alt="A crafting grid showing the recipe for Stool" />
+                        <p class="recipe-panel__text">A quick bit of woodwork gives you something comfy to sit on by a fire!</p>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <a href="/" class="footer__logo">
+                    <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png" srcset="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png 1x, https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_2x_p69bcp.png 2x" alt="BWRP Logo" />
+                </a>
+                <a class="footer__link" href="https://www.patreon.com/join/brokenworldrp">Become a Patron</a>
+                <a class="footer__link" href="https://www.paypal.com/paypalme/BWRPDonations">Donate on Paypal</a>
+                <a class="footer__link" href="https://discord.gg/F2ugDHf">Join Our Discord</a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/less" ></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="../scripts/theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

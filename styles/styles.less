@@ -627,3 +627,28 @@ blockquote {
     margin-left: 15px;
     text-align: left;
 }
+
+.recipe-panels {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.recipe-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 48%;
+    margin: 20px 5px;
+    @media @md {
+        width: 31%;
+    }
+    &__title, &__text {
+        display: block;
+        margin: 10px 0;
+    }
+}
