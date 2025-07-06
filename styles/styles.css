@@ -600,3 +600,9 @@ table tr:nth-child(even) {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+blockquote {
+  border-left: 3px solid #f97352;
+  padding-left: 15px;
+  margin-left: 15px;
+  text-align: left;
+}
