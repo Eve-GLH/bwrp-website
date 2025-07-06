@@ -142,6 +142,9 @@ table {
         background-color: @orange;
         color: #FFF;
     }
+    &-child {
+        margin-left: 15px;
+    }
 }
 
 .video-iframe {
@@ -558,6 +561,7 @@ table {
         }
     }
     &-left, &-right {
+        width: 100%;
         @media @md {
             width: 48%;
         }
@@ -571,6 +575,12 @@ table {
         justify-content: center;
         flex-direction: column;
         align-content: center;
+    }
+    &-backwards__mobile {
+        flex-direction: column-reverse;
+        @media @sm {
+            flex-direction: row;
+        }
     }
 }
 
