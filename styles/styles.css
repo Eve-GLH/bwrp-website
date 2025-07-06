@@ -129,6 +129,9 @@ table tr:nth-child(even) {
   background-color: #f97352;
   color: #FFF;
 }
+.contents-child {
+  margin-left: 15px;
+}
 .video-iframe {
   border: 5px solid #2A3132;
   transition: all 0.5s;
@@ -535,6 +538,10 @@ table tr:nth-child(even) {
     flex-wrap: wrap;
   }
 }
+.content-row-left,
+.content-row-right {
+  width: 100%;
+}
 @media (min-width: 768px) {
   .content-row-left,
   .content-row-right {
@@ -550,6 +557,14 @@ table tr:nth-child(even) {
   justify-content: center;
   flex-direction: column;
   align-content: center;
+}
+.content-row-backwards__mobile {
+  flex-direction: column-reverse;
+}
+@media (min-width: 576px) {
+  .content-row-backwards__mobile {
+    flex-direction: row;
+  }
 }
 @media (min-width: 576px) {
   .mechanics-page-left {
@@ -584,4 +599,36 @@ table tr:nth-child(even) {
 }
 .dropdown:hover .dropdown-content {
   display: block;
+}
+blockquote {
+  border-left: 3px solid #f97352;
+  padding-left: 15px;
+  margin-left: 15px;
+  text-align: left;
+}
+.recipe-panels {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.recipe-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 48%;
+  margin: 20px 5px;
+}
+@media (min-width: 768px) {
+  .recipe-panel {
+    width: 31%;
+  }
+}
+.recipe-panel__title,
+.recipe-panel__text {
+  display: block;
+  margin: 10px 0;
 }

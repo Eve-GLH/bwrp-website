@@ -142,6 +142,9 @@ table {
         background-color: @orange;
         color: #FFF;
     }
+    &-child {
+        margin-left: 15px;
+    }
 }
 
 .video-iframe {
@@ -558,6 +561,7 @@ table {
         }
     }
     &-left, &-right {
+        width: 100%;
         @media @md {
             width: 48%;
         }
@@ -571,6 +575,12 @@ table {
         justify-content: center;
         flex-direction: column;
         align-content: center;
+    }
+    &-backwards__mobile {
+        flex-direction: column-reverse;
+        @media @sm {
+            flex-direction: row;
+        }
     }
 }
 
@@ -610,3 +620,35 @@ table {
 }
 
 .dropdown:hover .dropdown-content {display: block;}
+
+blockquote {
+    border-left: 3px solid @orange;
+    padding-left: 15px;
+    margin-left: 15px;
+    text-align: left;
+}
+
+.recipe-panels {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.recipe-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 48%;
+    margin: 20px 5px;
+    @media @md {
+        width: 31%;
+    }
+    &__title, &__text {
+        display: block;
+        margin: 10px 0;
+    }
+}

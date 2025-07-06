@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="canonical" href="https://www.brokenworldrp.com/mechanics/brewery" />
+    <link rel="stylesheet/less" type="text/css" href="../styles/styles.css" />
+    <title>Brewery - Broken World Role Play</title>
+  </head>
+  <body>
+    <div class="mobile-menu d-block d-sm-none">
+        <div class="mobile-menu__inner">
+            <div class="mobile-menu__logo">
+                <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png" srcset="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png 1x, https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_2x_p69bcp.png 2x" alt="BWRP Logo" />
+            </div>
+            <button class="mobile-menu__button dropdown-toggle" data-bs-toggle="dropdown" type="button" id="MobileDropdownButton" aria-haspopup="true" aria-expanded="false">
+                <img src="../images/mobile-menu-closed.png" alt="Menu Closed" />
+            </button>
+            <ul class="dropdown-menu mobile-menu__dropdown" aria-labelledby="MobileDropdownButton">
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/">Home</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/rules">Rules</a>
+                </li>
+                <li class="mobile-menu__li mobile-menu__li--alt">
+                    <a class="mobile-menu__link" href="https://discord.gg/F2ugDHf">Discord</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/mechanics">Our Mechanics</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/about-the-world">Our World</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/our-team">Our Team</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/our-roleplay">Our Roleplay</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/join">Join</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <header class="header d-none d-sm-block">
+        <div class="container">
+            <div class="header__inner">
+                <a href="/" class="header__logo">
+                    <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png" srcset="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png 1x, https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_2x_p69bcp.png 2x" alt="BWRP Logo" />
+                </a>
+                <nav class="toplinks">
+                    <ul class="toplinks__inner">
+                        <li class="toplinks__li">
+                            <a class="toplinks__link" href="/">Home</a>
+                        </li>
+                        <li class="toplinks__li">
+                            <a class="toplinks__link" href="/rules">Rules</a>
+                        </li>
+                        <li class="toplinks__li toplinks__li--alt">
+                            <a class="toplinks__link toplinks__link--alt" href="https://discord.gg/F2ugDHf">Discord</a>
+                        </li>
+                        <li class="dropdown toplinks__li">
+                            <div class="dropdown-toggle toplinks__link" type="button" id="AboutDropdownButton" data-bs-toggle="dropdown" aria-expanded="false">About</div>
+                            <ul class="dropdown-menu toplinks__dropdown" aria-labelledby="AboutDropdownButton">
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/mechanics">Our Mechanics</a></li>
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/about-the-world">Our World</a></li>
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/our-team">Our Team</a></li>
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/our-roleplay">Our Roleplay</a></li>
+                            </ul>
+                        </li>
+                        <li class="toplinks__li">
+                            <a class="toplinks__link" href="/join">Join</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="content-row">
+        <div class="container">
+            <h1>Brewery</h1>
+            <div class="content-row-inner row">
+                <div class="content-row-left col-sm-9 col-md-8">
+                    <p>Brewery is one of many plugins used to enhance the roleplay experience of the server. Through its usage, it is possible for players to create a great number of drinks, tonics, teas and more by combining ingredients in a cauldron. These are not vanilla style potions, and most do not give any beneficial effect, however they are incredibly useful for roleplay purposes and knowledgeable brewers are always in high demand.</p>
+                    <p><b>To begin brewing</b> you will need a cauldron sitting over a heat source (Lava, magma blocks or fire). Without being heated, your brews will not mix properly. Make sure to fill the cauldron with water! Next, you will need the proper ingredients. While there are many ingredients accepted, most brews use some plant based material.</p>
+                </div>
+                <div class="content-row-right col-sm-3 col-md-4">
+                    <div class="contents-list">
+                        <a class="contents" href="#Basics">Brewing Basics</a>
+                        <a class="contents" href="#Fresh">Fresh From the Pot</a>
+                        <a class="contents contents-child" href="#Distilling">Distilling</a>
+                        <a class="contents contents-child" href="#Aging">Aging</a>
+                        <a class="contents" href="#Tips">Tips & Tricks</a>
+                        <a class="contents" href="#Example">An Example Brew</a>
+                        <a class="contents" href="#Alchemy">A Note On Alchemy</a>
+                        <a class="contents" href="#Final">Final Notes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Basics" class="content-row">
+        <div class="container">
+            <h2>Brewery Basics</h2>
+            <div class="content-row-inner">
+                <div class="content-row-left content-row-image">
+                    <img src="../images/brew1.png" alt="4 couldrons" />
+                </div>
+                <div class="content-row-right">
+                    <p>To put your ingredients in the cauldron you will need to right click while holding the ingredients on the cauldron. Due to an internal bug, it is recommended you hold a shovel or some other tool in your offhand to properly have blocks and plant blocks enter the cauldron. Think of it as your mixing spoon!</p>
+                    <p>Finally, you will need bottles and a clock. Right clicking the cauldron with a clock will tell you how long the cauldron has been brewing. Different brews take time, with harder spirits usually taking more time than weaker drinks.</p>
+                    <p>When you believe it has finished brewing, you may right click the cauldron with your bottles to take your brew out.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Fresh" class="content-row">
+        <div class="container">
+            <h2>Fresh From the Pot</h2>
+            <div class="content-row-inner">
+                <div class="content-row-left">
+                    <p>While many of our drinks do not require much more work than simply brewing the ingredients together, nearly all of our alcohols do require some additional steps.</p>
+                    <h3 id="Distilling">Distilling</h3>
+                    <p>The first option is distilling. Normally, this would require just a brewing stand with glowstone placed in the ingredient slot. However, on BWRP larger distilleries are necessary to achieve the same effect.</p>
+                    <p>Brews can be distilled once or multiple times. It is up to the brewer to discover what creates the perfect brew.</p>
+                </div>
+                <div class="content-row-right content-row-image">
+                    <img src="../images/brew2.png" alt="Minecraft distillery" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-row">
+        <div class="container">
+            <div class="content-row-inner">
+                <div class="content-row-left content-row-image">
+                    <img src="../images/brew3.png" alt="A Minecraft basement full of large barrels" />
+                </div>
+                <div class="content-row-right">
+                    <h3 id="Aging">Aging</h3>
+                    <p>Another option is aging. Aging is done in barrels, which are multiblock storages for drinks. Barrels can come in two sizes, large and small and can be made with any wood type.</p>
+                    <p>Different brews can either have a specific barrel to be perfect or can be aged in any barrel.</p>
+                    <p>Brews can be aged, distilled or both. It is up to you to find out which combination creates the best brew!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Tips" class="content-row">
+        <div class="container">
+            <h2>Tips & Tricks</h2>
+            <div class="content-row-inner">
+                <div class="content-row-left">
+                    <ul>
+                        <li>Many of our brews use custom items which can be found in themed builds with loot chests. Substitutions for these items will not be accepted. You can tell a custom item from its colored name or lore.</li>
+                        <li>All brew recipes have three versions, bad, ok, and perfect. To determine what you need to change, place a brew in a barrel and it will color code what you got right and wrong in the different categories.</li>
+                        <li>Brewed drinks may be placed back in the cauldron. This is used in advanced brewing E.g brandies or cocktails. To use, simply right click a drink on the cauldron to dump it in.</li>
+                    </ul>
+                </div>
+                <div class="content-row-right content-row-image">
+                    <img src="../images/brew4.png" alt="Two large Minecraft barrels" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-row">
+        <div class="container">
+            <div class="content-row-inner">
+                <div class="content-row-left content-row-image">
+                    <img src="../images/brew5.png" alt="" />
+                </div>
+                <div class="content-row-right">
+                    <ul>
+                        <li>Many of the brews are similar to each other, with the only difference being ingredients. For example, if you discover a wine it is wise to try other ingredients in similar amounts and cook time. Ratios are also very important, with many brews having a primary ingredient with another ‘spice’ being half or a third of the amount of the primary ingredient.</li>
+                        <li>Multiple ingredients can go into a brew! However, there are almost never more than 5 different types of ingredients going in. Most sit between 1-3 different types of items.</li>
+                        <li>If you're unhappy with a brew and want to get rid of it without drinking it or losing your bottle, you can shift right click the bottle on a hopper to drain it.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Example" class="content-row">
+        <div class="container">
+            <h2>An Example Brew</h2>
+            <div class="content-row-inner">
+                <div class="content-row-left">
+                    <p>To demonstrate how to brew we shall go through the steps of making a simple starter brew!</p>
+                    <p><b>Aromatic Herbal Tea</b></p>
+                    <p><b>First</b> of course you will require a heated cauldron.</p>
+                    <p><b>Next</b> you will need your tools (Spoon, clock, bottles) and your ingredients (grass). Right click with your ingredients to place them in the cauldron. They will disappear from your inventory and make a sound when going in.</p>
+                    <p>You may now right click with your clock to check its time. Brewery will tell you how long it has been cooking in chat.</p>
+                </div>
+                <div class="content-row-right content-row-image">
+                    <img src="../images/brew6.png" alt="A cauldron with water in it" />
+                </div>
+            </div>
+            <p>Because you get three bottles, it is possible to pull the brews out at three different times. It is possible to place more ingredients in after it has been cooking if you feel that is a better way to test.</p>
+            <p>We will be pulling three different times out, one at 3 minutes, 5 and 8.</p>
+            <div class="row">
+                <img class="col-xs-12 col-sm-6 col-md-4" src="../images/brew7.png" alt="" />
+                <img class="col-xs-12 col-sm-6 col-md-4" src="../images/brew8.png" alt="" />
+                <img class="col-xs-12 col-sm-6 col-md-4" src="../images/brew9.png" alt="" />
+            </div>
+            <p>These are the three resulting brews. The first two were recognized as some sort of tea, while the third was simply too long and is not close enough to be recognized.</p>
+            <p>While it's clear that the 2nd brew is perfect, with the colored name, let us place the first in a barrel to find where we went wrong. Note it may take some time to activate. Within the barrel you’ll find that the first one had its time highlighted red, indicating that was the portion that was off from the perfect brew, and by a significant amount. The coloring scale goes from red, to orange, and finally to green when it is close enough or perfect.</p>
+        </div>
+    </div>
+    <div id="Alchemy" class="content-row">
+        <div class="container">
+            <h2>A Note on Alchemy</h2>
+            <div class="content-row-inner">
+                <div class="content-row-left">
+                    <p>Brewers and alchemists have the ability to gather custom ingredients scattered around the world to make special potions. While everyone has the ability to combine and mix these ingredients to get interesting brews, only the Alchemist has the ability to create the ‘perfected’ version of a potion, which are used in some skills and crafting recipes.</p>
+                    <p>All Alchemical ingredients can be brewed in order to taste them and begin mixing them with other brewed ingredients.</p>
+                    <p><b>We advise some familiarity with BWRP mechanics and Brewery systems as a whole before attempting alchemy.</b></p>
+                </div>
+                <div class="content-row-right content-row-image">
+                    <img src="../images/brew10.png" alt="" />
+                </div>
+            </div>
+            <h2 id="Final">Final Notes</h2>
+            <p>Brewery is a plugin that requires patience and time! It's ok if you get stuck with one brew you’re chasing, not all are the same difficulty.</p>
+            <p>If your character is coming into this world having an experience in brewing, but you have never learned any recipes, reach out to an ST and they may grant you some starting brews! Other brewers are also sometimes willing to work with you in sharing knowledge, but know that recipes for how to brew some drinks is some of the most valuable knowledge a brewer, alchemist, or any characer, could possess.</p>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <a href="/" class="footer__logo">
+                    <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png" srcset="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png 1x, https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_2x_p69bcp.png 2x" alt="BWRP Logo" />
+                </a>
+                <a class="footer__link" href="https://www.patreon.com/join/brokenworldrp">Become a Patron</a>
+                <a class="footer__link" href="https://www.paypal.com/paypalme/BWRPDonations">Donate on Paypal</a>
+                <a class="footer__link" href="https://discord.gg/F2ugDHf">Join Our Discord</a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/less" ></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="../scripts/theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
