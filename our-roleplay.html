@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet/less" type="text/css" href="styles/styles.css" />
+    <link rel="canonical" href="https://www.brokenworldrp.com/our-roleplay" />
+    <title>Our Roleplay - Broken World Role Play</title>
+    <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/bwrpimages/image/upload/v1625305628/Logos%20and%20Socials/favicon-32x32_uuq7wv.png">
+  </head>
+  <body>
+    <div class="mobile-menu d-block d-sm-none">
+        <div class="mobile-menu__inner">
+            <div class="mobile-menu__logo">
+                <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png" srcset="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png 1x, https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_2x_p69bcp.png 2x" alt="BWRP Logo" />
+            </div>
+            <button class="mobile-menu__button dropdown-toggle" data-bs-toggle="dropdown" type="button" id="MobileDropdownButton" aria-haspopup="true" aria-expanded="false">
+                <img src="images/mobile-menu-closed.png" alt="Menu Closed" />
+            </button>
+            <ul class="dropdown-menu mobile-menu__dropdown" aria-labelledby="MobileDropdownButton">
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/">Home</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/rules">Rules</a>
+                </li>
+                <li class="mobile-menu__li mobile-menu__li--alt">
+                    <a class="mobile-menu__link" href="https://discord.gg/F2ugDHf">Discord</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/mechanics">Our Mechanics</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/about-the-world">Our World</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/our-team">Our Team</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/our-roleplay">Our Roleplay</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/join">Join</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <header class="header d-none d-sm-block">
+        <div class="container">
+            <div class="header__inner">
+                <a href="/" class="header__logo">
+                    <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png" srcset="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png 1x, https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_2x_p69bcp.png 2x" alt="BWRP Logo" />
+                </a>
+                <nav class="toplinks">
+                    <ul class="toplinks__inner">
+                        <li class="toplinks__li">
+                            <a class="toplinks__link" href="/">Home</a>
+                        </li>
+                        <li class="toplinks__li">
+                            <a class="toplinks__link" href="/rules">Rules</a>
+                        </li>
+                        <li class="toplinks__li toplinks__li--alt">
+                            <a class="toplinks__link toplinks__link--alt" href="https://discord.gg/F2ugDHf">Discord</a>
+                        </li>
+                        <li class="dropdown toplinks__li">
+                            <div class="dropbtn toplinks__link" type="button" id="AboutDropdownButton" data-bs-toggle="dropdown" aria-expanded="false">About</div>
+                            <ul class="dropdown-menu toplinks__dropdown dropdown-content" aria-labelledby="AboutDropdownButton">
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/mechanics">Our Mechanics</a></li>
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/about-the-world">Our World</a></li>
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/our-team">Our Team</a></li>
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/our-roleplay">Our Roleplay</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown toplinks__li">
+                            <div type="button" class="dropbtn toplinks__link" href="#">Join</div>
+                            <ul class="dropdown-menu toplinks__dropdown dropdown-content">
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/apply.html">Join Us</a></li>
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/team-apply.html">Join A Team</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="content-row-single">
+                <h1>Our Roleplay</h1>
+            </div>
+        </div>
+    </section>
+    <div class="content-row">
+        <div class="container">
+            <div class="content-row-inner">
+                <div class="content-row-left">
+                    <h2>What Are We?</h2>
+                    <p>BWRP is a swashbuckling action, medieval fantasy live roleplaying system built within Minecraft. Our combination of player written, staff managed, lore along with extensive mechanical additions to minecraft allow for a wide range of characters and development. We offer a deeply immersive and interactive first person storytelling experience that can appeal to people who enjoy video games, tabletop gaming like Dungeons & Dragons, improvisational theater and countless other hobbies!</p>
+                </div>
+                <div class="content-row-right">
+                    <div class="contents-list">
+                        <a class="contents" href="#Content">Content</a>
+                        <a class="contents contents-child" href="#PG13">A PG-13 Guideline</a>
+                        <a class="contents" href="#Consent">Consent</a>
+                        <a class="contents" href="#Consequences">Consequences</a>
+                        <a class="contents contents-child" href="#Death">Death</a>
+                        <a class="contents" href="#Conclusion">Conclusion</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section ID="Content" class="content-row">
+        <div class="container">
+            <div class="content-row-inner">
+                <h2>Content</h2>
+                <p>BWRP as a roleplay is perhaps closest to a traditional live roleplay or "boffer" larp. A boffer larp being one that uses foam weapons and players own skills to simulate combat and other roleplay actions. With Minecraft being our medium, we've no need to resort to foam but you can still expect the other things that would accompany such a larp. BWRP offers a high degree of immersion because of this but it in turn can present some limits to our players; As an example it is quite hard to roleplay a character as more witty than the player playing them (though not impossible!).</p>
+                <p>This boffer style of roleplay allows us to transition smoothly between Storyteller led events or players' own narratives intersecting or clashing, leaving players free to seek out the stories they wish to be a part of and avoid the parts they find disinteresting.</p>
+                <h3 id="PG13">A PG-13 Guideline</h3>
+                <p>We strive to keep our roleplay experience as family-friendly as possible and around PG-13 in nature. This means that we do not allow extreme explicit language or violence. However, we understand that sometimes heroes swear like sailors and that our depictions of violence may linger beyond a strict PG-13 rating. If you are unsure whether something is appropriate, please err on the side of caution and avoid it or check in with a staff member. Be mindful that not all roleplays or groups will have the same expectations of tone.</p>
+                <p>We do not endorse torture or overly graphic depictions of violence. If you are planning to include these elements in your roleplay, please be sure to discuss them with your fellow participants and a storyteller first. It is important to be respectful of everyone's comfort levels.</p>
+                <p>We have zero tolerance of sexual content.</p>
+                <p>Use Your Head! Ultimately, it is up to you to set the tone of your roleplay. Use your head and the knowledge of your fellow participants to create an experience that is fun and enjoyable for everyone.</p>
+            </div>
+        </div>
+    </section>
+    <section id="Consent" class="content-row">
+        <div class="container">
+            <div class="content-row-inner">
+                <h2>Consent</h2>
+                <p>Because our roleplay is a live one where things can happen quickly and unexpectedly it is extremely important to have a way to bow out of the roleplay if it becomes too much for you.</p>
+                <p><b>Call Safeword! </b>If you encounter something that is upsetting or a step too far for you personally, you can halt any scene for a moment by saying "Safeword". This can be used for a momentary break from an intense scene or as a time to discuss our boundaries. We encourage roleplay participants to discuss amongst themselves and find the most suitable direction to move forwards in but we understand this is not always possible and that sometimes mediation by a staff member will be desired to find an impartial resolution to the scene or help someone in distress.</p>
+                <p>Should you feel able to return to a scene after discussion or mediation you may, but most importantly you also have the option to simply agree on a resolution with your roleplay partner and end the scene without acting it out. In this way, the roleplay can be swiftly brought to a close should you need to step away entirely.</p>
+                <p>There is absolutely no shame in the above practices and our staff will support their use to the best of our abilities. We're all here to have fun and part of that is ensuring we're all as comfortable as we can be.</p>
+                <p>Some further tips to help reinforce a culture of consent:</p>
+                <ul>
+                    <li>Try to broadcast your own expectations clearly. When moving into a roleplay with a new roleplay partner or storyteller, try to work together on your expectations. While we frown upon metagaming it is entirely possible for a momentary discussion of upcoming boundaries without sharing or using in character secrets.</li>
+                    <li>Check in with your partner(s) regularly. As you're roleplaying it can be very healthy and encouraging for all parties to talk about ongoing roleplay, checking for any discomfort and discussing any changes that can be made to accommodate.</li>
+                    <li>Be respectful of your partners. This goes in all directions, respect boundaries set by your partners, no always means no. Do not try to apply pressure to continue a scene. At the same time do not abuse our consent rules for in game advantages over others.</li>
+                    <li>Be mindful that if you join another’s roleplay they may have different boundaries to your own, never be afraid to excuse yourself from a situation you feel uncomfortable with and be mindful of further interactions with that player or party!</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="Consequences" class="content-row">
+        <div class="container">
+            <div class="content-row-inner">
+                <h2>Consequences</h2>
+                <p>In a live roleplay, each of our actions can shape every element of a story as it goes forwards. This means that other people may face the consequences of your actions, and you theirs in turn.</p>
+                <p>While you can steer your character, in this style of play you do not have complete control over what happens to them. Both STs and players may impact the character, but it is where everyone's choices meet that produces the path forwards.</p>
+                <p>As this is a living narrative, we cannot always simply avoid the consequences of our in-character actions. If you choose to do something that has negative consequences for another player, you should be prepared to face those consequences yourself.</p>
+                <p>Some examples of consequences that you may face for your actions are:</p>
+                <ul>
+                    <li>Your character may be killed or injured.</li>
+                    <li>Your character may be imprisoned or exiled.</li>
+                    <li>Your character may lose your reputation or standing in their town or community.</li>
+                    <li>Your character may be forced to make difficult choices that have far-reaching consequences.</li>
+                    <li>Your character may make enemies or lose close friends.</li>
+                </ul>
+                <p>If you are unsure about the consequences of your actions, please talk to the Storytellers. They may be able to help you understand the potential impact of your choices and help ensure everyone is on the same page.</p>
+                <h3 id="Death">Death</h3>
+                <p><a href="/mechanics/dying">Dying</a> is a natural part of life, and it is also a part of BWRP. Here, while there are countless ways to forestall or cheat it, death is permanent, so it is important to be prepared for the possibility that your character may die. This can be difficult, as we all become attached to our characters and the stories we create for them. However, it is important to remember that BWRP is a game, and death is simply a part of the game.</p>
+                <p>There are a few things you can do to help prepare for the possibility of your character's death though it is important to note we each handle loss differently, these may not work for you as well as they do others. First, try to have a backup character or concept ready to go. This way, if your first character dies, you can simply switch to your backup character and continue playing, even if you only use that backup for a short while. Second, try to detach yourself emotionally from your character. This can be difficult, we all handle character bleed differently, but it is important to try to remember that your character is not real. They are a figment of our shared imagination, and their death should not have a significant impact on your real life.</p>
+                <p>Finally, remember that death is not the end, the story you've forged will live on forever and your choices may reverberate through the narrative for years to come. In BWRP, death is simply a new beginning. When your character dies, you can create a new character and start a new story. This can be a great opportunity to try something new and different. So, don't be afraid of death. Embrace it as a part of the game and as an opportunity to create new and exciting stories.</p>
+                <p>Here are some additional tips for dealing with death in BWRP or any roleplay:</p>
+                <ul>
+                    <li>Talk to your fellow players about your feelings. It can be helpful to talk to others who understand what you are going through.</li>
+                    <li>Take some time to grieve. It is normal to feel sad, angry, or even guilty for a short while after a character dies. Allow yourself to feel these emotions and don't try to bottle them up.</li>
+                    <li>Find a way to honor your character's memory. This could involve writing a story about them, creating a memorial in-game, or simply remembering the good times you had playing them with friends.</li>
+                    <li>Focus on the journey, not the destination. Enjoy the time you have with your character, and don't worry about what will happen when they die. The friends you make here will still be excited to play with your next character too!</li>
+                    <li>You do not need to roleplay grieving any more than you wish to. Some roleplay regarding a departed friend of your character can be cathartic but where it wouldn’t be, it is entirely welcomed to assume you’ve been grieving off screen if you feel your character should have done so.</li>
+                </ul>
+                <p>Remember, death is a part of life, and it is also a part of BWRP. Don't let it stop you from enjoying the game. To mangle the old Dwarf Fortress adage: Dying is fun!</p>
+            </div>
+        </div>
+    </section>
+    <section id="Conclusion" class="content-row">
+        <div class="container">
+            <div class="content-row-inner">
+                <h2>An Important Conclusion</h2>
+                <p>This manner of roleplay can be turbulent and intense for some. Scenes and situations can change incredibly fast, to one's liking or not. For this to work, understanding and communication are key. Understanding of one's own limits and others feelings, and clear communication of those limits and feelings. Taking a step back to find this understanding or communicating these feelings is entirely encouraged and necessary for our environment to be a positive one.</p>
+                <p>Sometimes this step back can be momentary, other times it can be permanent. Both are valid, and neither are poor reflections of someone. As a community seeking to be a positive one, helping someone through these emotions and directing them to better fitting places or structures is the least we can do.</p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <a href="/" class="footer__logo">
+                    <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png" srcset="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png 1x, https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_2x_p69bcp.png 2x" alt="BWRP Logo" />
+                </a>
+                <div class="footer__col">
+                    <a class="footer__link" href="https://www.patreon.com/join/brokenworldrp">Become a Patron</a>
+                    <a class="footer__link money-bag" href="https://www.paypal.com/paypalme/BWRPDonations">
+                        <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1605286689/Logos%20and%20Socials/money-bag_h9kyq6_sdw7s0.png" alt="" />
+                    </a>
+                    <a class="footer__link" href="https://www.paypal.com/paypalme/BWRPDonations">Donate on Paypal</a>
+                </div>
+                <div class="footer__col-end">
+                    <a class="footer__link" href="#">Found an issue?</a>
+                    <a class="footer__link" href="https://discord.gg/F2ugDHf">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M524.5 69.8a1.5 1.5 0 0 0 -.8-.7A485.1 485.1 0 0 0 404.1 32a1.8 1.8 0 0 0 -1.9 .9 337.5 337.5 0 0 0 -14.9 30.6 447.8 447.8 0 0 0 -134.4 0 309.5 309.5 0 0 0 -15.1-30.6 1.9 1.9 0 0 0 -1.9-.9A483.7 483.7 0 0 0 116.1 69.1a1.7 1.7 0 0 0 -.8 .7C39.1 183.7 18.2 294.7 28.4 404.4a2 2 0 0 0 .8 1.4A487.7 487.7 0 0 0 176 479.9a1.9 1.9 0 0 0 2.1-.7A348.2 348.2 0 0 0 208.1 430.4a1.9 1.9 0 0 0 -1-2.6 321.2 321.2 0 0 1 -45.9-21.9 1.9 1.9 0 0 1 -.2-3.1c3.1-2.3 6.2-4.7 9.1-7.1a1.8 1.8 0 0 1 1.9-.3c96.2 43.9 200.4 43.9 295.5 0a1.8 1.8 0 0 1 1.9 .2c2.9 2.4 6 4.9 9.1 7.2a1.9 1.9 0 0 1 -.2 3.1 301.4 301.4 0 0 1 -45.9 21.8 1.9 1.9 0 0 0 -1 2.6 391.1 391.1 0 0 0 30 48.8 1.9 1.9 0 0 0 2.1 .7A486 486 0 0 0 610.7 405.7a1.9 1.9 0 0 0 .8-1.4C623.7 277.6 590.9 167.5 524.5 69.8zM222.5 337.6c-29 0-52.8-26.6-52.8-59.2S193.1 219.1 222.5 219.1c29.7 0 53.3 26.8 52.8 59.2C275.3 311 251.9 337.6 222.5 337.6zm195.4 0c-29 0-52.8-26.6-52.8-59.2S388.4 219.1 417.9 219.1c29.7 0 53.3 26.8 52.8 59.2C470.7 311 447.5 337.6 417.9 337.6z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/less" ></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="scripts/theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
