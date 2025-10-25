@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet/less" type="text/css" href="styles/styles.css" />
+    <link rel="canonical" href="https://www.brokenworldrp.com/myriad" />
+    <title>Myriad - Broken World Role Play</title>
+    <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/bwrpimages/image/upload/v1625305628/Logos%20and%20Socials/favicon-32x32_uuq7wv.png">
+  </head>
+  <body>
+    <div class="mobile-menu d-block d-sm-none">
+        <div class="mobile-menu__inner">
+            <div class="mobile-menu__logo">
+                <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png" srcset="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png 1x, https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_2x_p69bcp.png 2x" alt="BWRP Logo" />
+            </div>
+            <button class="mobile-menu__button dropdown-toggle" data-bs-toggle="dropdown" type="button" id="MobileDropdownButton" aria-haspopup="true" aria-expanded="false">
+                <img src="images/mobile-menu-closed.png" alt="Menu Closed" />
+            </button>
+            <ul class="dropdown-menu mobile-menu__dropdown" aria-labelledby="MobileDropdownButton">
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/">Home</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/rules">Rules</a>
+                </li>
+                <li class="mobile-menu__li mobile-menu__li--alt">
+                    <a class="mobile-menu__link" href="https://discord.gg/F2ugDHf">Discord</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/mechanics">Our Mechanics</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/about-the-world">Our World</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/our-team">Our Team</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/our-roleplay">Our Roleplay</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/join">Join</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <header class="header d-none d-sm-block">
+        <div class="container">
+            <div class="header__inner">
+                <a href="/" class="header__logo">
+                    <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png" srcset="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png 1x, https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_2x_p69bcp.png 2x" alt="BWRP Logo" />
+                </a>
+                <nav class="toplinks">
+                    <ul class="toplinks__inner">
+                        <li class="toplinks__li">
+                            <a class="toplinks__link" href="/">Home</a>
+                        </li>
+                        <li class="toplinks__li">
+                            <a class="toplinks__link" href="/rules">Rules</a>
+                        </li>
+                        <li class="toplinks__li toplinks__li--alt">
+                            <a class="toplinks__link toplinks__link--alt" href="https://discord.gg/F2ugDHf">Discord</a>
+                        </li>
+                        <li class="dropdown toplinks__li">
+                            <div class="dropbtn toplinks__link" type="button" id="AboutDropdownButton" data-bs-toggle="dropdown" aria-expanded="false">About</div>
+                            <ul class="dropdown-menu toplinks__dropdown dropdown-content" aria-labelledby="AboutDropdownButton">
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/mechanics">Our Mechanics</a></li>
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/about-the-world">Our World</a></li>
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/our-team">Our Team</a></li>
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/our-roleplay">Our Roleplay</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown toplinks__li">
+                            <div type="button" class="dropbtn toplinks__link" href="#">Join</div>
+                            <ul class="dropdown-menu toplinks__dropdown dropdown-content">
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/apply.html">Join Us</a></li>
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/team-apply.html">Join A Team</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="body-section">
+        <div class="container">
+            <div class="row">
+                <h1>Myriad</h1>
+                <div class="col-xs-12 col-sm-6 col-md-7">
+                    <b>Myriad; strange constructs of young life and burning purpose.</b>
+                    <p>The Myriad do not hold a past. If they had one, it is long forgotten to them. At first these hulking constructs seem little more than bulky simpletons, but their naive mindset often fades quickly, picking up both skill and purpose with unmatched speed as they join a community. While they may seem alien to those who have not gotten to know one, myriad can share in many of the experiences that mortals of flesh might endure, and studies of ones who have fallen reveal a metallic anatomy near perfectly mirroring that of other mortals.</p>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-5">
+                    <img src="/images/Myriad.png" alt="3 examples of Myriad Minecraft skins. They appear to be metallic or even stone-like." />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="accordion-section">
+        <div class="container">
+            <details class="accordion-details">
+                <summary class="accordion-title">Features</summary>
+                <div class="accordion-inner">
+                    <h3>The Long Sleep</h3>
+                    <p>The Myriad are natives to the western fjords and plains of Nebelloren, but it is only recently that they awoke from their Long Sleep to walk upon the earth. It’s usually noted that the Myriad awoke only during the arrival of the Entente but it’s clear some wandered the land, attempting to join in herds of deer, packs of wolves or any other basic society. What is true however is that none seemed to strive beyond these basic social structures until the Entente landed, then the Myriad flocked to them filled with a strange drive to fulfill some unknown purpose.</p>
+                    <p>Myriad retain little of whatever their former lives were, with most holding only fragmentary, nonsense filled, dream-like memories of the time before they slept. As for the Long Sleep itself, those rare few who can recall it remember the slow passage of time as they awaited some unknown moment to come, watching the world as nature expanded, seasons past, and the world changed around and over them.</p>
+                    <h3>Myriad Wonder</h3>
+                    <p>Myriad can often seem like they think quite differently than the average humanoid, with their strong yet simple emotions and aspirations, but these will often belie their keen intellect. A myriad can experience the same types of emotions as a regular person, but sometimes experience them differently.</p>
+                    <p>Experiencing these strong emotions, Myriad often have an insatiable sense of curiosity. Exploration, discovery, and intrigue drive a Myriad to ask more questions and look for more answers. This can sometimes result in the development of a new skill, but more often, poking their noses where they don’t belong.</p>
+                    <h3>Cog of The Great Clockwork</h3>
+                    <p>Beings forged with no other purpose but to be, in the pursuit of meaning the Myriad will integrate themselves into the societies and organizational structures of organic beings around them, adopting secondary purposes as their own interests in the natural world and the needs of the groups that they join arise.</p>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Physiology & MPM</summary>
+                <div class="accordion-inner">
+                    <h3>Appearance</h3>
+                    <p>Myriad as a whole tend to tower over the average human, with some being taller than even Caeli. They have stocky and powerful builds, and as such tend to have issues passing through the average doorway.</p>
+                    <p>The Myriad are sentient golems composed almost entirely of a homogeneous, semi-flexible metal that defies understanding which seemingly has no natural origin and no clear method of creation via alloying. While this metal is primarily shades of gray, discoloration into shades of brown and others have been noted after their long sleep. Most myriad bear the marks of the terrain where they slept, growths of plants between plates, rocky or crystal formations over them ect.</p>
+                    <p>After introduction to society it's common for Myriad to decorate themselves, wether by curating their plant growths, shaping the rock on them, painting patterns or adopting items of clothing.</p>
+                    <p>The Myriad lack the biological eyes of their organic counterparts, but they have something in their place; indented panels that somehow allow for sensory input, which can vary in colour and size.</p>
+                    <h3>Lifespan</h3>
+                    <p>The true age of the Myriad are unknown, even to them. The Long Sleep left dream-like impressions on the Myriad, and those with a deeper grasp on these “dreams” tend to agree that the Myriad have existed for centuries, if not longer. The maximum age of a Myriad is also unknown, though the wear and tear of time has caused some to not awaken from their dream.</p>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Naming Conventions</summary>
+                <div class="accordion-inner">
+                    <p>Myriad tend to enter communities having no name themselves. Quite quickly they'll adopt a simple name to their own tastes. A Myriad may simply adopt a name, or sometimes will be given one as a nickname by people around them. Myriad names can be anything; some relate to their job or purpose, but many will take words they consider pleasing sounding as names.</p>
+                    <p><b>Example profession names:</b> Hallmark (A smith), Civil (A builder), Rudder (A fisherman), Bastide (A builder)</p>
+                    <p><b>Example pleasant sounding words:</b> Murky, Alpaca, Well, Quills.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <a href="/" class="footer__logo">
+                    <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png" srcset="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png 1x, https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_2x_p69bcp.png 2x" alt="BWRP Logo" />
+                </a>
+                <div class="footer__col">
+                    <a class="footer__link" href="https://www.patreon.com/join/brokenworldrp">Become a Patron</a>
+                    <a class="footer__link money-bag" href="https://www.paypal.com/paypalme/BWRPDonations">
+                        <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1605286689/Logos%20and%20Socials/money-bag_h9kyq6_sdw7s0.png" alt="" />
+                    </a>
+                    <a class="footer__link" href="https://www.paypal.com/paypalme/BWRPDonations">Donate on Paypal</a>
+                </div>
+                <div class="footer__col-end">
+                    <a class="footer__link" href="#">Found an issue?</a>
+                    <a class="footer__link" href="https://discord.gg/F2ugDHf">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M524.5 69.8a1.5 1.5 0 0 0 -.8-.7A485.1 485.1 0 0 0 404.1 32a1.8 1.8 0 0 0 -1.9 .9 337.5 337.5 0 0 0 -14.9 30.6 447.8 447.8 0 0 0 -134.4 0 309.5 309.5 0 0 0 -15.1-30.6 1.9 1.9 0 0 0 -1.9-.9A483.7 483.7 0 0 0 116.1 69.1a1.7 1.7 0 0 0 -.8 .7C39.1 183.7 18.2 294.7 28.4 404.4a2 2 0 0 0 .8 1.4A487.7 487.7 0 0 0 176 479.9a1.9 1.9 0 0 0 2.1-.7A348.2 348.2 0 0 0 208.1 430.4a1.9 1.9 0 0 0 -1-2.6 321.2 321.2 0 0 1 -45.9-21.9 1.9 1.9 0 0 1 -.2-3.1c3.1-2.3 6.2-4.7 9.1-7.1a1.8 1.8 0 0 1 1.9-.3c96.2 43.9 200.4 43.9 295.5 0a1.8 1.8 0 0 1 1.9 .2c2.9 2.4 6 4.9 9.1 7.2a1.9 1.9 0 0 1 -.2 3.1 301.4 301.4 0 0 1 -45.9 21.8 1.9 1.9 0 0 0 -1 2.6 391.1 391.1 0 0 0 30 48.8 1.9 1.9 0 0 0 2.1 .7A486 486 0 0 0 610.7 405.7a1.9 1.9 0 0 0 .8-1.4C623.7 277.6 590.9 167.5 524.5 69.8zM222.5 337.6c-29 0-52.8-26.6-52.8-59.2S193.1 219.1 222.5 219.1c29.7 0 53.3 26.8 52.8 59.2C275.3 311 251.9 337.6 222.5 337.6zm195.4 0c-29 0-52.8-26.6-52.8-59.2S388.4 219.1 417.9 219.1c29.7 0 53.3 26.8 52.8 59.2C470.7 311 447.5 337.6 417.9 337.6z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/less" ></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="scripts/theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
