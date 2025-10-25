@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet/less" type="text/css" href="styles/styles.css" />
+    <link rel="canonical" href="https://www.brokenworldrp.com/entente" />
+    <title>The Imeris Entente - Broken World Role Play</title>
+    <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/bwrpimages/image/upload/v1625305628/Logos%20and%20Socials/favicon-32x32_uuq7wv.png">
+  </head>
+  <body>
+    <div class="mobile-menu d-block d-sm-none">
+        <div class="mobile-menu__inner">
+            <div class="mobile-menu__logo">
+                <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png" srcset="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png 1x, https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_2x_p69bcp.png 2x" alt="BWRP Logo" />
+            </div>
+            <button class="mobile-menu__button dropdown-toggle" data-bs-toggle="dropdown" type="button" id="MobileDropdownButton" aria-haspopup="true" aria-expanded="false">
+                <img src="images/mobile-menu-closed.png" alt="Menu Closed" />
+            </button>
+            <ul class="dropdown-menu mobile-menu__dropdown" aria-labelledby="MobileDropdownButton">
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/">Home</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/rules">Rules</a>
+                </li>
+                <li class="mobile-menu__li mobile-menu__li--alt">
+                    <a class="mobile-menu__link" href="https://discord.gg/F2ugDHf">Discord</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/mechanics">Our Mechanics</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/about-the-world">Our World</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/our-team">Our Team</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/our-roleplay">Our Roleplay</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a class="mobile-menu__link" href="/join">Join</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <header class="header d-none d-sm-block">
+        <div class="container">
+            <div class="header__inner">
+                <a href="/" class="header__logo">
+                    <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png" srcset="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png 1x, https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_2x_p69bcp.png 2x" alt="BWRP Logo" />
+                </a>
+                <nav class="toplinks">
+                    <ul class="toplinks__inner">
+                        <li class="toplinks__li">
+                            <a class="toplinks__link" href="/">Home</a>
+                        </li>
+                        <li class="toplinks__li">
+                            <a class="toplinks__link" href="/rules">Rules</a>
+                        </li>
+                        <li class="toplinks__li toplinks__li--alt">
+                            <a class="toplinks__link toplinks__link--alt" href="https://discord.gg/F2ugDHf">Discord</a>
+                        </li>
+                        <li class="dropdown toplinks__li">
+                            <div class="dropbtn toplinks__link" type="button" id="AboutDropdownButton" data-bs-toggle="dropdown" aria-expanded="false">About</div>
+                            <ul class="dropdown-menu toplinks__dropdown dropdown-content" aria-labelledby="AboutDropdownButton">
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/mechanics">Our Mechanics</a></li>
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/about-the-world">Our World</a></li>
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/our-team">Our Team</a></li>
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/our-roleplay">Our Roleplay</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown toplinks__li">
+                            <div type="button" class="dropbtn toplinks__link" href="#">Join</div>
+                            <ul class="dropdown-menu toplinks__dropdown dropdown-content">
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/apply.html">Join Us</a></li>
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/team-apply.html">Join A Team</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="content-row-single">
+                <h1>The Imeris Entente</h1>
+                <p>The Imeris Entente is an alliance of <a href="/dwarf">Dwarven clans,</a> <a href="/caeli">Caeli Principalities</a> and the <a href="/front">Lambent Front</a>. Bound together by an ancient treaty forged to keep the peace between their civilizations, the people of the Entente have worked together to form a unified society for hundreds of years. Now joined by the mysterious metallic <a href="/myriad">Myriad,</a> sworn in to the alliance on the shores of Nebelloren where a new home is being built, but its course can only be decided by those with the will and determination to act.</p>
+            </div>
+        </div>
+    </section>
+    <div class="content-row">
+        <div class="container">
+            <div class="content-row-inner">
+                <div class="content-row-left">
+                    <p>Before its fall to the undead, the Entente was a nation in decay. Having already begun to lose its grasp on its outlying territories. It also suffered from the destruction of one of its greatest member states; in the destruction of the <a href="https://broken-worlds.fandom.com/wiki/Variman">Kingdom of Variman</a>. But before this age of decay, it had been a beacon of culture and stability to the late medieval world it existed in. Its monuments and works grand and spectacular, its armies vast and unrivalled, and its people safe and prospering. Whether this glory can be recaptured in this new land is up only to the survivors who wash up along the shores of Nebelloren.</p>
+                </div>
+                <div class="content-row-right">
+                    <div class="contents-list">
+                        <a class="contents" href="#History">History</a>
+                        <a class="contents" href="#Governance">Governance</a>
+                        <a class="contents" href="#Geography">Geography</a>
+                        <a class="contents" href="#Education">Education</a>
+                        <a class="contents" href="#Culture">Culture</a>
+                        <a class="contents" href="#Timeline">Timeline</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="History" class="content-row">
+        <div class="container">
+            <h2>History</h2>
+            <details class="accordion-details">
+                <summary class="accordion-title">Pre-Entente History</summary>
+                <div class="accordion-inner">
+                    <p>Much of the time before the Entente has given way to the space of myth and legend, only known from disparate folklore and ancient relics. What can be gleaned from these inheritances tells the tale of a land first held by a wrathful nature, full of mystical wonders and horrors. As nature was beaten back, it was replaced with an age of petty kings, hillock lords, and lesser princes each serving nothing but their own desires.</p>
+                    <p>It is in this landscape that the first recognizable Entente precursors emerge. In the Lamic Dale, the Assembly of Votha began building new holds from their already ancient stronghold, the first unified Dwarven city of Ovdalam. In the Tassone Headlands, Thidrek the Varimanian carved out his kingdom by driving out the old gods of men in favor of the new beliefs he preached. And as the age began to come to a close, Araen the Westerwind began to unite the disparate city states along the Straits of Belgethor to carve out the Araenic Kingdom. It would be these nations that would begin to reign over the lands of Imeris, leading to rising tension and the oncoming clash.</p>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Formation</summary>
+                <div class="accordion-inner">
+                    <p>Over 1000 years before Imeris’ fall, the armies of Men, Caeli, and Dwarves clashed over the region known as Ordaly Rock. Coveted by Men and Caeli to serve as a buffer region between their expansionist states, and by the Dwarves to carve a new grand fortress, it was only natural that a conflict would brew over the region. Legends say that the battles left no victor, and in this stalemate the Dwarven Elder Mutal 'Leadbelly' Lam proposed a mutual peace in mirror to the clans peace of old. This was welcomed by King Ardaric of Variman and Araen the Westerwind's court, both of whom faced other threats from the far reaches of their realms.</p>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Post Formation</summary>
+                <div class="accordion-inner">
+                    <p>The first form the Entente took was far different than its modern incarnation, with treaties that promised peace and trade, though how long any of these were expected to last is unknown. However despite all odds the peace held, and as the security and prosperity of these agreements grew, the agreements began to become more complex and binding as each party sought to secure greater wealth, security, defense for themselves and their future generations. This gradual buildup and interlocking eventually creating a united, if decentralized, confederacy of states that was one of the most prosperous in its world.</p>
+                    <p>As the centuries passed, other states would be brought into the fold, though it was never a simple matter. Many territories were annexed by military expansion, such as Jorfith while others, such as the Ascensionist League were invited when war was an untenable option. This expansion was rare and slow, but those who found themselves underneath the Entente's banner in this age found themselves in a bright golden era of the Entente where Dwarves were free to refine their crafts, Caeli left to peer deep into the heavens and the Varimanians to further expand their theology.</p>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Human Civil War</summary>
+                <div class="accordion-inner">
+                    <p>The Varimanian Civil War was viewed by the greater Entente at first as an internal succession crisis due to the diplomatic deceptions of Prince Lethis. While interventions were prepared, these diplomatic stallings led to them never being committed to cross the border in force with only minor militia units supporting the bordering human regions before they were recalled. By the time the severity of the events was known, it was too late, and with the Houses of the Archons sundered, the Dwarves and Caeli had no chance to save their human allies. At the height of the passing of <a href="https://broken-worlds.fandom.com/wiki/Cau_Haf_Calan_Gaeaf">Calan Gaeaf</a>, the cult of Eris performed a ritual on Lethis' royal blood, condemning the bloodline of man to sickness, possession or as the Entente would later discover, banishment deep into <a href="https://broken-worlds.fandom.com/wiki/Gehenna">Gehenna</a>.</p>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">In The Aftermath</summary>
+                <div class="accordion-inner">
+                    <p>In the aftermath of the Varimanian Civil War, the remaining people of Imeris were left reeling by the swift and sudden destruction. The Elder of Clan Lam at the time, Dunan Grayback Lam, as a self imposed penance for his role in blocking intervention is said to have recorded the history of the civil war in stone before taking his own life at its completion. There was no time left however for recovery as outlying northern territories, held back by the Varimanians, rose up seeing their chance for gain. What people did survive and remain in the Varamanian heartlands were maddened by demonic blood curses. With no other options, the surviving Caeli and Dwarves cut down these twisted versions of their former allies, and allowed these northern territories to plunder the fallen kingdom. And with uprisings among the dwarves pointing to a similar corruption, suspicions began to rise between the varied parties of the Entente as each feared the other becoming the next Variman. Eighty years of this decline saw a fall from grace like no other. Then the undead came.</p>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Evacuation from Imeris</summary>
+                <div class="accordion-inner">
+                    <p>The undead came from both the east and the north, each waves of their own. They brought plague and pestilence, and where they trod the dead rose from their graves. The Entente, while weakened, brought what fight they still had left, delaying the undead as best they could. However the years of decline had deprived them of many of their resources and allies they'd needed against such a foe. Defeat was inevitable. In the north, the Vothan Clans of Ral and Deler suffered the brunt of the initial invasion, buying crucial time for an escape to be planned. It is widely believed that this led to their total downfall, with their sacrifice being honoured by the dwarven survivors. Many precious cultural touchstones, such as grudge books, sculptures, holy texts and similar were lost in this period.</p>
+                    <p>To ensure that not all was lost, the fleet was marshalled in a desperate attempt to evacuate what people they could. Every ship that could be considered seaworthy was mustered for the endeavour, though it was not enough for the tides of refugees. The unexpected challenge of humanities return in the form of the Lambent Front at Orderly Rock complicated matters further. While they were formidable fighters, they were few in number, scattered by arrival and not prepared for the hostile greeting they would receive. The fleet, a disorganised rabble, would eventually spread far into the Western and Southern seas, attempting to find any home safe from the undead.</p>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Arrival on Nebelloren</summary>
+                <div class="accordion-inner">
+                    <p>A portion of the refugee fleets sailed far into open ocean, with many of them losing all sense of direction. It was commonly believed that the outer seas held nothing but ocean, as no previous expeditions had ever returned. While many entered despair or worse the desperation pushed them to keep sailing. The weather began to turn as thick fogs from an unknown source rolled over them. After days within the mists, a horrid storm raged, impairing vision so much that one could not see the end of their arm. No ships are known to have made it through the mists unscathed, leaving the passengers aboard to wash up on the untamed shores of Nebelloren.</p>
+                    <p>Amongst the first to land were the scattered remains of a flotilla led by Caerwyn de Nebelloren who would claim the new shores for the Entente. On this landing they happened across the first of the Myriad, stirred awake by their coming, and became fast friends as they worked hard alongside the survivors to ensure both parties thrived. In recognition of this undue kindness that the Myriad showed the Entente, the self titled Marquis de Nebelloren, granted all Myriad citizenship within the Entente. This new, Nebelloren Entente would go on to lay the first stones of Parravon as directed by the Myriad Bastide. Bastide and his kin brought with them a large strange machine, of unknown origin, for the Entente to keep safe in the heart of their town.</p>
+                </div>
+            </details>
+        </div>
+    </div>
+    <div class="content-row" id="Governance">
+        <div class="container">
+            <h2>Governance</h2>
+            <details class="accordion-details">
+                <summary class="accordion-title">Politics</summary>
+                <div class="accordion-inner">
+                    <p>The Entente as a whole was ruled by a council of representatives from the primary kingdoms and states that made it up, and had a central administration which served as the focal point of the institutions that worked across the whole Entente, organizing construction, defence, trade and other joint projects.</p>
+                    <p>The member states of the Entente all retained their traditional court structures in addition to this overarching council and were free to enact local laws as each state wished.</p>
+                    <p>Dwarven holds were led by hillock lords in a decentralised system who were overseen by councils of elders. Frequently when operating as a whole nation an Elder of each clan would be nominated by his peers to work in tandem with the other four.</p>
+                    <p>The Kingdom of Variman was ruled over by a royal family, descendants of Thidrek. Below them sat the Judges and Heerser who managed local lands and oversaw enforcement of secular and religious law. The holy orders of the Seskantige Preke also held significant political sway in their local lands due to their institutionalised power.</p>
+                    <p>The Areanic kingdom is a maritime bureaucratic state that is led by the regent for the enlightened Araen the Westerwind. While the government in theory holds a centralised power, in practice it is divvied between Magisters and bureaucrats who use intrigue and politics to gather as much power and wealth for themselves and their territory. Similar to Variman the Akarist church holds much institutionalised power due to it's deep ties with the monarchy and bureaucracy. So too does the navy hold much sway between the disparate isles of the Belgethor strait.</p>
+                    <p>Other Caeli were frequently labelled as the Ascensionist league. Whilst these city states and pocket kingdoms keep no formal allegiances to each other they have held this name since their communal bargain to join the Entente. Their systems of governance are as varied as the peoples within them from the Nadir Matriarchies to the sage councils of the Udarists.</p>
+                    <p>On Nebelloren, the Entente is a small feudal society organized under the March of Nebelloren, a title which has passed hands several times.</p>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Laws</summary>
+                <div class="accordion-inner">
+                    <p>The Entente did not have a universal code of laws that applied across its member states, though some policies and laws were adopted across borders to ensure fair commerce and general safety. The finer details however were left to each state to define with their laws applying in their domains, and this was generally respected by all other parties. Centuries of cross cultural exchanges did lead to similar thoughts of justice being spread, but the dominant values of each society would usually steer them in varied directions. The nominal arbitrator of the law across most of the Entente were the Magistrates though frequently in dwarven holds it was respected that Elders would be looked to for legal arbitration through moot.</p>
+                </div>
+            </details>
+        </div>
+    </div>
+    <div class="content-row" id="Geography">
+        <div class="container">
+            <h2>Geography</h2>
+            <div class="content-row-inner">
+                <div class="content-row-left">
+                    <p>The territory of the Imeris Entente was vast, stretching across two great peninsulas surrounding an inland sea; The Dymur Seral. It's size and location made it a highly geographically diverse territory, with frigid mountaintops scattered across the far north, sprawling forests and ancient groves throughout, and warm temperate grassland across the bays of Penhira. Further extremes existed beyond the common boarders of the map in the wildlands of the north and the untamable Faisah deserts to the East.</p>
+                </div>
+                <div class="content-row-right content-row-image">
+                    <img src="/images/ImerisP2V7_xwg34f.png" alt="A map of Imeris" />
+                </div>
+            </div>
+            <details class="accordion-details">
+                <summary class="accordion-title">Natural Features</summary>
+                <div class="accordion-inner">
+                    <ul>
+                        <li><b>Imeris</b> - The Western Peninsula of Imeris as well as its original heartland, home to the Kingdom of Variman. It was more temperate in climate, with cold winters in its north. The Peninsula was divided by the Darigen Spine.</li>
+                        <ul>
+                            <li><b>Ordaly Rock</b> - The cultural heart of the Entente, as well as its defacto capital. The mountain itself has been untouched by Dwarven settlement or mining.</li>
+                            <li><b>Mount Votha</b> - Another untouched mountain, this one located in the Dairgen Spine, its peak is said to have been where the Dwarf Lam first swore his people's grudge against Morkith. A small memorial is the only structure to touch its peak.</li>
+                            <li><b>Rimerock Isle</b> - A small island that hung off the western shores of Imeris.</li>
+                        </ul>
+                        <li><b>Tassone Headlands'</b> - A hilly cape off the eastern side of Imeris, the headlands were the heartland of Variman.</li>
+                        <li><b>Lamic Dale</b> - The low lying lands east of the Darigens, the Dale was an agricultural centre for much of northern Imeris.</li>
+                        <ul>
+                            <li><b>Orner Estallas</b> - In the heart of the Lamic Dale, the Orner Estalles was the largest body of water on Imeris. Because of this size, it was oft debated on whether it was a lake or an inland sea, from which its name was source, being known in traditional dwarvish as the "Small Lake, Little Sea"</li>
+                        </ul>
+                        <li><b>Straits of Belgethor</b> - The span between western Imeris and the eastern Penhira, as well as the islands that stretch across it, which are part of the Araenic Kingdom.</li>
+                        <ul>
+                            <li><b>Lasiima</b> - A holy island to the Akarist's in the straits of Belgethor</li>
+                        </ul>
+                        <li><b>Penhira</b> - The Eastern Peninsula, home to the first Konos hold and the main bulk of Caeli kingdoms, including the Araenic Kingdom. Divided north and south by the Durthnol Range, it was more Mediterranean in climate, with more arid lands in the far east.</li>
+                        <ul>
+                            <li><b>Vimnir</b> - A mull on the northern half of Penhira, Vimnir is primarily known for being a largely rural hinterlands.</li>
+                            <li><b>Udarah</b> - A river sacred to Udarahist Ascenionists, the river served as a travel hub and settling ground</li>
+                            <li><b>Ishlum</b> - A large lake in Penhira.</li>
+                        </ul>
+                        <li><b>Faisah</b> -  - While not a part of the Entente directly, the Faisah were the desert and savannah regions beyond the eastern ends of Penhira, and were considered culturally and spiritually important to the Caeli, who originally migrated into Penhira and Belgethor from these regions.</li>
+                        <ul>
+                            <li><b>The Ivory Pass</b> - A feat of High Entente engineering, the Ivory Pass was a series of tunnels, bridges, ledges and valleys that connected Penhira to the Faisah, named for the more readily accessible ivory</li>
+                        </ul>
+                        <li><b>The Brun</b> - The Brun was the western and southern ocean that was once thought to have been the edge of the world, as no known lands laid beyond it.</li>
+                        <li><b>The Dymur Seral</b> - Literally "the Mirror of Stars" the Dymur Seral was the ocean most frequented by Entente sailors, being used for trade and travel between the many coastal territories of the Entente</li>
+                    </ul>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Cities and Towns</summary>
+                <div class="accordion-inner">         
+                    <ul>
+                        <li><b>Old Variman</b> - The capital of Variman and the oldest city in the region. Former home to the House of Zeal, and still serves as the religious center for the Kingdom of Variman and home of the royal family. Located in the province of Vestigstad.</li>
+                        <li><b>Roldhass</b> - The capital of the province of Linesse and the home to the House of Wisdom, it was thought destroyed after Variman was sundered. Served as the bastion for the Lambent Front in Gehenna until their flight.</li>
+                        <li><b>Ovdalam</b> - The seat of the Assembly of Votha, said to have been founded by Lam himself. Sits on a peak next to Mount Votha in the Darigen's.</li>
+                        <li><b>Aromnol</b> - The seat hold of the Konos', Aromnol was perhaps the wealthiest city in the Entente, being situated above one of the largest discovered gold deposits in Imeris. This also made it the center of the minting for the Gold Entente Crown.</li>
+                        <li><b>Akar</b> - The capital of the Araenic Kingdom and holy city of Akarism, it is also had a bustling trade port.</li>
+                        <li><b>Leadwater</b> - A small hold that was the sole Arelbel founded fortress, built on a small hill over a lead deposit near the shores of lake Ishlum.</li>
+                    </ul>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Nature and Wildlife</summary>
+                <div class="accordion-inner">
+                    <p>The Imeris Entente was a geographically diverse realm, and while nature held its threats these never grew beyond the merely mundane, with things like bears, wolves, mountain lions, and similar posing great dangers to outlying settlements and wayward travelers. Despite this, in the most outlying regions tales of great beasts would often flourish, with little regard for the truth of the matter.</p>
+                </div>
+            </details>
+        </div>
+    </div>
+    <div id="Culture" class="content-row">
+        <div class="container">
+            <h2>Culture</h2>
+            <details class="accordion-details">
+                <summary class="accordion-title">Languages</summary>
+                <div class="accordion-inner">
+                    <p>The modern Entente shares a common language to aid in trade and communication, a blend of all its respective cultures. Beyond this Common Tongue, the original Varimanian tongue holds sway for the more devoted of its people, while Runes still hold cultural significance among the dwarves and Caeli recorded their names in their own ancient forms.</p>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Religions</summary>
+                <div class="accordion-inner">         
+                    <p>The Entente has no single religion, with a diverse number of theologies and philosophies dominating the varied lands. The four most prominent of these faiths were:</p>
+                    <ul>
+                        <li><b>The Adamant Path:</b> A dwarven anti-theistic religion centred around the First Grudge against the Dwarven Creator God, Morkith. Espouses a philosophy of self-betterment, traditional family values, and a personal cultivation of honour and respect. This also encompasses traditional dwarven superstitions, most notably Runes.</li>
+                        <li><b>The Seskantige Preke (Sixfold Teachings):</b> The Varimanian religion centred around the teachings that the physical world is inherently corrupt, but that good is an ideal that all mortals should pursue. Espouses a doctrine of the rejection of false gods, a protection of spiritual purity, and virtue as a path to spiritual enlightenment.</li>
+                        <li><b>Ascensionism:</b> The older of the two primary Caeli faiths, Ascensionism is noted as having few concrete doctrines across all of its sects. It is a decentralized faith centred around the teachings of the Skysage Gahn, and espouses the philosophy of Cosmic Order and that you should use that knowledge as you see fit.</li>
+                        <li><b>Akarism:</b> The younger of the two primary Caeli faiths, Akarism is derived from an attempt by Araen the Westerwind to centralize the many Caeli beliefs. By some, it is simply considered a new sect of Ascensionism though it's believers reject this. Its most important concept is the ultimately understandable Grand Design that can be predicted, pursued, delayed but never halted. These beliefs largely stuck to their races of origins, but occasional conversions and mixings led to strange syncretisms as Dwarves swore upon the Archons, Caeli sought to cast down false gods, or Men followed the path of the Grand Design.</li>
+                    </ul>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Festivals</summary>
+                <div class="accordion-inner">
+                    <p><b>Cau Haf Calan Gaeaf or, more commonly Calan Gaeaf;</b> originally a Caeli tradition centred around a strange celestial alignment that only comes about every 6 years when a large comet approaches. It is believed to be a series of days where spirits and ghosts return to plague the living.</p>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Folklore</summary>
+                <div class="accordion-inner">
+                    <p>As a nation with many distinct cultures, the folklore of Imeris was often distinct depending on what region you spoke of. Each Dwarven Hold had sagas of its founding, every Varimanian village a story of a distant monster.</p>
+                    <p>An example folk tale would be the story of the Wyrm of Kaildain Hold, a common folktale in the mountains of Penhira. Set during the mythic past, two dwarves of the Clan Konos set out with a Caeli to restore the ancient hold of Kaildain, once a great jewel of the Konos' that was lost to the fearsome Wyrm of Kaildain hold, who made its lair in the still waters in the deepest levels of the fortress.</p>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Architecture</summary>
+                <div class="accordion-inner">
+                    <p>Entente architecture was highly diverse, with the Kingdom of Variman favoring simple but cozy timber framed homes, the Vothans favoring elaborate and intricate stonework, and the Caeli favoring tall and ornate structures.</p>
+                </div>
+            </details>
+            <details class="accordion-details">
+                <summary class="accordion-title">Arts</summary>
+                <div class="accordion-inner">
+                    <p>Each member of the Entente had unique art forms and styles as one would expect. The Dwarves of Imeris were famed for their detailed carvings and beautiful sculptures, merging aesthetics with functionality to create towering works of Art. The Dwarves of Penhira meanwhile were masters of finesmithing and gem cutting, creating crafts of intricate beauty unrivaled anywhere. Both groups also claimed mastery over the area of their rivals of course. The Kingdom of Variman was famed for its dramatic theater culture, originating first from its religious ceremonies that recounted their mythic past. The Caeli of both Akarist and Ascensionist backgrounds were known best for their detailed and realistic paintings, with natural landscapes being a favorite in most schools. There were of course famed outliers such as the surrealist painters of Variman, the epics of Nadir theater and storytelling, the songs of Arelbel performers, and as the Entente grew in prosperity, the various arts began to merge and evolve, only further blurring the lines. However as the Entente fell into decline, the arts too fell away and by the time of the flight, it was considered that it would take decades to even recapture some of the glamour of the past.</p>
+                </div>
+            </details>
+        </div>
+    </div>
+    <div class="content-row" Id="Timeline">
+        <div class="container">
+            <h2>Timeline</h2>
+            <ul>
+                <li><b>??? BL - </b>the Dwarves begin to carve their first holds in the mountains of Imeris and Penhira.</li>
+                <li><b>??? BL - </b>the Skysage Gahn lays down the first of his teachings, forming the foundation of Caeli philosophy and spirituality.</li>
+                <li><b>~3000 BL - </b>the Caeli move from the farther eastern reaches in Penhira.</li>
+                <li><b>~2300 BL - </b>Thidrek the Varimanian comes down from the north and founds the Kingdom of Variman.</li>
+                <li><b>~2000 BL - </b>Lam, Ral and Deler first discover the Konos holds in Penhira and open up routes to trade gold and ivory.</li>
+                <li><b>~1400 BL - </b>Araen the Westerwind begins his conquests, uniting the Caeli cities at the edge of Penhira and isles in the straits of Belgethor into a single Kingdom.</li>
+                <li><b>~1200 BL - </b>the rough date of the Battle of Ordaly Rock.</li>
+                <li><b>734 BL - </b>the Human nation of Jorfith begins to cause trouble for the Entente, is eventually annexed.</li>
+                <li><b>658 BL - </b>the Ascenionist League and its Dwarven allies join the Entente after long negotiations.</li>
+                <li><b>~200 BL - </b>An uprising occurs in the Araenic Kingdom over a supposed reincarnation of Araen the Westerwind.</li>
+                <li><b>85 BL - </b>the Cult of Eris emerges in Variman.</li>
+                <li><b>80 BL - </b>Humanity is plunged into Hell during the civil war.</li>
+                <li><b>2 BL - </b>The Undead begin to ravage the edges of the Entente.</li>
+                <li><b>Limestone 12 1 BL - </b>Humanity begins to emerge from Gehenna, with the Lambent Front as its head.</li>
+                <li><b>Sandstone 18 1 BL - </b>The last member of the Lambent Front steps through from Gehenna.</li>
+                <li><b>0 BL - </b>the Entente are forced, over many months, to fully vacate the mainland ahead of the rising undead hordes.</li>
+                <li><b>1 AL - </b>The survivors of the Entente reach Nebelloren.</li>
+                <li><b>Timber 2, 1 AL - </b>The town of Parravon is founded.</li>
+                <li><b>Felsite 20, 1 AL - </b>first contact with the Wildchoir.</li>
+            </ul>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <a href="/" class="footer__logo">
+                    <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png" srcset="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png 1x, https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_2x_p69bcp.png 2x" alt="BWRP Logo" />
+                </a>
+                <div class="footer__col">
+                    <a class="footer__link" href="https://www.patreon.com/join/brokenworldrp">Become a Patron</a>
+                    <a class="footer__link money-bag" href="https://www.paypal.com/paypalme/BWRPDonations">
+                        <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1605286689/Logos%20and%20Socials/money-bag_h9kyq6_sdw7s0.png" alt="" />
+                    </a>
+                    <a class="footer__link" href="https://www.paypal.com/paypalme/BWRPDonations">Donate on Paypal</a>
+                </div>
+                <div class="footer__col-end">
+                    <a class="footer__link" href="#">Found an issue?</a>
+                    <a class="footer__link" href="https://discord.gg/F2ugDHf">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M524.5 69.8a1.5 1.5 0 0 0 -.8-.7A485.1 485.1 0 0 0 404.1 32a1.8 1.8 0 0 0 -1.9 .9 337.5 337.5 0 0 0 -14.9 30.6 447.8 447.8 0 0 0 -134.4 0 309.5 309.5 0 0 0 -15.1-30.6 1.9 1.9 0 0 0 -1.9-.9A483.7 483.7 0 0 0 116.1 69.1a1.7 1.7 0 0 0 -.8 .7C39.1 183.7 18.2 294.7 28.4 404.4a2 2 0 0 0 .8 1.4A487.7 487.7 0 0 0 176 479.9a1.9 1.9 0 0 0 2.1-.7A348.2 348.2 0 0 0 208.1 430.4a1.9 1.9 0 0 0 -1-2.6 321.2 321.2 0 0 1 -45.9-21.9 1.9 1.9 0 0 1 -.2-3.1c3.1-2.3 6.2-4.7 9.1-7.1a1.8 1.8 0 0 1 1.9-.3c96.2 43.9 200.4 43.9 295.5 0a1.8 1.8 0 0 1 1.9 .2c2.9 2.4 6 4.9 9.1 7.2a1.9 1.9 0 0 1 -.2 3.1 301.4 301.4 0 0 1 -45.9 21.8 1.9 1.9 0 0 0 -1 2.6 391.1 391.1 0 0 0 30 48.8 1.9 1.9 0 0 0 2.1 .7A486 486 0 0 0 610.7 405.7a1.9 1.9 0 0 0 .8-1.4C623.7 277.6 590.9 167.5 524.5 69.8zM222.5 337.6c-29 0-52.8-26.6-52.8-59.2S193.1 219.1 222.5 219.1c29.7 0 53.3 26.8 52.8 59.2C275.3 311 251.9 337.6 222.5 337.6zm195.4 0c-29 0-52.8-26.6-52.8-59.2S388.4 219.1 417.9 219.1c29.7 0 53.3 26.8 52.8 59.2C470.7 311 447.5 337.6 417.9 337.6z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/less" ></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="scripts/theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

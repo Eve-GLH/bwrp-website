@@ -632,3 +632,14 @@ blockquote {
   display: block;
   margin: 10px 0;
 }
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .buttons-container {
+    flex-direction: row;
+  }
+}
