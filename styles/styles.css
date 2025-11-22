@@ -190,7 +190,7 @@ table tr:nth-child(even) {
 .mobile-menu__logo img {
   max-width: 100%;
 }
-.mobile-menu .dropdown-toggle:after {
+.mobile-menu .dropbtn:after {
   display: none;
 }
 .mobile-menu__button {
@@ -288,11 +288,19 @@ table tr:nth-child(even) {
     padding-left: 2rem;
   }
 }
-.toplinks .dropdown-toggle::after {
+.toplinks .dropbtn::after {
   margin: 0;
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
 }
-.toplinks .dropdown-toggle:hover::after {
-  border: 0;
+.toplinks .dropbtn:hover::after {
+  border: 1px solid transparent;
 }
 .toplinks__li {
   padding: 0 20px;
