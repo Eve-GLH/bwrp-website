@@ -20,6 +20,11 @@
   font-weight: 400;
   font-style: normal;
 }
+.Aguafina {
+  font-family: "Aguafina Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
 img {
   display: block;
   position: relative;
@@ -696,6 +701,12 @@ blockquote {
   text-decoration: italic;
   padding: 30px 0;
   color: #444;
+}
+.knowledge-potion-story__question.giants-font {
+  font-family: "Aguafina Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #666;
 }
 .knowledge-potion-story__marker {
   font-family: "Lugrasimo", cursive;
