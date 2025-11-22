@@ -496,6 +496,19 @@ table tr:nth-child(even) {
     width: 20%;
   }
 }
+.footer__col--middle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.footer__col--text-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
 .footer__link {
   color: #FFF;
   transition: all 0.5s;
