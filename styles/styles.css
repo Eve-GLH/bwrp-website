@@ -10,6 +10,36 @@
   font-weight: 400;
   font-style: normal;
 }
+.Lugrasimo {
+  font-family: "Lugrasimo", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.Nothing {
+  font-family: "Nothing You Could Do", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.Aguafina {
+  font-family: "Aguafina Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.Kristi {
+  font-family: "Kristi", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.Liu {
+  font-family: "Liu Jian Mao Cao", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.Reenie {
+  font-family: "Reenie Beanie", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
 img {
   display: block;
   position: relative;
@@ -642,4 +672,91 @@ blockquote {
   .buttons-container {
     flex-direction: row;
   }
+}
+.knowledge-potion-story {
+  background-color: #3f3f3f;
+  padding: 60px 10%;
+  font-family: "Lugrasimo", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #222;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.knowledge-potion-story__inner {
+  background-size: cover;
+  background-repeat: repeat-y;
+  border-radius: 2px;
+  padding: 60px;
+  background-image: url("/images/paper.png");
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.knowledge-potion-story h1 {
+  text-align: center;
+  font-family: "Lugrasimo", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #7d1e1e;
+}
+.knowledge-potion-story h2 {
+  font-family: "Lugrasimo", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.knowledge-potion-story__question {
+  font-family: "Nothing You Could Do", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: italic;
+  padding: 30px 0;
+  color: #444;
+}
+.knowledge-potion-story__question.giants-font {
+  font-family: "Aguafina Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #666;
+}
+.knowledge-potion-story__question.machine-font {
+  font-family: "Kristi", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.knowledge-potion-story__question.moju-font {
+  font-family: "Liu Jian Mao Cao", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.knowledge-potion-story__question.moju-font span {
+  font-size: 2.5rem;
+}
+.knowledge-potion-story__question.lines-font {
+  font-family: "Reenie Beanie", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.knowledge-potion-story__question.prudence .a {
+  text-align: left;
+}
+.knowledge-potion-story__question.prudence .b {
+  text-align: center;
+}
+.knowledge-potion-story__question.prudence .c {
+  text-align: right;
+}
+.knowledge-potion-story__marker {
+  font-family: "Lugrasimo", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #444;
+  font-weight: 700;
+  font-size: 7rem;
+  line-height: 0.2;
+  padding-bottom: 20px;
 }
