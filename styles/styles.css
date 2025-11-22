@@ -25,6 +25,11 @@
   font-weight: 400;
   font-style: normal;
 }
+.Kristi {
+  font-family: "Kristi", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
 img {
   display: block;
   position: relative;
@@ -707,6 +712,11 @@ blockquote {
   font-weight: 400;
   font-style: normal;
   color: #666;
+}
+.knowledge-potion-story__question.machine-font {
+  font-family: "Kristi", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 .knowledge-potion-story__marker {
   font-family: "Lugrasimo", cursive;
