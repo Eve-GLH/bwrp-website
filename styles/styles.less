@@ -23,6 +23,24 @@
     font-style: normal;
 }
 
+.Lugrasimo {
+  font-family: "Lugrasimo", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bookmania", serif;
+  src: url("/assets/Bookmania\ Regular.otf") format("opentype");
+}
+
+.Bookmania {
+    font-family: "Bookmania", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 img {
     display: block;
     position: relative;
@@ -660,5 +678,34 @@ blockquote {
     justify-content: center;
     @media @md {
         flex-direction: row;
+    }
+}
+
+.knowledge-potion-story {
+    background-color: #3f3f3f;
+    padding: 60px 10%;
+    .Lugrasimo;
+    color: #222;
+    font-size: 1.2rem;
+    font-weight: 600;
+    &__inner {
+        background-size: cover;
+        background-repeat: repeat-y;
+        border-radius: 2px;
+        padding: 60px;
+        background-image: url("/images/paper.png");
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    }
+    h1 {
+        text-align: center;
+        .Lugrasimo;
+        font-size: 3rem;
+        font-weight: 700;
+        color: #7d1e1e;
+    }
+    h2 {
+        .Lugrasimo;
+        font-size: 2rem;
+        font-weight: 700;
     }
 }
