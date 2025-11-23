@@ -379,6 +379,7 @@ table tr:nth-child(even) {
   position: relative;
   max-width: 100vw;
   overflow: hidden;
+  background-image: url("https://res.cloudinary.com/bwrpimages/image/upload/v1605286610/Homepage%20Banner/placeholder-1920x1080-1920x1080_cymnuj_aojnve.png");
   min-height: 78vh;
 }
 .banner .slick-list {
@@ -391,33 +392,6 @@ table tr:nth-child(even) {
   object-fit: contain;
   object-position: top left;
   width: 100%;
-}
-.banner__inner-1,
-.banner__inner-2,
-.banner__inner-3 {
-  background-size: cover;
-  position: relative;
-}
-.banner__inner-1:after,
-.banner__inner-2:after,
-.banner__inner-3:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
-.banner__inner-1 {
-  background-image: url("https://res.cloudinary.com/bwrpimages/image/upload/v1605286610/Homepage%20Banner/placeholder-1920x1080-1920x1080_cymnuj_aojnve.png");
-}
-.banner__inner-2 {
-  background-image: url("https://res.cloudinary.com/bwrpimages/image/upload/v1605286612/Homepage%20Banner/placeholder3-1920x1080-1920x1080_ogss3n_w1dh5g.png");
-}
-.banner__inner-3 {
-  background-image: url("https://res.cloudinary.com/bwrpimages/image/upload/v1605286613/Homepage%20Banner/placeholder2-1920x1080-1920x1080_udevhp_qqkq6y.jpg");
 }
 .banner__text {
   position: absolute;
