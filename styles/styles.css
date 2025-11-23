@@ -86,6 +86,7 @@ h3 {
 h2 {
   border-bottom: 1px solid #2A3132;
   margin-top: 25px;
+  width: 100%;
 }
 a {
   transition: all 0.5s;
