@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>BWRP Pixel Calendar</title>
+<title>BWRP Calendar</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
@@ -168,25 +168,24 @@ summary{cursor:pointer;font-family:"Press Start 2P";font-size:12px;color:var(--i
 </head>
 <body>
 <div class="wrap">
+  <div class="head"></div>
   <div class="board" id="board">
-    <div class="head">
+      <div class="big" id="headline"></div>
       <div class="hgroup">
-        <div class="big" id="headline"></div>
         <div class="sub" id="subline"></div>
         <div id="todayRibbon"></div>
         <div class="moonbox">
           <img id="moonActive" referrerpolicy="no-referrer" alt="today moon">
           <div class="moontext" id="moonText">moon</div>
         </div>
-      </div>
-
-      <div class="rightbox">
+        <div class="rightbox">
         <div class="live" id="clockMono"></div>
         <div class="minirow">
           <div class="minilabel">Day</div>
           <div class="minibar"><div class="minifill" id="topDyBar"></div></div>
           <div class="minipct" id="topDyPct"></div>
         </div>
+      </div>
       </div>
     </div>
 
