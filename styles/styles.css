@@ -160,7 +160,20 @@ table tr:nth-child(even) {
   color: #FFF;
 }
 .contents-child {
-  margin-left: 15px;
+  margin-left: 30px;
+  position: relative;
+}
+.contents-child:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url(/images/arrow.png);
+  background-size: cover;
 }
 .video-iframe {
   border: 5px solid #2A3132;
