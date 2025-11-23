@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>BWRP Pixel Calendar</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#1f2427; --ink:#e9f1f7; --ink2:#b9c7d1; --grid:#e9f1f7; --today:#38454F;
+  --cell:72px; --gap:8px;
+  /* This version was heavily edited with GPT assistance, old resource helpful comments were overwritten. Reach out to Siah on Discord for any assistance or questions about the original script/functions. */
+  /* category colors to match the legend, changed these to reflect tav's four coloooor codes */
+  --cat-choir:#4DFF85;
+  --cat-gnoll:#B37A4E;
+  --cat-caeli:#2A4BFF;
+  --cat-hyth:#FFFFFF;
+  --cat-akar:#2A4BFF;
+  --cat-imer:#2A4BFF;
+  --cat-kwa:#B37A4E;
+  --cat-ent:#2A4BFF;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:"VT323",monospace;font-size:18px}
+a{color:#9fd2ff;text-decoration:none} a:hover{text-decoration:underline}
+
+.wrap{max-width:1200px;margin:18px auto;padding:0 12px}
+.board{padding:12px;border:3px solid var(--grid);outline:3px solid #000;background:#232a2f;box-shadow:0 0 0 6px #30363b}
+
+/* Header */
+.head{
+  display:flex;justify-content:space-between;align-items:flex-end;
+  border-bottom:3px solid var(--grid);padding:6px 0 12px;margin-bottom:10px
+}
+.hgroup{display:flex;flex-direction:column;gap:4px;min-width:0}
+.big{font-family:"Press Start 2P";font-size:18px}
+.sub{font-size:15px;color:var(--ink2)}
+
+.rightbox{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  min-width:260px;
+  max-width:360px;
+  align-items:stretch;
+  margin-top:8px;
+  padding-right:20px; /* 👈 Adds space between the day counter and the right edge */
+  box-sizing:border-box;
+}
+.live{font-family:"Press Start 2P";font-size:14px;text-align:center}
+
+.moonbox{display:flex;align-items:center;gap:8px;margin-top:4px}
+#moonActive{width:34px;height:34px;image-rendering:pixelated;filter:drop-shadow(0 0 1px #000)}
+.moontext{font-size:14px;color:var(--ink2)}
+
+/* Compact day bar */
+.minirow{display:flex;align-items:center;gap:8px}
+.minilabel{font-size:12px;color:#b9c7d1;font-family:"Press Start 2P"}
+.minibar{flex:1;height:10px;background:#0f1418;border:2px solid var(--grid);min-width:160px}
+.minifill{height:100%;background:#7fb7ff;width:0%}
+.minipct{font-size:12px;color:#b9c7d1;font-family:"Press Start 2P"}
+
+#todayRibbon{margin-top:6px;font-family:"Press Start 2P";font-size:12px;color:#222;background:#ffe08a;border:3px solid var(--grid);padding:6px 8px;display:none;max-width:max-content}
+
+/* Nav */
+.nav{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:8px 0}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  height:34px;line-height:1;font-family:"Press Start 2P";font-size:12px;
+  color:var(--ink);padding:0 12px;background:#141a1e;border:3px solid var(--grid);cursor:pointer
+}
+.btn:hover{background:#0f1418}
+
+/* Month panel */
+.m{background:#141a1e;padding:10px;border:3px solid var(--grid)}
+.mhead{display:flex;justify-content:center;align-items:center;gap:12px;margin-bottom:2px}
+.mname{font-family:"Press Start 2P";font-size:22px;text-transform:uppercase}
+#malt{font-size:14px;color:var(--ink2);text-align:center;margin:0}
+.icon{width:32px;height:32px;image-rendering:pixelated;filter:drop-shadow(0 0 1px #000);object-fit:contain}
+#icoR{transform:scaleX(-1)}
+
+/* Grid */
+.grid{display:grid;grid-template-columns:repeat(7,var(--cell));gap:var(--gap);margin:10px auto;width:calc((var(--cell)*7)+(var(--gap)*6))}
+.c{width:var(--cell);height:var(--cell);background:#0f1418;border:2px solid var(--grid);position:relative;display:flex;align-items:flex-start;justify-content:flex-start;padding:6px;overflow:hidden}
+.c .n{font-family:"Press Start 2P";font-size:12px}
+.c.today{background:var(--today);color:#000} .c.today .n{color:#000}
+
+/* Event dots */
+.dots{position:absolute;left:6px;bottom:6px;display:flex;gap:4px;flex-wrap:wrap;max-width:calc(var(--cell) - 32px)}
+.dot{width:8px;height:8px;border-radius:50%;border:1px solid #0b0b0b;cursor:pointer}
+.dot[data-cat="choir"]{background:var(--cat-choir)}
+.dot[data-cat="gnoll"]{background:var(--cat-gnoll)}
+.dot[data-cat="caeli"]{background:var(--cat-caeli)}
+.dot[data-cat="hyth"]{background:var(--cat-hyth)}
+.dot[data-cat="akar"]{background:var(--cat-akar)}
+.dot[data-cat="imeris"]{background:var(--cat-imer)}
+.dot[data-cat="kwa"]{background:var(--cat-kwa)}
+.dot[data-cat="ent"]{background:var(--cat-ent)}
+
+/* Moon badge in cells */
+.mbadge{position:absolute;right:6px;bottom:6px;width:16px;height:16px;image-rendering:pixelated;filter:drop-shadow(0 0 1px #000)}
+.mbadge.dim{filter:grayscale(1) brightness(.7) drop-shadow(0 0 1px #000);opacity:.45}
+
+/* Event banners */
+.bands{position:absolute;left:6px;right:6px;bottom:26px;display:flex;flex-direction:column;gap:4px;pointer-events:none}
+.band{
+  pointer-events:auto;
+  font-size:12px;
+  line-height:1;
+  color:var(--ink2);
+  background:#0f1418;
+  border:2px solid var(--grid);
+  border-left-width:6px;
+  padding:3px 6px 3px 8px;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+.band[data-cat="choir"]{border-left-color:var(--cat-choir)}
+.band[data-cat="gnoll"]{border-left-color:var(--cat-gnoll)}
+.band[data-cat="caeli"]{border-left-color:var(--cat-caeli)}
+.band[data-cat="hyth"]{border-left-color:var(--cat-hyth)}
+.band[data-cat="akar"]{border-left-color:var(--cat-akar)}
+.band[data-cat="imeris"]{border-left-color:var(--cat-imer)}
+.band[data-cat="kwa"]{border-left-color:var(--cat-kwa)}
+.band[data-cat="ent"]{border-left-color:var(--cat-ent)}
+
+/* Hide third bannerr */
+.bands .band:nth-child(n + 3) { display: none; }
+
+/* Modal */
+.modal{
+  position:fixed; inset:0; display:none; align-items:center; justify-content:center;
+  background:rgba(0,0,0,.6); backdrop-filter:blur(1px);
+  padding:16px; z-index:9999;
+}
+.card{
+  background:#141a1e;border:3px solid var(--grid);box-shadow:0 0 0 6px #000;
+  max-width:520px;width:100%;padding:16px
+}
+.card h4{font-family:"Press Start 2P";font-size:16px;margin:0 0 8px}
+.card p{margin:0 0 8px;color:var(--ink2)}
+.x{float:right;font-family:"Press Start 2P";cursor:pointer}
+
+/* Progress */
+details#progressBox{background:#141a1e;border:3px solid var(--grid);padding:8px;margin-top:10px}
+summary{cursor:pointer;font-family:"Press Start 2P";font-size:12px;color:var(--ink);list-style:revert}
+.bar{height:14px;background:#0f1418;border:3px solid var(--grid);margin:6px 0}
+.fill{height:100%;background:#7fb7ff;width:0%}
+.pct{font-family:"Press Start 2P";font-size:12px;color:#b9c7d1;margin-left:6px}
+
+/* Bottom text */
+.note,.credit{font-size:15px;color:#b9c7d1;margin-top:10px;text-align:center}
+.credit{font-size:12px;margin-top:6px}
+@keyframes floatMoon {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
+
+#moonActive {
+  animation: floatMoon 3.5s ease-in-out infinite;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="board" id="board">
+    <div class="head">
+      <div class="hgroup">
+        <div class="big" id="headline"></div>
+        <div class="sub" id="subline"></div>
+        <div id="todayRibbon"></div>
+        <div class="moonbox">
+          <img id="moonActive" referrerpolicy="no-referrer" alt="today moon">
+          <div class="moontext" id="moonText">moon</div>
+        </div>
+      </div>
+
+      <div class="rightbox">
+        <div class="live" id="clockMono"></div>
+        <div class="minirow">
+          <div class="minilabel">Day</div>
+          <div class="minibar"><div class="minifill" id="topDyBar"></div></div>
+          <div class="minipct" id="topDyPct"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav">
+      <div class="btn" id="btnPrev"><span>◄</span><span>Back</span></div>
+      <div class="btn" id="btnToday"><span>Today</span></div>
+      <div class="btn" id="btnNext"><span>Next</span><span>►</span></div>
+      <div class="btn" id="btnPrevYear"><span>«</span><span>Year</span></div>
+      <div class="btn" id="btnNextYear"><span>Year</span><span>»</span></div>
+    </div>
+
+    <div class="m" id="monthPanel">
+      <div class="mhead">
+        <img class="icon" id="icoL" alt="" referrerpolicy="no-referrer" decoding="async" loading="eager">
+        <h3 class="mname" id="mname"></h3>
+        <img class="icon" id="icoR" alt="" referrerpolicy="no-referrer" decoding="async" loading="eager">
+      </div>
+      <div id="malt"></div>
+      <div class="grid" id="grid"></div>
+    </div>
+
+    <details id="progressBox" open>
+      <summary>Progress</summary>
+      <div>Year <span id="yrPct" class="pct"></span><div class="bar"><div class="fill" id="yrBar"></div></div></div>
+      <div>Season <span id="snPct" class="pct"></span><div class="bar"><div class="fill" id="snBar"></div></div></div>
+      <div>Month <span id="moPct" class="pct"></span><div class="bar"><div class="fill" id="moBar"></div></div></div>
+      <div>Day <span id="dyPct" class="pct"></span><div class="bar"><div class="fill" id="dyBar"></div></div></div>
+    </details>
+
+    <div class="note">Sandstone and similar names are the Entente calendar. Fellwood and similar names are the Choir calendar. The dual month name lists Entente first and Choir second.</div>
+    <div class="credit">Made by: SiahSneaka</div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="card">
+    <div class="x" id="closeModal" aria-label="Close">[ close ]</div>
+    <h4 id="mTitle"></h4>
+    <p id="mWhen"></p>
+    <p id="mDesc"></p>
+    <p style="font-size:12px;color:#889">Category: <span id="mCat"></span></p>
+  </div>
+</div>
+
+<script>
+/* Epoch and units */
+const EPOCH0=1647032400, SEC_YEAR=4838400, SEC_SEASON=1209600, SEC_MONTH=403200, SEC_DAY=14400, SEC_HOUR=600, SEC_MIN=10;
+const SEASONS=["Spring","Summer","Autumn","Winter"];
+const MONTHS=["Granite/Winterwane","Felsite/Mudluck","Slate/Greengrass","Hematite/Bloomlurch","Malachite/Harvest","Galena/Fruitfell","Limestone/Goldencrown","Sandstone/Fellwood","Timber/Reaping","Moonstone/Hearth","Opal/Sunsebb","Obsidian/Icetide"];
+
+/* Moon icons */
+const MOON_ICONS={
+  full:"https://i.imgur.com/bTug3og.png",
+  waxing:"https://i.imgur.com/5PiFX6k.png",
+  new:"https://i.imgur.com/V82swz9.png",
+  waning:"https://i.imgur.com/JebARiF.png"
+};
+
+/* Month header icons */
+const ICONS=[
+  "https://i.imgur.com/eciArWY.png", // Granite
+  "https://i.imgur.com/1KIA0iZ.png", // Felsite
+  "https://i.imgur.com/L63wk9V.png", // Slate
+  "https://i.imgur.com/a5wVxYz.png", // Hematite
+  "https://i.imgur.com/kEeqd02.png", // Malachite
+  "https://i.imgur.com/DQ9O1Ng.png", // Galena
+  "https://i.imgur.com/2Y6jBTT.png", // Limestone
+  "https://i.imgur.com/qpEdvxz.png", // Sandstone
+  "https://i.imgur.com/uLvGLAZ.png", // Timber
+  "https://i.imgur.com/pwZbXvm.png", // Moonstone
+  "https://i.imgur.com/qAqaQVI.png", // Opal left
+  "https://i.imgur.com/NBfwHPW.png"  // Obsidian
+];
+const OPAL_LEFT="https://i.imgur.com/qAqaQVI.png";
+const OPAL_RIGHT="https://i.imgur.com/dxcQwub.png";
+
+STATIC_EVENTS=[
+  {m:0,d:[1],title:"Genedigaeth Blwyddyn",cat:"gnoll",desc:"Gnollish New Year"},
+  {m:0,d:[1],title:"The Conclave Vernal",cat:"caeli",desc:"Equinox gathering"},
+  {m:1,d:[20],title:"Prophecy Day",cat:"choir",desc:"Remembrance of Rhania"},
+  {m:3,d:[1],title:"Solar Apogee",cat:"caeli",desc:"Peak of Solar Affinity"},
+  {m:4,range:[1,7],title:"Ganolsommar",cat:"gnoll",desc:"Summer feast and games"},
+  {m:4,range:[1,7],title:"Hythian Games",cat:"hyth",desc:"Athletic festival"},
+  {m:6,d:[1],title:"Falls Wane",cat:"choir",desc:"Workday at the turn to harvest"},
+  {m:6,d:[1],title:"The Conclave Autumnal",cat:"caeli",desc:"Equinox gathering"},
+  {m:6,d:[13],title:"Harvestboon",cat:"choir",desc:"First fruits and celebration"},
+  {m:7,d:[7],title:"Night of the Everking",cat:"imeris",desc:"Araen under a waxing moon"},
+  {m:9,d:[1],title:"Winter Apogee",cat:"caeli",desc:"Peak of Lunar Affinity"},
+  {m:9,range:[14,20],title:"Wintertide Festival",cat:"hyth",desc:"Week of winter merriment"},
+  {m:9,d:[23],title:"Karakamat",cat:"kwa",desc:"Kinship feast with chhaang"},
+  {m:10,d:[6],title:"Feast of the Ancestors",cat:"choir",desc:"Honor parents and the dead"},
+  {m:10,range:[28,28],title:"Candle Nights begin",cat:"gnoll",desc:"Nosweithiau Canhwyllau Disglair starts"},
+  {m:11,range:[1,7],title:"Candle Nights continue",cat:"gnoll",desc:"Nosweithiau Canhwyllau Disglair"},
+
+    // Calan Gaeaf cycles, manually placed
+
+  // IRL 2025 Calan window (2025-10-25 to 2025-11-03)
+  {y:24,m:7, range:[16,28],title:"Calan Gaeaf",cat:"ent",desc:"Dark season vigil."},
+  {y:24,m:8, range:[1,28], title:"Calan Gaeaf",cat:"ent",desc:"Dark season vigil."},
+  {y:24,m:9, range:[1,19], title:"Calan Gaeaf",cat:"ent",desc:"Dark season vigil."},
+
+  // IRL 2026 Calan window (2026-10-31 to 2026-11-02)
+  {y:31,m:3, range:[2,19], title:"Calan Gaeaf",cat:"ent",desc:"Dark season vigil."},
+
+  // IRL 2027 Calan window (2027-10-30 to 2027-11-01)
+  {y:37,m:9, range:[2,19], title:"Calan Gaeaf",cat:"ent",desc:"Dark season vigil."},
+
+  // IRL 2028 Calan window (2028-10-28 to 2028-11-06)
+  {y:44,m:3, range:[2,28], title:"Calan Gaeaf",cat:"ent",desc:"Dark season vigil."},
+  {y:44,m:4, range:[1,28], title:"Calan Gaeaf",cat:"ent",desc:"Dark season vigil."},
+  {y:44,m:5, range:[1,5],  title:"Calan Gaeaf",cat:"ent",desc:"Dark season vigil."},
+
+  // IRL 2029 Calan window (2029-10-27 to 2029-11-05)
+  {y:50,m:9, range:[2,28], title:"Calan Gaeaf",cat:"ent",desc:"Dark season vigil."},
+  {y:50,m:10,range:[1,28], title:"Calan Gaeaf",cat:"ent",desc:"Dark season vigil."},
+  {y:50,m:11,range:[1,5],  title:"Calan Gaeaf",cat:"ent",desc:"Dark season vigil."},
+
+  // IRL 2030 Calan window (2030-10-26 to 2030-11-04)
+  {y:57,m:3, range:[2,28], title:"Calan Gaeaf",cat:"ent",desc:"Dark season vigil."},
+  {y:57,m:4, range:[1,28], title:"Calan Gaeaf",cat:"ent",desc:"Dark season vigil."},
+  {y:57,m:5, range:[1,5],  title:"Calan Gaeaf",cat:"ent",desc:"Dark season vigil."},
+
+  // Nadolig cycles, manually placed
+  // BWRP year 25  IRL Dec 20 2025 to Jan 1 2026
+  {y:25,m:7,range:[16,28],title:"Nadolig",cat:"gnoll",desc:"Midwinter days."},
+  {y:25,m:8,range:[1,28],title:"Nadolig",cat:"gnoll",desc:"Midwinter days."},
+  {y:25,m:9,range:[1,28],title:"Nadolig",cat:"gnoll",desc:"Midwinter days."},
+  {y:25,m:10,range:[1,9],title:"Nadolig",cat:"gnoll",desc:"Midwinter days."},
+
+  // BWRP year 32  IRL Dec 20 2026 to Jan 1 2027
+  {y:32,m:1,range:[16,28],title:"Nadolig",cat:"gnoll",desc:"Midwinter days."},
+  {y:32,m:2,range:[1,28],title:"Nadolig",cat:"gnoll",desc:"Midwinter days."},
+  {y:32,m:3,range:[1,28],title:"Nadolig",cat:"gnoll",desc:"Midwinter days."},
+  {y:32,m:4,range:[1,15],title:"Nadolig",cat:"gnoll",desc:"Midwinter days."},
+
+  // BWRP year 38  IRL Dec 20 2027 to Jan 1 2028
+  {y:38,m:9,range:[2,28],title:"Nadolig",cat:"gnoll",desc:"Midwinter days."},
+  {y:38,m:10,range:[1,21],title:"Nadolig",cat:"gnoll",desc:"Midwinter days."},
+
+  // BWRP year 45  IRL Dec 20 2028 to Jan 1 2029
+  {y:45,m:3,range:[2,28],title:"Nadolig",cat:"gnoll",desc:"Midwinter days."},
+  {y:45,m:4,range:[1,28],title:"Nadolig",cat:"gnoll",desc:"Midwinter days."},
+  {y:45,m:5,range:[1,5],title:"Nadolig",cat:"gnoll",desc:"Midwinter days."},
+
+  // BWRP year 51  IRL Dec 20 2029 to Jan 1 2030
+  {y:51,m:9,range:[2,28],title:"Nadolig",cat:"gnoll",desc:"Midwinter days."},
+  {y:51,m:10,range:[1,28],title:"Nadolig",cat:"gnoll",desc:"Midwinter days."},
+  {y:51,m:11,range:[1,11],title:"Nadolig",cat:"gnoll",desc:"Midwinter days."},
+
+  // BWRP year 58  IRL Dec 20 2030 to Jan 1 2031
+  {y:58,m:3,range:[2,28],title:"Nadolig",cat:"gnoll",desc:"Midwinter days."},
+  {y:58,m:4,range:[1,28],title:"Nadolig",cat:"gnoll",desc:"Midwinter days."},
+  {y:58,m:5,range:[1,17],title:"Nadolig",cat:"gnoll",desc:"Midwinter days."}
+];
+
+/* Helpers */
+function nowSec(){return Date.now()/1000}
+function baseCalc(t){return t-EPOCH0}
+function getYear(t){return Math.floor(baseCalc(t)/SEC_YEAR)+1}
+function getSeason(t){return SEASONS[Math.floor(baseCalc(t)/SEC_SEASON)%4]}
+function getMonthIdx(t){return Math.floor(baseCalc(t)/SEC_MONTH)%12}
+function getMonthName(t){return MONTHS[getMonthIdx(t)]}
+function getDay(t){return Math.floor(baseCalc(t)/SEC_DAY)%28+1}
+function getHour(t){return Math.floor(baseCalc(t)/SEC_HOUR)%24}
+function getMin(t){return Math.floor(baseCalc(t)/SEC_MIN)%60}
+function pad(n){return n.toString().padStart(2,"0")}
+function pct(v){return (v*100).toFixed(1)+"%"}
+function expandRange(r){const [a,b]=r;const arr=[];for(let i=a;i<=b;i++)arr.push(i);return arr}
+
+/* Moon phase index, used only for label and top icon */
+function phaseIndex(day){ return Math.round((day/28)*8) % 9; }
+function phaseForDay(day){
+  const idx=phaseIndex(day);
+  switch(idx){
+    case 0: case 8: return {label:"Full", icon:MOON_ICONS.full};
+    case 1: return {label:"Waning Gibbous", icon:MOON_ICONS.waning};
+    case 2: return {label:"Last Quarter", icon:MOON_ICONS.waning};
+    case 3: return {label:"Waning Crescent", icon:MOON_ICONS.waning};
+    case 4: return {label:"New", icon:MOON_ICONS.new};
+    case 5: return {label:"Waxing Crescent", icon:MOON_ICONS.waxing};
+    case 6: return {label:"First Quarter", icon:MOON_ICONS.waxing};
+    case 7: return {label:"Waxing Gibbous", icon:MOON_ICONS.waxing};
+    default:return {label:"Full", icon:MOON_ICONS.full};
+  }
+}
+
+/* Bars */
+function setBar(fillId,pctId,ratio){
+  document.getElementById(fillId).style.width=pct(ratio);
+  document.getElementById(pctId).textContent=pct(ratio);
+}
+
+/* Responsive sizing */
+const board=document.getElementById("board"), gridEl=document.getElementById("grid");
+function cssNum(v){return parseFloat(getComputedStyle(document.documentElement).getPropertyValue(v))}
+function resizeGrid(){
+  const pad=40,avail=Math.max(320,board.clientWidth-pad),gap=cssNum('--gap')||8;
+  const cell=Math.floor((avail-gap*6)/7);
+  const finalCell=Math.max(44,Math.min(cell,120));
+  document.documentElement.style.setProperty('--cell',finalCell+'px');
+  gridEl.style.width=`calc( (var(--cell) * 7) + (var(--gap) * 6) )`;
+}
+
+/* Month state */
+let viewMonth=getMonthIdx(nowSec());
+let viewYear=getYear(nowSec());
+
+/* DOM nodes */
+const mnameEl=document.getElementById("mname"),
+      maltEl=document.getElementById("malt"),
+      icoL=document.getElementById("icoL"),
+      icoR=document.getElementById("icoR"),
+      todayRibbon=document.getElementById("todayRibbon"),
+      moonTextEl=document.getElementById("moonText"),
+      moonActive=document.getElementById("moonActive");
+
+/* Build month grid */
+function buildMonth(){
+  gridEl.innerHTML="";
+  const ent=MONTHS[viewMonth].split("/")[0], cho=MONTHS[viewMonth].split("/")[1];
+  mnameEl.textContent=ent;
+  maltEl.textContent=`(${cho}) • Year ${viewYear}`;
+
+  // Opal dual masks
+  if(viewMonth===10){ icoL.src=OPAL_LEFT; icoR.src=OPAL_RIGHT; }
+  else { icoL.src=ICONS[viewMonth]; icoR.src=ICONS[viewMonth]; }
+
+  for(let d=1; d<=28; d++){
+    const cell=document.createElement("div"); cell.className="c"; cell.dataset.day=d;
+    const number=document.createElement("div"); number.className="n"; number.textContent=d;
+
+    const dots=document.createElement("div"); dots.className="dots";
+    const bands=document.createElement("div"); bands.className="bands";
+
+    const mb=document.createElement("img"); mb.className="mbadge"; mb.referrerPolicy="no-referrer";
+    const pf=phaseForDay(d); mb.src=pf.icon; mb.alt=pf.label;
+    /* Only color the apex day of each week */
+    if(d%7!==0) mb.classList.add("dim");
+
+    cell.appendChild(number);
+    cell.appendChild(dots);
+    cell.appendChild(mb);
+    cell.appendChild(bands);
+    gridEl.appendChild(cell);
+  }
+  placeEventsForView();
+  resizeGrid();
+}
+
+/* IRL to BWRP date mapping with UTC to avoid DST gaps */
+function bwrpFromUTC(gy, gm, gd){
+  const dt=new Date(Date.UTC(gy,gm,gd,12,0,0)); // noon UTC for safety
+  const t=dt.getTime()/1000;
+  return {m:getMonthIdx(t), d:getDay(t)};
+}
+
+/* All BWRP days that fall within a single Gregorian UTC day */
+function bwrpDaysWithinGregorianUTC(gy, gm, gd){
+  const startUTC = Date.UTC(gy, gm, gd, 0, 0, 0) / 1000; // 00:00 UTC
+  const step = 86400 / 6;                                // 24h divided by 6 is 4h per BWRP day
+  const seen = new Set();
+  const out = [];
+  for(let i=0;i<6;i++){
+    const t = startUTC + i*step + step/2;               // sample mid slot
+    const y = getYear(t), m = getMonthIdx(t), d = getDay(t);
+    const key = `${y}-${m}-${d}`;
+    if(!seen.has(key)){ seen.add(key); out.push({y, m, d}); }
+  }
+  return out;
+}
+
+/* Build six-year cadence events, expanding each IRL day to all overlapping BWRP days */
+function buildIRL6YearEventsFor(bwrpYear){
+  const out=[];
+  if((bwrpYear % 6)!==0 && ((bwrpYear-1) % 6)!==0) return out;
+
+  const yearStartSec = EPOCH0 + (bwrpYear-1)*SEC_YEAR;
+  const gy = new Date(yearStartSec*1000).getUTCFullYear();
+
+  function addSpanDay(gy,gm,gd,title,cat,desc){
+    bwrpDaysWithinGregorianUTC(gy,gm,gd).forEach(({y,m,d})=>{
+      if(y === bwrpYear) out.push({y,m,d:[d],title,cat,desc});
+    });
+  }
+
+  // Feast of Blooming Kindness: Feb 14, UTC
+  { addSpanDay(gy, 1, 14, "Feast of Blooming Kindness", "choir", "Venswood kindness day."); }
+
+  const NADOLIG_EVENTS = [
+  // IRL 2025 12 20 to 2026 01 01
+  // BWRP: Year 25, Sandstone 15 to Opal 3
+  { y: 25, m: 7, range: [15, 28], title: "Nadolig", cat: "gnoll", desc: "Midwinter days." },
+  { y: 25, m: 8, range: [1, 28],  title: "Nadolig", cat: "gnoll", desc: "Midwinter days." },
+  { y: 25, m: 9, range: [1, 28],  title: "Nadolig", cat: "gnoll", desc: "Midwinter days." },
+  { y: 25, m: 10, range: [1, 3],   title: "Nadolig", cat: "gnoll", desc: "Midwinter days." },
+
+  // IRL 2026 12 20 to 2027 01 01
+  // BWRP: Year 32, Felsite 21 to Malachite 9
+  { y: 32, m: 1, range: [21, 28], title: "Nadolig", cat: "gnoll", desc: "Midwinter days." },
+  { y: 32, m: 2, range: [1, 28],  title: "Nadolig", cat: "gnoll", desc: "Midwinter days." },
+  { y: 32, m: 3, range: [1, 28],  title: "Nadolig", cat: "gnoll", desc: "Midwinter days." },
+  { y: 32, m: 4, range: [1, 9],   title: "Nadolig", cat: "gnoll", desc: "Midwinter days." },
+
+  // IRL 2027 12 20 to 2028 01 01
+  // BWRP: Year 38, Sandstone 27 to Opal 15
+  { y: 38, m: 7, range: [27, 28], title: "Nadolig", cat: "gnoll", desc: "Midwinter days." },
+  { y: 38, m: 8, range: [1, 28],  title: "Nadolig", cat: "gnoll", desc: "Midwinter days." },
+  { y: 38, m: 9, range: [1, 28],  title: "Nadolig", cat: "gnoll", desc: "Midwinter days." },
+  { y: 38, m: 10, range: [1, 15], title: "Nadolig", cat: "gnoll", desc: "Midwinter days." },
+
+  // IRL 2028 12 20 to 2029 01 01
+  // BWRP: Year 45, Slate 11 to Malachite 27
+  { y: 45, m: 2, range: [11, 28], title: "Nadolig", cat: "gnoll", desc: "Midwinter days." },
+  { y: 45, m: 3, range: [1, 28],  title: "Nadolig", cat: "gnoll", desc: "Midwinter days." },
+  { y: 45, m: 4, range: [1, 27],  title: "Nadolig", cat: "gnoll", desc: "Midwinter days." },
+
+  // IRL 2029 12 20 to 2030 01 01
+  // BWRP: Year 51, Timber 17 to Obsidian 5
+  { y: 51, m: 8, range: [17, 28], title: "Nadolig", cat: "gnoll", desc: "Midwinter days." },
+  { y: 51, m: 9, range: [1, 28],  title: "Nadolig", cat: "gnoll", desc: "Midwinter days." },
+  { y: 51, m: 10, range: [1, 28], title: "Nadolig", cat: "gnoll", desc: "Midwinter days." },
+  { y: 51, m: 11, range: [1, 5],  title: "Nadolig", cat: "gnoll", desc: "Midwinter days." }
+];
+
+  // De dupe across year month day title
+  const seen = new Set();
+  return out.filter(e=>{
+    const key = `${e.y}-${e.m}-${e.d[0]}-${e.title}`;
+    if(seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+/* Place events */
+const modal=document.getElementById("modal"),
+      closeModal=document.getElementById("closeModal"),
+      mTitle=document.getElementById("mTitle"),
+      mWhen=document.getElementById("mWhen"),
+      mDesc=document.getElementById("mDesc"),
+      mCat=document.getElementById("mCat");
+
+function placeEventsForView(){
+  const dyn=buildIRL6YearEventsFor(viewYear);
+  const all=STATIC_EVENTS.concat(dyn).filter(e=>e.m===viewMonth && (e.y? e.y===viewYear : true));
+
+  all.forEach(e=>{
+    const days=(e.d||[]).concat(e.range?expandRange(e.range):[]);
+    days.forEach(day=>{
+      const cell=gridEl.querySelector(`.c[data-day="${day}"]`); if(!cell) return;
+      const dots=cell.querySelector(".dots");
+      const bands=cell.querySelector(".bands");
+
+      const dot=document.createElement("div");
+      dot.className="dot"; dot.dataset.cat=e.cat; dot.title=e.title;
+      dot.addEventListener("click",(ev)=>{ev.stopPropagation(); openEvent(e,viewMonth,day);});
+      dots.appendChild(dot);
+
+      const band=document.createElement("div");
+      band.className="band"; band.dataset.cat=e.cat; band.textContent=e.title;
+      band.title=e.title;
+      band.addEventListener("click",(ev)=>{ev.stopPropagation(); openEvent(e,viewMonth,day);});
+      bands.appendChild(band);
+    });
+  });
+}
+
+/* Modal behavior */
+function openEvent(e,m,day){
+  mTitle.textContent=e.title;
+  mWhen.textContent=`${MONTHS[m]} ${day} • Year ${viewYear}`;
+  mDesc.textContent=e.desc||"";
+  mCat.textContent=(e.cat||"").toUpperCase();
+  modal.style.display="flex";
+  document.body.style.overflow="hidden";
+}
+function hideModal(){ modal.style.display="none"; document.body.style.overflow=""; }
+closeModal.onclick=hideModal;
+modal.addEventListener("click",(ev)=>{ if(ev.target===modal) hideModal(); });
+window.addEventListener("keydown",(e)=>{ if(e.key==="Escape" && modal.style.display==="flex") hideModal(); });
+
+/* Live loop */
+function update(){
+  const t=nowSec(), b=baseCalc(t);
+  const yr=getYear(t), sn=getSeason(t), mi=getMonthIdx(t), day=getDay(t), hour=getHour(t), minute=getMin(t);
+
+  document.getElementById("headline").textContent=`It is ${getMonthName(t)} ${day} of year ${yr} since the return.`;
+  document.getElementById("subline").textContent=`The season is ${sn}.`;
+  document.getElementById("clockMono").textContent=`${pad(hour)}:${pad(minute)}`;
+
+  const ph=phaseForDay(day);
+  moonTextEl.textContent=`${ph.label} moon`;
+  if(moonActive.src!==ph.icon) moonActive.src=ph.icon;
+
+  /* Today highlight only when year and month both match */
+  gridEl.querySelectorAll(".c").forEach((c,idx)=>{
+    const isToday=(viewYear===yr && viewMonth===mi && (idx+1)===day);
+    c.classList.toggle("today",isToday);
+  });
+
+  /* Today ribbon */
+  const list=[]; const dyn=buildIRL6YearEventsFor(yr).filter(e=>e.m===mi);
+  function collect(src){src.forEach(e=>{const ds=(e.d||[]).concat(e.range?expandRange(e.range):[]); if(ds.includes(day)) list.push(e.title);});}
+  collect(STATIC_EVENTS.filter(e=>e.m===mi)); collect(dyn);
+  const rib=document.getElementById("todayRibbon");
+  if(list.length){rib.style.display="inline-block"; rib.textContent="Today: "+[...new Set(list)].join(" • ");} else rib.style.display="none";
+
+  /* Progress bars */
+  setBar("yrBar","yrPct",(b%SEC_YEAR)/SEC_YEAR);
+  setBar("snBar","snPct",(b%SEC_SEASON)/SEC_SEASON);
+  setBar("moBar","moPct",(b%SEC_MONTH)/SEC_MONTH);
+  const dayRatio=(b%SEC_DAY)/SEC_DAY;
+  setBar("dyBar","dyPct",dayRatio);
+  setBar("topDyBar","topDyPct",dayRatio);
+}
+
+/* Nav */
+document.getElementById("btnPrev").onclick=()=>{viewMonth=(viewMonth+11)%12; if(viewMonth===11) viewYear--; buildMonth();};
+document.getElementById("btnNext").onclick=()=>{viewMonth=(viewMonth+1)%12; if(viewMonth===0) viewYear++; buildMonth();};
+document.getElementById("btnToday").onclick=()=>{viewMonth=getMonthIdx(nowSec()); viewYear=getYear(nowSec()); buildMonth();};
+document.getElementById("btnPrevYear").onclick=()=>{viewYear--; buildMonth();};
+document.getElementById("btnNextYear").onclick=()=>{viewYear++; buildMonth();};
+
+window.addEventListener("resize",resizeGrid);
+document.getElementById("progressBox").addEventListener("toggle",()=>requestAnimationFrame(resizeGrid));
+
+/* Start */
+buildMonth();
+(function loop(){update(); requestAnimationFrame(loop);})();
+</script>
+</body>
+</html>
