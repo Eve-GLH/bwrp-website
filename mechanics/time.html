@@ -18,7 +18,7 @@
                 <img src="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png" srcset="https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_1x_plkbo4.png 1x, https://res.cloudinary.com/bwrpimages/image/upload/v1681570659/Logos%20and%20Socials/bwrp-logo_2x_p69bcp.png 2x" alt="BWRP Logo" />
             </div>
             <button class="mobile-menu__button dropdown-toggle" data-bs-toggle="dropdown" type="button" id="MobileDropdownButton" aria-haspopup="true" aria-expanded="false">
-                <img src="../images/mobile-menu-closed.png" alt="Menu Closed" />
+                <img src="images/mobile-menu-closed.png" alt="Menu Closed" />
             </button>
             <ul class="dropdown-menu mobile-menu__dropdown" aria-labelledby="MobileDropdownButton">
                 <li class="mobile-menu__li">
@@ -31,7 +31,7 @@
                     <a class="mobile-menu__link" href="https://discord.gg/F2ugDHf">Discord</a>
                 </li>
                 <li class="mobile-menu__li">
-                    <a class="mobile-menu__link" href="/mechanics">Our Mechanics</a>
+                    <a class="mobile-menu__link" href="/our-mechanics">Our Mechanics</a>
                 </li>
                 <li class="mobile-menu__li">
                     <a class="mobile-menu__link" href="/about-the-world">Our World</a>
@@ -44,6 +44,12 @@
                 </li>
                 <li class="mobile-menu__li">
                     <a class="mobile-menu__link" href="/join">Join</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a href="/downloads/modpacks/BWRPModpack.zip" role="button" class="mobile-menu__link">Download Modpack</a>
+                </li>
+                <li class="mobile-menu__li">
+                    <a href="/downloads/resourcepacks/BWRPResourcePack.zip" role="button" class="mobile-menu__link">Download Resource Pack</a>
                 </li>
             </ul>
         </div>
@@ -66,16 +72,27 @@
                             <a class="toplinks__link toplinks__link--alt" href="https://discord.gg/F2ugDHf">Discord</a>
                         </li>
                         <li class="dropdown toplinks__li">
-                            <div class="dropdown-toggle toplinks__link" type="button" id="AboutDropdownButton" data-bs-toggle="dropdown" aria-expanded="false">About</div>
-                            <ul class="dropdown-menu toplinks__dropdown" aria-labelledby="AboutDropdownButton">
-                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/mechanics">Our Mechanics</a></li>
+                            <div class="dropbtn toplinks__link" type="button" id="AboutDropdownButton" data-bs-toggle="dropdown" aria-expanded="false">About</div>
+                            <ul class="dropdown-menu toplinks__dropdown dropdown-content" aria-labelledby="AboutDropdownButton">
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/our-mechanics">Our Mechanics</a></li>
                                 <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/about-the-world">Our World</a></li>
                                 <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/our-team">Our Team</a></li>
                                 <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/our-roleplay">Our Roleplay</a></li>
                             </ul>
                         </li>
-                        <li class="toplinks__li">
-                            <a class="toplinks__link" href="/join">Join</a>
+                        <li class="dropdown toplinks__li">
+                            <div type="button" class="dropbtn toplinks__link" href="#">Join</div>
+                            <ul class="dropdown-menu toplinks__dropdown dropdown-content">
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/apply">Join Us</a></li>
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/team-apply">Join A Team</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown toplinks__li">
+                            <div type="button" class="dropbtn toplinks__link" href="#">Downloads</div>
+                            <ul class="dropdown-menu toplinks__dropdown dropdown-content">
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/downloads/modpacks/BWRPModpack.zip">Modpack</a></li>
+                                <li class="toplinks__dropdown-li"><a class="toplinks__dropdown-link" href="/downloads/resourcepacks/BWRPResourcePack.zip">Resource Pack</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </nav>
