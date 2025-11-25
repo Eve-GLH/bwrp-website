@@ -36,9 +36,14 @@ a{color:#9fd2ff;text-decoration:none} a:hover{text-decoration:underline}
   display:flex;justify-content:space-between;align-items:flex-end;
   border-bottom:3px solid var(--grid);padding:6px 0 12px;margin-bottom:10px
 }
-.hgroup{display:flex;flex-direction:column;gap:4px;min-width:0}
-.big{font-family:"Press Start 2P";font-size:18px}
-.sub{font-size:15px;color:var(--ink2)}
+.hgroup{display:flex;flex-wrap:wrap;flex-direction:column;gap:4px;min-width:0;margin:20px 0;text-align: center;align-content: center;}
+@media (min-width:600px){
+  .hgroup {
+    flex-direction:row;justify-content:space-evenly;align-items:center;
+  }
+}
+.big{font-family:"Press Start 2P";font-size:18px;text-align: center;margin:20px 0;}
+.sub{font-size:18px;color:var(--ink2);padding: 0 10px;}
 
 .rightbox{
   display:flex;
@@ -53,9 +58,9 @@ a{color:#9fd2ff;text-decoration:none} a:hover{text-decoration:underline}
 }
 .live{font-family:"Press Start 2P";font-size:14px;text-align:center}
 
-.moonbox{display:flex;align-items:center;gap:8px;margin-top:4px}
+.moonbox{display:flex;align-items:center;gap:8px;margin-top:4px;justify-content: center;}
 #moonActive{width:34px;height:34px;image-rendering:pixelated;filter:drop-shadow(0 0 1px #000)}
-.moontext{font-size:14px;color:var(--ink2)}
+.moontext{font-size:18px;color:var(--ink2)}
 
 /* Compact day bar */
 .minirow{display:flex;align-items:center;gap:8px}
@@ -64,10 +69,10 @@ a{color:#9fd2ff;text-decoration:none} a:hover{text-decoration:underline}
 .minifill{height:100%;background:#7fb7ff;width:0%}
 .minipct{font-size:12px;color:#b9c7d1;font-family:"Press Start 2P"}
 
-#todayRibbon{margin-top:6px;font-family:"Press Start 2P";font-size:12px;color:#222;background:#ffe08a;border:3px solid var(--grid);padding:6px 8px;display:none;max-width:max-content}
+#todayRibbon{margin-top:6px;font-family:"Press Start 2P";font-size:12px;color:#222;background:#ffe08a;border:3px solid var(--grid);padding:6px 8px;display:none;}
 
 /* Nav */
-.nav{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:8px 0}
+.nav{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:8px 0;justify-content: center;}
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:6px;
   height:34px;line-height:1;font-family:"Press Start 2P";font-size:12px;
@@ -180,13 +185,13 @@ summary{cursor:pointer;font-family:"Press Start 2P";font-size:12px;color:var(--i
           <div class="moontext" id="moonText">moon</div>
         </div>
         <div class="rightbox">
-        <div class="live" id="clockMono"></div>
-        <div class="minirow">
-          <div class="minilabel">Day</div>
-          <div class="minibar"><div class="minifill" id="topDyBar"></div></div>
-          <div class="minipct" id="topDyPct"></div>
+          <div class="live" id="clockMono"></div>
+          <div class="minirow">
+            <div class="minilabel">Day</div>
+            <div class="minibar"><div class="minifill" id="topDyBar"></div></div>
+            <div class="minipct" id="topDyPct"></div>
+          </div>
         </div>
-      </div>
       </div>
     </div>
 
