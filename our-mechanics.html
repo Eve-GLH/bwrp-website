@@ -246,6 +246,49 @@
                         <p><a href="./mechanics/figura.html">Read more about Figura and view a tutorial</a></p>
                     </div>
                 </details>
+                <details class="accordion-details">
+                    <summary class="accordion-title">Craftbook Mechanics</summary>
+                    <div class="accordion-inner">
+                        <p><b>Hidden Switches</b> requires three things; A block to put the sign on. Either a sign post or a wall sign with <b>[X]</b> as the second line. A lever or button one block away from the sign in any right angle direction. Right clicking a block next to the sign will toggle the switch(es) or button(s) adjacent to the sign.</p>
+                        <p></p>
+                        <p>The <b>Crush</b> mechanism breaks blocks that the piston head is pushed into. It requires a sign attached to the piston, with the second line being <b>[Crush]</b>. Upon being powered, the block into which the piston extends is the block that will be destroyed.</p>
+                        <p></p>
+                        <p>The <b>Bounce</b> mechanism propels blocks and entities. It requires a sign attached to the piston, with the second line being <b>[Bounce]</b>, and the third being the velocity of the bounce. The maximum bounce velocity is 10 (this is a Minecraft limitation). The block that the piston extends over is the one from which any entities or blocks that are directly above it will be propelled.</p>
+                        <p></p>
+                        <p>The <b>SuperSticky</b> mechanism allows blocks to be pulled that are farther than 1 block away. It requires a sign attached to the piston, with the second line being <b>[SuperSticky]</b>, and the third being the number of blocks to pull. The maximum amount is 10. The third line can also allow it to pull back a distance farther than 1 in a single pulse. To do so, enter it in this format: maxdistance-pullperpulse. For example, 10-2 would pull blocks up to 10 blocks away at a rate of 2 blocks per pulse.</p>
+                        <p>If AIR is on the last line, it gains the ability to pull AIR as if it were a solid block.</p>
+                        <p></p>
+                        <p>The <b>SuperPush</b> mechanism also allows air to be pushed by pistons. It requires a sign attached to the piston, with the second line being <b>[SuperPush]</b>, and the third being the amount of blocks to push. The maximum amount is 10. The third line can also allow it to push forward a distance farther than 1 in a single pulse. To do so, enter it in this format: maxdistance-pushperpulse. For example, 10-2 would push blocks up to 10 blocks away at a rate of 2 blocks per pulse.</p>
+                        <p></p>
+                        <p><b>Pipes</b> allow you to quickly transfer items from one place to another, they consist of numerous parts:</p>
+                        <ul>
+                            <li><b>An Item Source.</b> This can be any block with an inventory (Chests, Hoppers, Furnaces, Dispensers, ect)</li>
+                            <li><b>A sticky piston pointed at the source.</b> When the piston becomes powered or unpowered, items are sucked out of the source into the pipe one at a time.</li>
+                            <li><b>A sign on the sticky piston.</b> It must have <b>[Pipe]</b> on the second line. A message in chat should confirm this worked.</li>
+                            <li><b>A tube of blocks to act as the pipe.</b></li>
+                            <li><b>A piston pointed at the destination.</b></li>
+                            <li><b>An item destination.</b> This can be any block with an inventory (Chests, Hoppers, Furnaces, Dispensers, ect)</li>
+                        </ul>
+                        <p></p>
+                        <p><b>Pipe Filtering</b> is possible with pipes. To do so, just place a sign on the either sticky or normal piston, with the following text on it:</p>
+                        <ul>
+                            <li><b>[Leave 1st line blank]</b></li>
+                            <li><b>[Pipe]</b></li>
+                            <li><b>[ID’s to include, separated by commas]</b> Eg, “1,4,5:2” to only pipe stone, cobble and birch wood.</li>
+                            <li><b>[ID’s to exclude, separated by commas]</b> Eg, “1,4,5:2” will pipe everything BUT stone, cobble and birch wood.</li>
+                        </ul>
+                        <p></p>
+                        <p><b>Insulation </b>, because pipes are allowed to connect diagonally, they have the ability to be insulated. Insulation means that if a wool block is between every possible diagonal connection of 2 tube blocks, they will not connect.</p>
+                        <p></p>
+                        <p><b>Tube Types</b>; Different blocks perform different functions when used as a tube:</p>
+                        <ul>
+                            <li><b>Glass Tubes.</b> Standard glass blocks are simple pipes that pass through all items piped in with no special behaviour. They act as normal pipes.</li>
+                            <li><b>Stained Glass Tubes.</b> Stained glass blocks are used to allow multiple pipes to run next to each other. Stained pipes will only transfer items to standard pipes, or stained pipes of the same color.</li>
+                            <li><b>Intersection Tubes.</b> Glass pane blocks are pipe blocks that will only connect pipes straight in the direction the pipe came from. This allows for two unrelated pipes to pass through the same block.</li>
+                            <li><b>Stained Intersection Tubes.</b> Stained glass panes act similarly to intersection tubes, however they only work with other pipes of the same colour.</li>
+                        </ul>
+                    </div>
+                </details>
             </div>
         </div>
     </div>
