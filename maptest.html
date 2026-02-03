@@ -161,6 +161,15 @@
 			shadowAnchor: [10, 32],  // the same for the shadow
 			popupAnchor:  [0, -22] // point from which the popup should open relative to the iconAnchor
 		});
+		var iconArea = L.icon({
+			iconUrl: 'images/iconarea.png',
+			shadowUrl: 'images/marker-shadow.png',
+			iconSize:     [32, 32], // size of the icon
+			shadowSize:   [32, 32], // size of the shadow
+			iconAnchor:   [16, 32], // point of the icon which will correspond to marker's location
+			shadowAnchor: [10, 32],  // the same for the shadow
+			popupAnchor:  [0, -22] // point from which the popup should open relative to the iconAnchor
+		});
 		
 		//Groups
 		var cities = L.layerGroup();
@@ -176,7 +185,7 @@
 		var cityOrdalyRock = L.marker([ 704, 678 ], {icon: iconMonument}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Ordaly_Rock" target="_blank">Ordaly Rock</a></b>').addTo(cities);
 		var cityFreehold = L.marker([ 967, 1138 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Freehold" target="_blank">Freehold</a></b>').addTo(cities);
 		var cityAkar = L.marker([ 316, 1010 ], {icon: iconMonument}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Akar" target="_blank">Akar</a></b>').addTo(cities);
-		var cityLeadwater = L.marker([ 284, 1324 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Leadwater" target="_blank">Leadwater</a></b>').addTo(cities);
+		var cityLeadwater = L.marker([ 278, 1369 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Leadwater" target="_blank">Leadwater</a></b>').addTo(cities);
 		var cityAromnol = L.marker([ 297, 1678 ], {icon: iconMonument}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Aromnol" target="_blank">Aromnol</a></b>').addTo(cities);
 		var cityHemmerungBain = L.marker([ 1052, 738 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Hemmerung_Bain" target="_blank">Hemmerung Bain</a></b>').addTo(cities);
 		var cityValoire = L.marker([ 982, 915 ], {icon: iconTemple}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Valoire" target="_blank">Valoire</a></b>').addTo(cities);
@@ -195,7 +204,6 @@
 		var cityKaralGor = L.marker([ 1044, 193 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Kâral_Gor" target="_blank">Kâral Gor</a></b>').addTo(cities);
 		var cityDwryranBah = L.marker([ 250, 1180 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Dwryran_Bah" target="_blank">Dwryran Bah</a></b>').addTo(cities);
 		var cityRemaria = L.marker([ 435, 738 ], {icon: iconRuin}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Remaria" target="_blank">Remaria</a></b>').addTo(cities);
-
 		
 		var geography = L.layerGroup();
 		var geoDeldurBarrens = L.marker([ 952, 90 ], {icon: iconTree}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Deldur_Barrens" target="_blank">Deldur Barrens</a></b>').addTo(geography);
@@ -221,13 +229,39 @@
 		var geoJorfith = L.marker([ 702, 840 ], {icon: iconTree}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Jorfith" target="_blank">Jorfith</a></b>').addTo(geography);
 		var geoRooser = L.marker([ 982, 818 ], {icon: iconTree}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Rooser" target="_blank">Rooser</a></b>').addTo(geography);
 		var geoLaketebad = L.marker([ 516, 1754 ], {icon: iconWater}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Laketebad" target="_blank">Lake Laketebad</a></b>').addTo(geography);
-		var geoRiverVermeli = L.marker([ 495, 597 ], {icon: iconWater}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Vermeli" target="_blank">River Vermeli</a></b>').addTo(geography);
+		var geoRiverVermeli = L.marker([ 495, 597 ], {icon: iconWater}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/River_Vermeli" target="_blank">River Vermeli</a></b>').addTo(geography);
+		var geoRiverIger = L.marker([ 170, 1475 ], {icon: iconWater}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/River_Igër" target="_blank">River Igër</a></b>').addTo(geography);
+
+		var regions = L.layerGroup();
+		var geoRegionVestigstad = L.marker([ 915, 874 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Vestigstad" target="_blank">Vestigstad</a></b><p>The land of Zeal</p>').addTo(regions);
+		var geoRegionAuril= L.marker([ 1029, 874 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Auril" target="_blank">Auril</a></b><p>The land of Awe</p>').addTo(regions);
+		var geoRegionTassonne= L.marker([ 990, 697 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Tassonne" target="_blank">Tassonne</a></b><p>The land of Justice</p>').addTo(regions);
+		var geoRegionErswil= L.marker([ 929, 585 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Erswil" target="_blank">Erswil</a></b><p>The land of Persistance</p>').addTo(regions);
+		var geoRegionSoholm= L.marker([ 815, 595 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Soholm" target="_blank">Soholm</a></b><p>The land of Fortitude</p>').addTo(regions);
+		var geoRegionLinesse= L.marker([ 848, 774 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Linesse" target="_blank">Linesse</a></b><p>The land of Wisdom</p>').addTo(regions);
+		var geoRegionEntenteHeartland= L.marker([ 670, 663 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Entente_Heartlands" target="_blank">Entente Heartlands</a></b>').addTo(regions);
+		var geoRegionLamicDale= L.marker([ 956, 423 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Lamic_Dale" target="_blank">Lamic Dale</a></b>').addTo(regions);
+		var geoRegionBomIlrom= L.marker([ 879, 343 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Bom_Ilrom" target="_blank">Bom Ilrom</a></b>').addTo(regions);
+		var geoRegionAngzakAmtdal= L.marker([ 681, 457 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Angzak_Amtdal" target="_blank">Angzak Amtdal</a></b>').addTo(regions);
+		var geoRegionTholdarigen= L.marker([ 1023, 201 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Tholdarigen" target="_blank">Tholdarigen</a></b>').addTo(regions);
+		var geoRegionKingdomOfKeshdarigen= L.marker([ 569, 552 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Kingdom_of_Keshdarigen" target="_blank">Kingdom of Keshdarigen</a></b>').addTo(regions);
+		var geoRegionGulnasAmtdal= L.marker([ 644, 223 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Gulnas_Amtdal" target="_blank">Gulnas Amtdal</a></b>').addTo(regions);
+		var geoRegionEdodGulnas= L.marker([ 834, 84 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Edod-Gulnas" target="_blank">Edod-Gulnas</a></b>').addTo(regions);
+		var geoRegionKazberdan= L.marker([ 815, 444 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Kàzberdan" target="_blank">Kàzberdan</a></b>').addTo(regions);
+		var geoRegionArolUsibkil= L.marker([ 886, 212 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Arôl-Usibkil" target="_blank">Arôl-Usibkil</a></b>').addTo(regions);
+		var geoRegionEraromnol= L.marker([ 286, 1633 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Eraromnol" target="_blank">Eraromnol</a></b>').addTo(regions);
+		var geoRegionSalDakil= L.marker([ 502, 1672 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Sal-Däkil_Amtdal " target="_blank">Sal-Däkil Amtdal</a></b>').addTo(regions);
+		var geoRegionBaktuLimul= L.marker([ 280, 1412 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Baktus_Limul" target="_blank">Baktus Limul</a></b>').addTo(regions);
+		var geoRegionEigerDum= L.marker([ 145, 1561 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Eiger_dúm " target="_blank">Eiger`dúm </a></b>').addTo(regions);
+		
+
 
 		var bounds = [[0,0], [1080,1920]];
 		var baseMap = L.imageOverlay('images/ImerisMap.png', bounds);
 		var territoryMap = L.imageOverlay('images/ImerisTerritory.png', bounds);
 		var territoryMap2 = L.imageOverlay('images/ImerisTerritory2.png', bounds);
 		var undeadInvasionMap = L.imageOverlay('images/ImerisUndeadPath.png', bounds);
+		var imerisFirstAdminDist = L.imageOverlay('images/ImerisFirstAdminDistricts.png', bounds);
 		
 		//Map setup
 		var map = L.map('map', {
@@ -241,12 +275,14 @@
 			"Terrain": baseMap,
 			"Territory": territoryMap,
 			"Labelled Territory": territoryMap2,
-			"Undead Invasion Path": undeadInvasionMap
+			"Undead Invasion Path": undeadInvasionMap,
+			"First Administrative Districts": imerisFirstAdminDist
 		};
 
 		var overlayMaps = {
 			"Cities": cities,
-			"Geography": geography
+			"Geography": geography,
+			"Regions": regions
 		};
 		var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
 
