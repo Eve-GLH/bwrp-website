@@ -173,13 +173,54 @@
 		
 		//Groups
 		var cities = L.layerGroup();
-		var cityOldVariman = L.marker([ 923, 917 ], {icon: iconMonument}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Old_Variman" target="_blank">Old Variman</a></b>').addTo(cities);
-		
+		var cityDozhdrevya = L.marker([ 888, 1228 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Dozhdrevya" target="_blank">Dozhdrevya</a></b>').addTo(cities);
+		var cityLongtown = L.marker([ 811, 1281 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Longtown" target="_blank">Longtown</a></b>').addTo(cities);
+		var cityHayal = L.marker([ 741, 373 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Hayal" target="_blank">Hayal</a></b>').addTo(cities);
+		var cityPortAtay = L.marker([ 745, 245 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Port_Atay" target="_blank">Port Atay</a></b>').addTo(cities);
+		var cityLyari = L.marker([ 784, 268 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Lyari" target="_blank">Lyari</a></b>').addTo(cities);
+		var cityIsatis = L.marker([ 789, 374 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Isatis" target="_blank">Isatis</a></b>').addTo(cities);
+		var cityGhothra = L.marker([ 799, 143 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Ghothra" target="_blank">Ghothra</a></b>').addTo(cities);
+		var cityGamya = L.marker([ 779, 120 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Gamya" target="_blank">Gamya</a></b>').addTo(cities);
+		var cityJarvick = L.marker([ 883, 706 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Jarvick" target="_blank">Jarvick</a></b>').addTo(cities);
+		var cityBeanfynValley = L.marker([ 959, 435 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Beanfyn_Valley" target="_blank">Beanfyn Valley</a></b>').addTo(cities);
+		var cityBalakinaell = L.marker([ 978, 658 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Balakinaell" target="_blank">Balakinaell</a></b>').addTo(cities);
+		var cityEaenaserin = L.marker([ 375, 1374 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Eaenaserin" target="_blank">Eaenaserin</a></b>').addTo(cities);
+		var cityMapleview = L.marker([ 541, 775 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Mapleview" target="_blank">Mapleview</a></b>').addTo(cities);
+		var cityAlymhone = L.marker([ 558, 1026 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Alymhone" target="_blank">Alymhone</a></b>').addTo(cities);
+		var cityLotusmire = L.marker([ 410, 654 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Lotusmire" target="_blank">Lotusmire</a></b>').addTo(cities);
+		var cityRantire = L.marker([ 435, 1016 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Rantire" target="_blank">Rantire</a></b>').addTo(cities);
+		var cityHanganui = L.marker([ 368, 801 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Hanganui" target="_blank">Hanganui</a></b>').addTo(cities);
+		var cityTeosGlen = L.marker([ 621, 1466 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Teos_Glen" target="_blank">Teos Glen</a></b>').addTo(cities);
+		var cityBoilersMaw = L.marker([ 780, 504 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Boilers_Maw" target="_blank">Boilers Maw</a></b>').addTo(cities);
+
 		var geography = L.layerGroup();
-		var geoDeldurBarrens = L.marker([ 952, 90 ], {icon: iconTree}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Deldur_Barrens" target="_blank">Deldur Barrens</a></b>').addTo(geography);
+		var geoMountTvesha = L.marker([ 779, 68 ], {icon: iconMountain}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Mount_Tvesha" target="_blank">Mount Tvesha</a></b>').addTo(geography);
+		var geoMountEhani = L.marker([ 772, 120 ], {icon: iconMountain}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Mount_Ehani" target="_blank">Mount Ehani</a></b>').addTo(geography);
+		var geoDaxaValley = L.marker([ 802, 112 ], {icon: iconMountain}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Daxa_Valley" target="_blank">Daxa Valley</a></b>').addTo(geography);
+		var geoMaunKapuhanga = L.marker([ 254, 868 ], {icon: iconMountain}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Maun_Kapuhanga" target="_blank">Maun Kapuhanga</a></b>').addTo(geography);
+		var geoKirmiziCauldron = L.marker([ 791, 574 ], {icon: iconMountain}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Kirmizi_Cauldron" target="_blank">Kirmizi Cauldron</a></b>').addTo(geography);
+		var geoBoilersMaw = L.marker([ 780, 504 ], {icon: iconWater}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Boilers_Maw" target="_blank">Boilers Maw</a></b>').addTo(geography);
+		var geoTheRiverOrd = L.marker([ 690, 799 ], {icon: iconWater}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/The_River_Ord" target="_blank">The River Ord</a></b>').addTo(geography);
+		var geoTenglade = L.marker([ 498, 954 ], {icon: iconTree}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/The_Tenglade" target="_blank">The Tenglade</a></b>').addTo(geography);
+		var geoTobaExpanse = L.marker([ 810, 1031 ], {icon: iconTree}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Toba_Expanse" target="_blank">Toba Expanse</a></b>').addTo(geography);
+		var geoTheBoneyards = L.marker([ 922, 878 ], {icon: iconMountain}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/The_Boneyards" target="_blank">The Boneyards</a></b>').addTo(geography);
+		var geoTheAmatlBadlands = L.marker([ 1037, 864 ], {icon: iconMountain}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/The_Amatl_Badlands" target="_blank">The Amatl Badlands</a></b>').addTo(geography);
+		var geoMitahkatValleys = L.marker([ 831, 754 ], {icon: iconMountain}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Mitahkat_Valleys" target="_blank">Mitahkat Valleys</a></b>').addTo(geography);
+		var geoAainkaainPlateau = L.marker([ 936, 627 ], {icon: iconMountain}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Aainkaain_Plateau" target="_blank">Aainkaain Plateau</a></b>').addTo(geography);
+		var geoTheRangeProper = L.marker([ 832, 218 ], {icon: iconMountain}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/The_Range_Proper" target="_blank">The Range Proper</a></b>').addTo(geography);
+		var geoAbiralFoothills = L.marker([ 803, 378 ], {icon: iconTree}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Abiral_Foothills" target="_blank">Abiral Foothills</a></b>').addTo(geography);
+		var geoTheMehrLowlands = L.marker([ 750, 220 ], {icon: iconTree}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/The_Mehr_Lowlands" target="_blank">The Mehr Lowlands</a></b>').addTo(geography);
+		var geoAtayanBay = L.marker([ 747, 255 ], {icon: iconWater}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Atayan_Bay" target="_blank">Atayan Bay</a></b>').addTo(geography);
+		var geoSleepingValley = L.marker([ 741, 134 ], {icon: iconTree}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Sleeping_Valley" target="_blank">Sleeping Valley</a></b>').addTo(geography);
 
 		var regions = L.layerGroup();
-		var geoRegionVestigstad = L.marker([ 915, 874 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Vestigstad" target="_blank">Vestigstad</a></b><p>The land of Zeal</p>').addTo(regions);
+		var regionOldWood = L.marker([ 552, 911 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/The_Old_Wood" target="_blank">The Old_Wood</a></b>').addTo(regions);
+		var regionTidalGroves = L.marker([ 415, 1057 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Tidal_Groves" target="_blank">Tidal Groves</a></b>').addTo(regions);
+		var regionAmatlDreadwastes = L.marker([ 1006, 716 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Amatl_Dreadwastes" target="_blank">Amatl Dreadwastes</a></b>').addTo(regions);
+		var regionKwaungmo = L.marker([ 851, 653 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Kwaungmo" target="_blank">Kwaungmo</a></b>').addTo(regions);
+		var regiongeoAbiralRange = L.marker([ 812, 264 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/The_Abiral_Range" target="_blank">The Abiral Range</a></b>').addTo(regions);
+		var regionFarochDreich = L.marker([ 904, 1312 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Faroch_Dreich" target="_blank">Faroch Dreich</a></b>').addTo(regions);
+		var regionTheWet = L.marker([ 398, 557 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/The_Wet" target="_blank">The Wet</a></b>').addTo(regions);
 
 		var bounds = [[0,0], [1080,1920]];
 		var baseMap = L.imageOverlay('images/MapVens.png', bounds);
@@ -192,7 +233,7 @@
 		var map = L.map('map', {
 			crs: L.CRS.Simple,
 			minZoom: -1,
-			layers: [baseMap, cities]
+			layers: [baseMap, cities, geography, regions]
 		});
 		
 		//Layer Group Controls
