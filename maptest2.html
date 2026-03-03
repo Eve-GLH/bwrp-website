@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 	<meta name="description" content="BWRP is a minecraft role-playing server that's been going for over 6 years! We have a custom map, custom mobs, and a dedicated community!">
 	  
-	<title>BWRP - Imeris Map</title>
+	<title>BWRP - Venswood Map</title>
     <link rel="icon" type="image/x-icon" href="../images/favicon-32x32_BWRP.png">
 	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -192,6 +192,8 @@
 		var cityHanganui = L.marker([ 368, 801 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Hanganui" target="_blank">Hanganui</a></b>').addTo(cities);
 		var cityTeosGlen = L.marker([ 621, 1466 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Teos_Glen" target="_blank">Teos Glen</a></b>').addTo(cities);
 		var cityBoilersMaw = L.marker([ 780, 504 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Boilers_Maw" target="_blank">Boilers Maw</a></b>').addTo(cities);
+		var cityChesterGreen = L.marker([ 692, 717 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Chester_Green" target="_blank">Chester Green</a></b>').addTo(cities);
+		var cityKowaloon = L.marker([ 417, 1000 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Kowaloon" target="_blank">Kowaloon</a></b>').addTo(cities);
 
 		var geography = L.layerGroup();
 		var geoMountTvesha = L.marker([ 779, 68 ], {icon: iconMountain}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Mount_Tvesha" target="_blank">Mount Tvesha</a></b>').addTo(geography);
@@ -212,6 +214,7 @@
 		var geoTheMehrLowlands = L.marker([ 750, 220 ], {icon: iconTree}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/The_Mehr_Lowlands" target="_blank">The Mehr Lowlands</a></b>').addTo(geography);
 		var geoAtayanBay = L.marker([ 747, 255 ], {icon: iconWater}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Atayan_Bay" target="_blank">Atayan Bay</a></b>').addTo(geography);
 		var geoSleepingValley = L.marker([ 741, 134 ], {icon: iconTree}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Sleeping_Valley" target="_blank">Sleeping Valley</a></b>').addTo(geography);
+		var geoChesterGreen = L.marker([ 692, 719 ], {icon: iconTree}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Chester_Green" target="_blank">Chester Green</a></b>').addTo(geography);
 
 		var regions = L.layerGroup();
 		var regionOldWood = L.marker([ 552, 911 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/The_Old_Wood" target="_blank">The Old_Wood</a></b>').addTo(regions);
@@ -221,6 +224,8 @@
 		var regiongeoAbiralRange = L.marker([ 812, 264 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/The_Abiral_Range" target="_blank">The Abiral Range</a></b>').addTo(regions);
 		var regionFarochDreich = L.marker([ 904, 1312 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Faroch_Dreich" target="_blank">Faroch Dreich</a></b>').addTo(regions);
 		var regionTheWet = L.marker([ 398, 557 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/The_Wet" target="_blank">The Wet</a></b>').addTo(regions);
+		var regionKimolia = L.marker([ 613, 1329 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Kimolia" target="_blank">Kimolia</a></b>').addTo(regions);
+		var regionChesterGreen = L.marker([ 694, 718 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Chester_Green" target="_blank">Parish of Chester Green</a></b>').addTo(regions);
 
 		var bounds = [[0,0], [1080,1920]];
 		var baseMap = L.imageOverlay('images/MapVens.png', bounds);
