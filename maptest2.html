@@ -188,7 +188,7 @@
 		var cityMapleview = L.marker([ 541, 775 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Mapleview" target="_blank">Mapleview</a></b>').addTo(cities);
 		var cityAlymhone = L.marker([ 558, 1026 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Alymhone" target="_blank">Alymhone</a></b>').addTo(cities);
 		var cityLotusmire = L.marker([ 410, 654 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Lotusmire" target="_blank">Lotusmire</a></b>').addTo(cities);
-		var cityRantire = L.marker([ 425, 935 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Rantire" target="_blank">Rantire</a></b>').addTo(cities);
+		var cityRantire = L.marker([ 455, 1051 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Rantire" target="_blank">Rantire</a></b>').addTo(cities);
 		var cityHanganui = L.marker([ 368, 801 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Hanganui" target="_blank">Hanganui</a></b>').addTo(cities);
 		var cityTeosGlen = L.marker([ 621, 1466 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Teos_Glen" target="_blank">Teos Glen</a></b>').addTo(cities);
 		var cityBoilersMaw = L.marker([ 780, 504 ], {icon: iconHome}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Boilers_Maw" target="_blank">Boilers Maw</a></b>').addTo(cities);
@@ -215,10 +215,9 @@
 		var geoAtayanBay = L.marker([ 747, 255 ], {icon: iconWater}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Atayan_Bay" target="_blank">Atayan Bay</a></b>').addTo(geography);
 		var geoSleepingValley = L.marker([ 741, 134 ], {icon: iconTree}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Sleeping_Valley" target="_blank">Sleeping Valley</a></b>').addTo(geography);
 		var geoChesterGreen = L.marker([ 692, 719 ], {icon: iconTree}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Chester_Green" target="_blank">Chester Green</a></b>').addTo(geography);
-		var geoTonatikouatlTelentemoua = L.marker([ 520, 424 ], {icon: iconWater}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Tonatikouatl_Telentemoua" target="_blank">Tonatikouatl Telentemoua</a></b>').addTo(geography);
-		var geoItsenjoob = L.marker([ 576, 501 ], {icon: iconTree}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Itsenjoob" target="_blank">Itsenjoob</a></b>').addTo(geography);
-		var geoIbusEmbrace = L.marker([ 373, 925 ], {icon: iconTree}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Ibus_Embrace" target="_blank">Ibu`s Embrace</a></b>').addTo(geography);
-		var geoOukriu = L.marker([ 408, 934 ], {icon: iconTree}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/O`ukriu" target="_blank">O`ukriu</a></b>').addTo(geography);
+		var geoTonatikouatlTelentemoua = L.marker([ 520, 424 ], {icon: iconWater}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Tonatikouatl_Telentemoua" target="_blank">Tonatikouatl Telentemoua</a></b><p>Starstrike Crater</p><p>Sundrop Bay</p>').addTo(geography);
+		var geoIbusEmbrace = L.marker([ 373, 925 ], {icon: iconTree}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Ibu\'s_Embrace" target="_blank">Ibu\'s Embrace</a></b>').addTo(geography);
+		var geoOukriu = L.marker([ 408, 934 ], {icon: iconTree}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/O\'ukriu" target="_blank">O\'ukriu</a></b>').addTo(geography);
 		var geoAkaturi = L.marker([ 601, 356 ], {icon: iconTree}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Akaturi" target="_blank">Akaturi</a></b>').addTo(geography);
 
 		var regions = L.layerGroup();
@@ -233,6 +232,7 @@
 		var regionChesterGreen = L.marker([ 694, 718 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Chester_Green" target="_blank">Parish of Chester Green</a></b>').addTo(regions);
 		var regionTobaExpanse = L.marker([ 810, 1031 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Toba_Expanse" target="_blank">Toba Expanse</a></b>').addTo(regions);
 		var regionIronwoods = L.marker([ 951, 1651 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Ironwoods" target="_blank">Ironwoods</a></b>').addTo(regions);
+		var geoItsenjoob = L.marker([ 576, 501 ], {icon: iconArea}).bindPopup('<b><a href="https://broken-worlds.fandom.com/wiki/Itsenjo\'ob" target="_blank">Itsenjo\'ob</a></b>').addTo(regions);
 
 		var bounds = [[0,0], [1080,1920]];
 		var baseMap = L.imageOverlay('images/MapVens.png', bounds);
