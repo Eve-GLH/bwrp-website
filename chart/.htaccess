@@ -11,7 +11,7 @@ RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
 RewriteRule ^ /%1? [NC,L,R=301]
 
 # Restrict Access Here
-AuthUserFile apache2/htdocs/chaty/.htpasswd
+AuthUserFile apache2/htdocs/chart/.htpasswd
 AuthType Basic
 AuthName "The Chart"
 Require valid-user
